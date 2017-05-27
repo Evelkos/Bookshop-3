@@ -39,7 +39,7 @@ class Book
   void set_pages(int pag)           {pages = pag;}
 //  void stt_category(category c)     {cat = c;}
 
-  friend std::ostream& operator<<  (std::ostream &os, Book &b);
+  friend std::ostream& operator <<  (std::ostream &os, Book &b);
   friend std::istream& operator >> (std::istream&, Book&);
   Book& operator = (Book &b2);
   bool operator > (Book &b2);

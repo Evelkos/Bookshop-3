@@ -2,17 +2,18 @@
 1495831686 source:/home/ewelina/Pulpit/Projekt3/book.cpp
 	"book.hpp"
 
-1495891221 /home/ewelina/Pulpit/Projekt3/book.hpp
+1495895575 /home/ewelina/Pulpit/Projekt3/book.hpp
 	"debug_head.hpp"
 	<iostream>
 	<cstdlib>
 
 1493845109 /home/ewelina/Pulpit/Projekt3/debug_head.hpp
 
-1495895047 source:/home/ewelina/Pulpit/Projekt3/main.cpp
+1495899970 source:/home/ewelina/Pulpit/Projekt3/main.cpp
 	<iostream>
 	"bookshop.hpp"
 	"book.hpp"
+	"functions.hpp"
 
 1495891009 source:/home/ewelina/Pulpit/Projekt3/customer.cpp
 	"customer.hpp"
@@ -51,15 +52,19 @@
 	"employee.hpp"
 	<vector>
 
-1495891304 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
-	<iostream>
-	<cstring>
-	<vector>
-	<fstream>
-	"book.hpp"
+1495900217 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
+	"functions.hpp"
 
 1495892029 source:/home/ewelina/Pulpit/Projekt3/Warehouse.cpp
 	"warehouse.hpp"
 
 1495894452 source:/home/ewelina/Pulpit/Projekt3/house.cpp
+
+1495900403 /home/ewelina/Pulpit/Projekt3/functions.hpp
+	<vector>
+	<iostream>
+	<cstring>
+	<vector>
+	<fstream>
+	"book.hpp"
 

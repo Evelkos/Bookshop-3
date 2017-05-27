@@ -1,21 +1,24 @@
 #include <iostream>
 #include "bookshop.hpp"
 #include "book.hpp"
+#include "functions.hpp"
 using namespace std;
 
-template<typename T>
-extern void show_vec(vector<T>&);
-extern void data(vector<Book>&, vector<string>&, vector<string>&);
+extern void data(vector<Book*>&, vector<string*>&, vector<string*>&);
 
 
 int main()
 {
-  vector<Book> books;
-  vector<string> names;
-  vector<string> surnames;
+  vector<Book*> books;
+  vector<string*> names;
+  vector<string*> surnames;
+  cout<<"Tu dziala 1"<<endl;
   data(books, names, surnames);
-
+  cout<<"Tu dziala 2"<<endl;
   show_vec(books);
+  cout<<"Tu dziala 3"<<endl;
+  delete_data(books, names, surnames);
+  cout<<"Tu dziala 4"<<endl;
   cout<<endl;
 
   return 0;

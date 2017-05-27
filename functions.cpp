@@ -1,26 +1,4 @@
-#include <iostream>
-#include <cstring>
-#include <vector>
-#include <fstream>
-#include "book.hpp"
-
-template<typename T>
-int position(std::vector<T>& vec, T& ob)
-{
-  unsigned int i = 0;
-  if(vec.empty() == true || ob < vec[i] || ob == vec[i])
-    i = 1;
-  else
-  {
-    while(i+1 <= vec.size())
-    {
-      if(ob > vec[i])
-        break;
-      i++;
-    }
-  }
-  return i;
-}
+#include "functions.hpp"
 
 //wczytuje ciag wyrazow, dlugosc ciagu ograniczona
 char* load(char *words, int length){
@@ -71,11 +49,11 @@ double load_n(){
 }
 
 
-void data(std::vector<Book> &books, std::vector<std::string> &names, std::vector<std::string> &surnames)
+void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vector<std::string*> &surnames)
 {
   int n = 0;
-  Book bo;
-  std::string line;
+  Book *bo;
+  std::string line, *l;
   int y, pag;
 
   srand(time(NULL));
@@ -93,26 +71,32 @@ void data(std::vector<Book> &books, std::vector<std::string> &names, std::vector
       getline(file, line);
       if(line[0] == '#' && books.size() < books.max_size())      //wczytujemy ksiazke
       {
+
+        bo = new Book();
         getline(file, line);
-        bo.set_name(line);
+        bo->set_name(line);
         getline(file, line);
-        bo.set_author(line);
+        bo->set_author(line);
         getline(file, line);
-        bo.set_publisher(line);
+        bo->set_publisher(line);
         y = rand()%50+1967;
-        bo.set_year(y);
+        bo->set_year(y);
         pag = rand()%400+154;
-        bo.set_pages(pag);
+        bo->set_pages(pag);
         n = position(books, bo);
-//        books.insert(books.begin() + n -1 , 1 , bo);
+        std::cout<<"n = "<<n<<std::endl;
+        std::cout<<"Tu dziala - data"<<std::endl;
+        books.insert(books.begin()+n, bo);
+
       }
       else if(line[0] == '%')
       {
         getline(file, line);
         while(line[0] != '%')
         {
+          l = new std::string(line);
           if(names.size() < names.max_size())
-            names.push_back(line);
+            names.push_back(l);
         }
       }
       else if(line[0] == '*')
@@ -120,8 +104,9 @@ void data(std::vector<Book> &books, std::vector<std::string> &names, std::vector
         getline(file, line);
         while(line[0] != '*')
         {
+          l = new std::string(line);
           if(surnames.size() < surnames.max_size())
-            surnames.push_back(line);
+            surnames.push_back(l);
         }
       }
       else
@@ -130,11 +115,26 @@ void data(std::vector<Book> &books, std::vector<std::string> &names, std::vector
   }
 }
 
-
-template<typename T>
-void show_vec(std::vector<T> &vec)
+void delete_data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vector<std::string*> &surnames)
 {
-  unsigned int i;
-  for(i = 0 ; i < vec.size() ; i++)
-    std::cout<<vec[i];
+  Book *b;
+  std::string *s;
+  while(!books.empty())
+  {
+    b = books[books.size()-1];
+    books.pop_back();
+    delete b;
+  }
+  while(!names.empty())
+  {
+    s = names[names.size()-1];
+    names.pop_back();
+    delete s;
+  }
+  while(!surnames.empty())
+  {
+    s = surnames[surnames.size()-1];
+    surnames.pop_back();
+    delete s;
+  }
 }
