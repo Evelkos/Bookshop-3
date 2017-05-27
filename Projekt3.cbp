@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Projekt3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Projekt3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Projekt3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Warehouse.cpp" />
+		<Unit filename="book.cpp" />
+		<Unit filename="book.hpp" />
+		<Unit filename="bookshop.cpp" />
+		<Unit filename="bookshop.hpp" />
+		<Unit filename="building.hpp" />
+		<Unit filename="customer.cpp" />
+		<Unit filename="customer.hpp" />
+		<Unit filename="debug_head.hpp" />
+		<Unit filename="employee.cpp" />
+		<Unit filename="employee.hpp" />
+		<Unit filename="functions.cpp" />
+		<Unit filename="house.cpp" />
+		<Unit filename="house.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="owner.hpp" />
+		<Unit filename="person.hpp" />
+		<Unit filename="warehouse.hpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
