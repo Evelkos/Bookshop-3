@@ -44,6 +44,7 @@
 		<Unit filename="employee.cpp" />
 		<Unit filename="employee.hpp" />
 		<Unit filename="functions.cpp" />
+		<Unit filename="functions.hpp" />
 		<Unit filename="house.cpp" />
 		<Unit filename="house.hpp" />
 		<Unit filename="main.cpp" />

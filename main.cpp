@@ -16,6 +16,8 @@ int main()
   data(books, names, surnames);
   cout<<"Tu dziala 2"<<endl;
   show_vec(books);
+  show_vec(names);
+  show_vec(surnames);
   cout<<"Tu dziala 3"<<endl;
   delete_data(books, names, surnames);
   cout<<"Tu dziala 4"<<endl;

@@ -14,11 +14,11 @@ void data(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::stri
 void delete_data(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
 
 template<typename T>
-void show_vec(std::vector<T> &vec)
+void show_vec(std::vector<T*> &vec)
 {
   unsigned int i;
   for(i = 0 ; i < vec.size() ; i++)
-    std::cout<<vec[i];
+    std::cout<<*(vec[i]);
 }
 
 template<typename T>

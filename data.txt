@@ -2,9 +2,14 @@
 Naprawa Samochodow Osobowych Fiat126p
 Zbigniew Klimecki
 WydA
+#
+Zwiadowcy
+John Flanagan
+WydA
 
 %
 Jan
+Karol
 %
 
 *

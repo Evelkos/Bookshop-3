@@ -86,17 +86,22 @@ void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vect
         n = position(books, bo);
         std::cout<<"n = "<<n<<std::endl;
         std::cout<<"Tu dziala - data"<<std::endl;
-        books.insert(books.begin()+n, bo);
+        if(books.empty())
+          books.push_back(bo);
+        else if(books.size() < books.max_size())
+          books.insert(books.begin()+n, bo);
 
       }
       else if(line[0] == '%')
       {
         getline(file, line);
+        std::cout<<"Odczytany znak: "<<line[0]<<std::endl;
         while(line[0] != '%')
         {
           l = new std::string(line);
           if(names.size() < names.max_size())
             names.push_back(l);
+          getline(file, line);
         }
       }
       else if(line[0] == '*')
@@ -107,6 +112,7 @@ void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vect
           l = new std::string(line);
           if(surnames.size() < surnames.max_size())
             surnames.push_back(l);
+          getline(file, line);
         }
       }
       else
@@ -124,17 +130,20 @@ void delete_data(std::vector<Book*> &books, std::vector<std::string*> &names, st
     b = books[books.size()-1];
     books.pop_back();
     delete b;
+    std::cout<<"a"<<std::endl;
   }
   while(!names.empty())
   {
     s = names[names.size()-1];
     names.pop_back();
     delete s;
+    std::cout<<"b"<<std::endl;
   }
   while(!surnames.empty())
   {
     s = surnames[surnames.size()-1];
     surnames.pop_back();
     delete s;
+    std::cout<<"c"<<std::endl;
   }
 }
