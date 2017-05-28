@@ -7,16 +7,12 @@
 
 class Customer : public Person
 {
-  std::vector<Book*> coll;  //wektor wskazan na ksiazki
-
   public:
-  Customer(std::string = "-", std::string = "-", double = 0);
+  Customer(std::string = "Klient", std::string = "Ksiegarni", double = 0);
   ~Customer();
 
-  void add_book(Book*);
-  void show_b();
   void buy(Book&);
-
+  void work();
 
   void operator +=(double m) {this->set_money(this->get_money() + m);}
   friend std::ostream& operator<< (std::ostream&, Customer&);

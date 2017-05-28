@@ -14,7 +14,7 @@ class Building
 
 
   public:
-  Building(std::string n, std::string l, int a): name(n), loc(l), area(a) {}
+  Building(std::string n, std::string l, unsigned int a): name(n), loc(l), area(a) {}
   std::string get_name() {return name;}
   std::string get_loc() {return loc;}
   unsigned int get_area() {return area;}

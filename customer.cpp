@@ -7,7 +7,6 @@ Customer::Customer(std::string n, std::string s, double m): Person(n, s, m)
 
 Customer::~Customer()
 {
-  coll.clear();
   D(std::cout<<"Usuwamy kilenta"<<std::endl;)
 }
 
@@ -15,25 +14,6 @@ std::ostream& operator<<(std::ostream &os, Customer &c)
 {
   os << c.get_name()<<" "<<c.get_surname() <<" "<<c.get_money()<<std::endl;
   return os;
-}
-
-void Customer::add_book(Book *b)
-{
-  if(coll.size()+sizeof(b) < coll.max_size())
-    coll.push_back(b);
-  else
-    std::cout<<"Zbyt wiele ksiazek."<<std::endl;
-}
-
-void Customer::show_b()
-{
-  unsigned int i;
-  if(coll.empty() == true) std::cout<<"Kolekcja jest pusta"<<std::endl;
-  else
-  {
-    for(i = 0 ; i < coll.size() ; i++)  //czy tu nie pojawi sie blad - rozmiat tozsamy z i?
-      std::cout<<coll[i]<<std::endl;
-  }
 }
 
 //operator przypisania - nie likwiduje listy ksiazek klienta, ktorego dane ulegly zmianie (w programie nie jest to potrzebne)

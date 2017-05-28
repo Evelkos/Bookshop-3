@@ -9,7 +9,7 @@ class Warehouse: public Building
   std::vector<Bookn> bo;
 
   public:
-  Warehouse(std::string n, std::string l, int a): Building(n, l, a){}
+  Warehouse(std::string n, std::string, int);
   virtual void show();                  //wyswietla liste ksiazek znajdujacych sie w magazynie
   virtual void reset();                 //"resetuje" liczbe ksiazek w magazynie (ustawia wszystkie na okreslona liczbe)
   void add(int, int, Book*);            //dodaje nowa (juz utworzona) ksiazke do magazynu

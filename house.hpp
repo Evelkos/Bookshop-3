@@ -21,7 +21,7 @@ class House: public Building   //dom, w ktorym mieszka jedna rodzina
       os<<h.inhab[i].get_name()<<" "<<h.inhab[i].get_surname()<<" "<<h.inhab[i].get_money()<<std::endl;
     return os;
   }
-  void add_b(Book *bn, int pos);
+  void add(Book *bn, int pos);
   void virtual show();
   void virtual reset();
 };
@@ -41,13 +41,10 @@ void House<Per>::reset()  {  shelf.clear();  }
 
 //wstawianie nowo zakupionych ksiazek na polke
 template<typename Per>
-void House<Per>::add_b(Book *bn, int pos)
+void House<Per>::add(Book *bn, int pos)
 {
   if(shelf.size() < shelf.max_size() && area > shelf.size()/factor)
     shelf.insert(shelf.begin()+pos, 1, bn);
 }
-
-template<typecname Per>
-void
 
 #endif // house_h

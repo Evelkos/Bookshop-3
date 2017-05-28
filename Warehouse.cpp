@@ -1,6 +1,7 @@
 #include "warehouse.hpp"
 #include "functions.hpp"
 
+Warehouse::Warehouse(std::string n, std::string l, int a): Building(n, l, a){}
 
 std::ostream& operator << (std::ostream &os, Warehouse &w)
 {

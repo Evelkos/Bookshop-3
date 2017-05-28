@@ -173,7 +173,3 @@ void new_sn(std::vector<std::string*> &names)
   w = new std::string(word);
   names.push_back(w);
 }
-
-void new_cust()
-
-Person

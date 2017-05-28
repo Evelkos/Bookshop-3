@@ -1,6 +1,5 @@
 #include <iostream>
 #include "bookshop.hpp"
-#include "book.hpp"
 #include "functions.hpp"
 using namespace std;
 
@@ -17,8 +16,8 @@ int main()
   House<Customer> h;
 
   data(books, names, surnames); //wczytywanie danych z pliku tekstowego data.txt do tablic
-//  mag.add_all(10, books);       //dodawanie do magazynu wszystkich (w zalozeniu) ksiazek
-//  mag.show();
+  mag.add_all(10, books);       //dodawanie do magazynu wszystkich (w zalozeniu) ksiazek
+  mag.show();
   h.add(books[0], 0);
   h.add(books[1], 1);
   h.show();
