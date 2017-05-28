@@ -61,3 +61,5 @@ void Warehouse::add_all(int n, std::vector<Book*> &books)
       break;
   }
 }
+
+void Warehouse::delete_b(int n) {  bo.erase(bo.begin()+n);  }

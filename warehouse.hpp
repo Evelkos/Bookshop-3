@@ -15,6 +15,7 @@ class Warehouse: public Building
   virtual void reset();                 //"resetuje" liczbe ksiazek w magazynie (ustawia wszystkie na okreslona liczbe)
   void add(int, int, Book*);            //dodaje nowa (juz utworzona) ksiazke do magazynu
   void add_all(int, std::vector<Book*>&);//dodaje do magazynu wszystkie ksiazki z wektora ksiazek
+  void delete_b(int n);
 
   Warehouse(std::string n = "Magazyn", std::string l = "Miasto", unsigned int a = 100): Building(n, l, a) {};
   friend std::ostream& operator << (std::ostream&, Warehouse&);

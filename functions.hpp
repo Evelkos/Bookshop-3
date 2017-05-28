@@ -7,6 +7,8 @@
 #include <fstream>
 #include "book.hpp"
 
+const unsigned int MAX_L = 30;
+
 char* load(char*, int);
 double load_n();
 void data(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);

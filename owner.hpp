@@ -2,24 +2,24 @@
 #define owner_hpp
 
 #include "bookshop.hpp"
+#include "person.hpp"
+#include "functions.hpp"
 
 class Owner: public Person
 {
- /* List<Bookshop> *firstBs;
+  std::vector<Bookshop*> bs;
+
   public:
-
-  Owner(string = "-", string = "-", double = 0);
+  Owner(std::string = "Wlasciciel", std::string = "Ksiegarni", double = 0.0);
   ~Owner();
-  List<Bookshop>* get_firstBs() {return firstBs;}
-
-  void set_firstBs(List<Bookshop> *fBs) {firstBs = fBs;}
 
   void show_bs();
+  void add_bs();
+  void add_bs(char*, char*, unsigned, double);
   void show_order(Bookshop*);
-  void new_bs();
   void delete_bs(int);
   void accept(Bookshop*);
-  void get_cash(Bookshop*);*/
+  void get_cash(Bookshop*);
 };
 
 #endif // owner_hpp

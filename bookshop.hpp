@@ -9,6 +9,7 @@ extern double load_n();
 
 class Bookshop : public Warehouse
 {
+  public:
   double budget;
   std::vector<Bookn> ord;               //zamowienie
   std::vector<House<Employee>*> emp;    //wektor wskaznikow na domy pracownikow

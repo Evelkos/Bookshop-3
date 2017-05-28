@@ -187,7 +187,7 @@ void Bookshop::order_e()
 void Bookshop::delete_book(int n){ bo.erase(bo.begin()+n); }
 
 //usuwa klienta, ktorego numer zostal dany
-void Bookshop::delete_customers(int n){ cust.erase(cust.begin()+n); }
+void Bookshop::delete_customers(int n)  { House<Customer> *b; b = cust[n-1]; cust.erase(cust.begin()+n-1); delete b;}
 
 //usuwa pracownika, ktorego numer zostal dany
-void Bookshop::delete_employee(int n){ emp.erase(emp.begin()+n); }
+void Bookshop::delete_employee(int n)   { House<Employee> *b; b = emp[n-1];  emp.erase(emp.begin()+n-1); delete b;}

@@ -45,7 +45,10 @@
 		<Unit filename="functions.cpp" />
 		<Unit filename="functions.hpp" />
 		<Unit filename="house.hpp" />
+		<Unit filename="interface.cpp" />
+		<Unit filename="interface.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="owner.cpp" />
 		<Unit filename="owner.hpp" />
 		<Unit filename="person.hpp" />
 		<Unit filename="warehouse.cpp" />

@@ -1,7 +1,5 @@
 #include "functions.hpp"
 
-const unsigned int MAX_L = 30;
-
 //wczytuje ciag wyrazow, dlugosc ciagu ograniczona
 char* load(char *words, int length){
 	char *result;
