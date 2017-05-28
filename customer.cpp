@@ -1,4 +1,6 @@
 #include "customer.hpp"
+#include <cstdlib>
+#include <ctime>
 
 Customer::Customer(std::string n, std::string s, double m): Person(n, s, m)
 {
@@ -24,6 +26,8 @@ Customer& Customer::operator = (Customer &c2)
   this->money = c2.get_money();
   return *this;
 }
+
+
 /*
 void Customer::buy(Book &bo)
 {

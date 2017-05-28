@@ -19,4 +19,6 @@ class Customer : public Person
   Customer& operator= (Customer &c2);
 };
 
+Customer* new_cust(std::vector<std::string*>&, std::vector<std::string*>&);
+
 #endif

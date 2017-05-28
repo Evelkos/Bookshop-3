@@ -2,22 +2,24 @@
 1495831686 source:/home/ewelina/Pulpit/Projekt3/book.cpp
 	"book.hpp"
 
-1495895575 /home/ewelina/Pulpit/Projekt3/book.hpp
+1495987729 /home/ewelina/Pulpit/Projekt3/book.hpp
 	"debug_head.hpp"
 	<iostream>
 	<cstdlib>
 
 1493845109 /home/ewelina/Pulpit/Projekt3/debug_head.hpp
 
-1495982162 source:/home/ewelina/Pulpit/Projekt3/main.cpp
+1495986776 source:/home/ewelina/Pulpit/Projekt3/main.cpp
 	<iostream>
 	"bookshop.hpp"
 	"functions.hpp"
 
-1495982377 source:/home/ewelina/Pulpit/Projekt3/customer.cpp
+1495986164 source:/home/ewelina/Pulpit/Projekt3/customer.cpp
 	"customer.hpp"
+	<cstdlib>
+	<ctime>
 
-1495981131 /home/ewelina/Pulpit/Projekt3/customer.hpp
+1495984091 /home/ewelina/Pulpit/Projekt3/customer.hpp
 	<vector>
 	"book.hpp"
 	"person.hpp"
@@ -27,7 +29,7 @@
 1495891611 source:/home/ewelina/Pulpit/Projekt3/employee.cpp
 	"employee.hpp"
 
-1495891635 /home/ewelina/Pulpit/Projekt3/employee.hpp
+1495988033 /home/ewelina/Pulpit/Projekt3/employee.hpp
 	"book.hpp"
 	"person.hpp"
 
@@ -35,24 +37,26 @@
 	"bookshop.hpp"
 	<ctime>
 
-1495968051 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
+1495988033 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
 	"house.hpp"
 	"warehouse.hpp"
 
 1495982397 /home/ewelina/Pulpit/Projekt3/warehouse.hpp
 	"building.hpp"
 
-1495981786 /home/ewelina/Pulpit/Projekt3/building.hpp
+1495988634 /home/ewelina/Pulpit/Projekt3/building.hpp
 	<vector>
 	"book.hpp"
 
-1495982428 /home/ewelina/Pulpit/Projekt3/house.hpp
+1495988792 /home/ewelina/Pulpit/Projekt3/house.hpp
 	"building.hpp"
 	"customer.hpp"
 	"employee.hpp"
 	<vector>
+	<cstdlib>
+	<ctime>
 
-1495981205 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
+1495985260 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
 	"functions.hpp"
 
 1495982408 source:/home/ewelina/Pulpit/Projekt3/Warehouse.cpp
@@ -61,10 +65,14 @@
 
 1495894452 source:/home/ewelina/Pulpit/Projekt3/house.cpp
 
-1495964046 /home/ewelina/Pulpit/Projekt3/functions.hpp
+1495983863 /home/ewelina/Pulpit/Projekt3/functions.hpp
 	<iostream>
 	<cstring>
 	<vector>
 	<fstream>
 	"book.hpp"
+
+1495982408 source:/home/ewelina/Pulpit/Projekt3/warehouse.cpp
+	"warehouse.hpp"
+	"functions.hpp"
 

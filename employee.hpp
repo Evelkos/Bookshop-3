@@ -15,6 +15,4 @@ class Employee: public Person
   Employee& operator= (Employee &e2);
 };
 
-//int show_employee_list(Employee *first);
-
 #endif

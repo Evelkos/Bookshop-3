@@ -147,6 +147,7 @@ void new_book(std::vector<Book*> &books)
   unsigned int n;
 
   nb = new Book();
+  srand(time(NULL));
 
   std::cout<<"TYTUL: ";
   nb->set_name(load(word, MAX_L));
@@ -161,15 +162,4 @@ void new_book(std::vector<Book*> &books)
 
   n = position(books, nb);
   books.insert(books.begin() + n, nb);
-}
-
-//wczytywanie imion lub nazwisk
-void new_sn(std::vector<std::string*> &names)
-{
-  std::string *w;
-  char word[MAX_L];
-
-  load(word, MAX_L);
-  w = new std::string(word);
-  names.push_back(w);
 }

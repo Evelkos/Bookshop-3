@@ -11,8 +11,8 @@ class Bookshop : public Warehouse
 {
   double budget;
   std::vector<Bookn> ord;               //zamowienie
-  std::vector<House<Employee>> emp;     //wektor domow pracownikow
-  std::vector<House<Customer>> cust;    //wektor domow klientow
+  std::vector<House<Employee>*> emp;     //wektor wskaznikow na domy pracownikow
+  std::vector<House<Customer>*> cust;    //wektor domow klientow
 
   protected:
   static int numBookshops;              //liczba ksiegarni ogolem

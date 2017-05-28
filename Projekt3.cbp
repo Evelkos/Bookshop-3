@@ -32,7 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Warehouse.cpp" />
 		<Unit filename="book.cpp" />
 		<Unit filename="book.hpp" />
 		<Unit filename="bookshop.cpp" />
@@ -45,11 +44,11 @@
 		<Unit filename="employee.hpp" />
 		<Unit filename="functions.cpp" />
 		<Unit filename="functions.hpp" />
-		<Unit filename="house.cpp" />
 		<Unit filename="house.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="owner.hpp" />
 		<Unit filename="person.hpp" />
+		<Unit filename="warehouse.cpp" />
 		<Unit filename="warehouse.hpp" />
 		<Extensions>
 			<envvars />

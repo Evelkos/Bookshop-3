@@ -5,26 +5,44 @@
 #include "customer.hpp"
 #include "employee.hpp"
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 
 template<typename Per>          //osoba
-class House: public Building   //dom, w ktorym mieszka jedna rodzina
+class House: public Building    //dom, w ktorym mieszka jedna rodzina
 {
-  public:
-  std::vector<Per> inhab;       //mieszkancy domu
+  std::vector<Per*> inhab;       //mieszkancy domu
   std::vector<Book*> shelf;     //polka na ksiazki
 
+  public:
   House<Per>(std::string n = "Dom", std::string l = "Miasto", unsigned int a = 100): Building(n, l, a) {};
-  friend std::ostream& operator << (std::ostream& os, House<Per>& h)     //wyswietla wszystkich mieszkancow domu
-  {
-    unsigned int i;
-    for(i = 0 ; i < (h.inhab).size() ; i++)
-      os<<h.inhab[i].get_name()<<" "<<h.inhab[i].get_surname()<<" "<<h.inhab[i].get_money()<<std::endl;
-    return os;
-  }
+  ~House();
   void add(Book *bn, int pos);
+  void add_inhab(unsigned int, std::vector<std::string*>&, std::vector<std::string*>&);
   void virtual show();
   void virtual reset();
+
+
+  friend std::ostream& operator << (std::ostream& os, House<Per>& h)     //wyswietla wszystkich mieszkancow domu
+  {
+    for(unsigned i = 0 ; i < h.inhab.size() ; i++) os<<h.inhab[i]->get_name()<<" "<<h.inhab[i]->get_surname()<<" "<<h.inhab[i]->get_money()<<std::endl;
+    return os;
+  }
 };
+
+template<typename Per>
+House<Per>::~House()
+{
+  Per *p;
+  shelf.clear();
+  while(!inhab.empty())
+  {
+    p = inhab[inhab.size()-1];
+    inhab.pop_back();
+    delete p;
+  }
+  D(std::cout<<"Usuwamy dom"<<std::endl;)
+}
 
 //wirtualna funkcja show - wyswietlanie ksiazek znajdujacych sie na polce
 template<typename Per>
@@ -45,6 +63,36 @@ void House<Per>::add(Book *bn, int pos)
 {
   if(shelf.size() < shelf.max_size() && area > shelf.size()/factor)
     shelf.insert(shelf.begin()+pos, 1, bn);
+}
+
+template<typename Per>
+void House<Per>::add_inhab(unsigned int n, std::vector<std::string*> &names, std::vector<std::string*> &surnames)
+{
+  unsigned int i;
+  Per *pe;
+  std::string sur, nam;
+
+  if(!surnames.empty())
+  {
+    i = rand()%(surnames.size());
+    sur = *surnames[i];
+  }
+  else      sur = "Kowalski";
+
+  srand(time(NULL));
+  while(n > 0 && area/factor1 > this->inhab.size())
+  {
+    if(!names.empty())
+    {
+      i = rand()%(names.size());
+      nam = *names[i];
+    }
+    else    nam = "Jan";
+    i = rand()%20000+5000;
+    pe = new Per(nam, sur, i/100);
+    this->inhab.push_back(pe);
+    n--;
+  }
 }
 
 #endif // house_h

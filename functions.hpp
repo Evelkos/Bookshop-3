@@ -39,5 +39,4 @@ int position(std::vector<T*>& vec, T *ob)
   return i;
 }
 
-
 #endif // functions_hpp

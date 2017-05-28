@@ -5,6 +5,7 @@
 #include "book.hpp"
 
 const unsigned int factor = 5; //wspolczynnik: na ilu metrach kwadratowych miesci sie jeden rodzaj ksiazek
+const unsigned int factor1 = 20; //wspolczynnik: na ilu metrach kwadratowych moze minimalnie mieszkac jeden mieszkaniec
 
 class Building
 {
