@@ -9,7 +9,7 @@
 
 1493845109 /home/ewelina/Pulpit/Projekt3/debug_head.hpp
 
-1495901669 source:/home/ewelina/Pulpit/Projekt3/main.cpp
+1495969844 source:/home/ewelina/Pulpit/Projekt3/main.cpp
 	<iostream>
 	"bookshop.hpp"
 	"book.hpp"
@@ -32,36 +32,37 @@
 	"book.hpp"
 	"person.hpp"
 
-1495894664 source:/home/ewelina/Pulpit/Projekt3/bookshop.cpp
+1495967906 source:/home/ewelina/Pulpit/Projekt3/bookshop.cpp
 	"bookshop.hpp"
 	<ctime>
 
-1495891912 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
+1495968051 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
 	"house.hpp"
 	"warehouse.hpp"
 
-1495892029 /home/ewelina/Pulpit/Projekt3/warehouse.hpp
+1495967281 /home/ewelina/Pulpit/Projekt3/warehouse.hpp
 	"building.hpp"
 
-1495891862 /home/ewelina/Pulpit/Projekt3/building.hpp
+1495969826 /home/ewelina/Pulpit/Projekt3/building.hpp
 	<vector>
 	"book.hpp"
 
-1495894725 /home/ewelina/Pulpit/Projekt3/house.hpp
+1495969993 /home/ewelina/Pulpit/Projekt3/house.hpp
+	"building.hpp"
 	"customer.hpp"
 	"employee.hpp"
 	<vector>
 
-1495901635 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
+1495966902 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
 	"functions.hpp"
 
-1495892029 source:/home/ewelina/Pulpit/Projekt3/Warehouse.cpp
+1495969826 source:/home/ewelina/Pulpit/Projekt3/Warehouse.cpp
 	"warehouse.hpp"
+	"functions.hpp"
 
 1495894452 source:/home/ewelina/Pulpit/Projekt3/house.cpp
 
-1495901274 /home/ewelina/Pulpit/Projekt3/functions.hpp
-	<vector>
+1495964046 /home/ewelina/Pulpit/Projekt3/functions.hpp
 	<iostream>
 	<cstring>
 	<vector>

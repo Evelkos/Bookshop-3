@@ -3,10 +3,13 @@ Naprawa Samochodow Osobowych Fiat126p
 Zbigniew Klimecki
 WydA
 #
-Zwiadowcy
-John Flanagan
-WydA
-
+Moja
+Mala
+Pulapka
+#
+Adrenalina
+Moze
+Zadziala
 %
 Jan
 Karol
@@ -14,4 +17,5 @@ Karol
 
 *
 Pisarek
+Zalewski
 *

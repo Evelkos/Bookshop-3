@@ -7,7 +7,7 @@
 
 class Customer : public Person
 {
-  std::vector<Book*> coll;  //wektor wskazan na ksiazki (jest jedna lista) znajdujace sie w posiadaniu klienta
+  std::vector<Book*> coll;  //wektor wskazan na ksiazki
 
   public:
   Customer(std::string = "-", std::string = "-", double = 0);

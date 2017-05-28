@@ -1,7 +1,6 @@
 #ifndef functions_hpp
 #define functions_hpp
 
-#include <vector>
 #include <iostream>
 #include <cstring>
 #include <vector>
@@ -12,6 +11,7 @@ char* load(char*, int);
 double load_n();
 void data(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
 void delete_data(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
+void new_book(std::vector<Book*>&);
 
 template<typename T>
 void show_vec(std::vector<T*> &vec)
@@ -24,10 +24,9 @@ void show_vec(std::vector<T*> &vec)
 template<typename T>
 int position(std::vector<T*>& vec, T *ob)
 {
-  unsigned int i = 1;
-  if(vec.empty() || *ob < *(vec[i]) || *ob == *(vec[i])){
-    i = 1;
-    std::cout<<"Tu dziala - pos"<<std::endl;}
+  unsigned int i = 0;
+  if(vec.empty() || *ob < *(vec[i]) || *ob == *(vec[i]))
+    i = 0;
   else
   {
     while(i < vec.size())
@@ -37,7 +36,7 @@ int position(std::vector<T*>& vec, T *ob)
       i++;
     }
   }
-  return i-1;
+  return i;
 }
 
 

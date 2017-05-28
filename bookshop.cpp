@@ -68,7 +68,7 @@ void Bookshop::show_employees()
 }
 
 //wyswietla aktywne zamowienie
-void Bookshop::show_order()
+void Bookshop::show_ord()
 {
   unsigned int i;
   if(ord.empty())

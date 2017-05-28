@@ -1,5 +1,7 @@
 #include "functions.hpp"
 
+const unsigned int MAX_L = 30;
+
 //wczytuje ciag wyrazow, dlugosc ciagu ograniczona
 char* load(char *words, int length){
 	char *result;
@@ -69,33 +71,22 @@ void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vect
     while(!file.eof())
     {
       getline(file, line);
-      if(line[0] == '#' && books.size() < books.max_size())      //wczytujemy ksiazke
+      if(line[0] == '#' && books.size() < books.max_size())     //wczytujemy ksiazke
       {
-
         bo = new Book();
-        getline(file, line);
-        bo->set_name(line);
-        getline(file, line);
-        bo->set_author(line);
-        getline(file, line);
-        bo->set_publisher(line);
-        y = rand()%50+1967;
-        bo->set_year(y);
-        pag = rand()%400+154;
-        bo->set_pages(pag);
-        n = position(books, bo);
-        std::cout<<"n = "<<n<<std::endl;
-        std::cout<<"Tu dziala - data"<<std::endl;
-        if(books.empty())
-          books.push_back(bo);
-        else if(books.size() < books.max_size())
-          books.insert(books.begin()+n, bo);
+        getline(file, line);        bo->set_name(line);
+        getline(file, line);        bo->set_author(line);
+        getline(file, line);        bo->set_publisher(line);
+        y = rand()%50+1967;         bo->set_year(y);
+        pag = rand()%400+154;       bo->set_pages(pag);
 
+        n = position(books, bo);
+        if(books.size() < books.max_size())
+          books.insert(books.begin() + n, bo);
       }
-      else if(line[0] == '%')
+      else if(line[0] == '%' )                                  //wczytujemy imie
       {
         getline(file, line);
-        std::cout<<"Odczytany znak: "<<line[0]<<std::endl;
         while(line[0] != '%')
         {
           l = new std::string(line);
@@ -104,7 +95,7 @@ void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vect
           getline(file, line);
         }
       }
-      else if(line[0] == '*')
+      else if(line[0] == '*')                                   //wczytujemy nazwisko
       {
         getline(file, line);
         while(line[0] != '*')
@@ -118,6 +109,7 @@ void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vect
       else
         continue;
     }
+    file.close();
   }
 }
 
@@ -125,25 +117,63 @@ void delete_data(std::vector<Book*> &books, std::vector<std::string*> &names, st
 {
   Book *b;
   std::string *s;
+  std::cout<<std::endl<<"Czyszczenie danych"<<std::endl;
   while(!books.empty())
   {
     b = books[books.size()-1];
     books.pop_back();
     delete b;
-    std::cout<<"a"<<std::endl;
   }
   while(!names.empty())
   {
     s = names[names.size()-1];
     names.pop_back();
     delete s;
-    std::cout<<"b"<<std::endl;
+    D(std::cout<<"Usuwanie imion"<<std::endl;);
   }
   while(!surnames.empty())
   {
     s = surnames[surnames.size()-1];
     surnames.pop_back();
     delete s;
-    std::cout<<"c"<<std::endl;
+    D(std::cout<<"Usuwanie nazwisk"<<std::endl;);
   }
 }
+
+void new_book(std::vector<Book*> &books)
+{
+  Book *nb;
+  char word[MAX_L];
+  unsigned int n;
+
+  nb = new Book();
+
+  std::cout<<"TYTUL: ";
+  nb->set_name(load(word, MAX_L));
+  std::cout<<"AUTOR: ";
+  nb->set_author(load(word, MAX_L));
+  std::cout<<"WYDAWCA: ";
+  nb->set_publisher(load(word, MAX_L));
+  n = rand()%50+1967;
+  nb->set_year(n);
+  n = rand()%400+154;
+  nb->set_pages(n);
+
+  n = position(books, nb);
+  books.insert(books.begin() + n, nb);
+}
+
+//wczytywanie imion lub nazwisk
+void new_sn(std::vector<std::string*> &names)
+{
+  std::string *w;
+  char word[MAX_L];
+
+  load(word, MAX_L);
+  w = new std::string(word);
+  names.push_back(w);
+}
+
+void new_cust()
+
+Person
