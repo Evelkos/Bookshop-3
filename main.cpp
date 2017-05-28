@@ -13,19 +13,18 @@ int main()
   vector<string*> names;        //tablica imion do tworzenia klientow/pracownikow
   vector<string*> surnames;     //tablica nazwisk do tworzenia klientow/pracownikow
   Warehouse mag;                //magazyn - wspolny dla wszystkich ksiegarni
-  House<Customer> h;
-
-
+//  House<Customer> h;
+  Bookshop b("Ksiegarnia", "Ciechanow", 100, 999);
   data(books, names, surnames); //wczytywanie danych z pliku tekstowego data.txt do tablic
+  cout<<endl<<b<<endl;
 
-//  mag.add_all(10, books);       //dodawanie do magazynu wszystkich (w zalozeniu) ksiazek
-//  mag.show();
-  h.add(books[0], 0);
-  h.add(books[1], 1);
-  h.show();
+  b.add(10, 0, books[0]);
+  b.add(10, 1, books[1]);
+  b.show();
 
-  h.add_inhab(3, names, surnames);
-  cout<<endl<<h<<endl;
+  b.add_customers(2, "Dom", "Ciechanow", 100, names, surnames);
+  cout<<endl<<b<<endl;
+  b.show_customers();
 
   delete_data(books, names, surnames);  //usuwanie tablic
   cout<<endl;

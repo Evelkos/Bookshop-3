@@ -15,13 +15,12 @@ class House: public Building    //dom, w ktorym mieszka jedna rodzina
   std::vector<Book*> shelf;     //polka na ksiazki
 
   public:
-  House<Per>(std::string n = "Dom", std::string l = "Miasto", unsigned int a = 100): Building(n, l, a) {};
-  ~House();
+  House<Per>(std::string = "Dom", std::string = "Miasto", unsigned int = 100);
+  ~House<Per>();
   void add(Book *bn, int pos);
   void add_inhab(unsigned int, std::vector<std::string*>&, std::vector<std::string*>&);
   void virtual show();
   void virtual reset();
-
 
   friend std::ostream& operator << (std::ostream& os, House<Per>& h)     //wyswietla wszystkich mieszkancow domu
   {
@@ -29,6 +28,12 @@ class House: public Building    //dom, w ktorym mieszka jedna rodzina
     return os;
   }
 };
+
+template<typename Per>
+House<Per>::House(std::string n, std::string l, unsigned int a): Building(n, l, a)
+{
+  D(std::cout<<"Tworze dom"<<std::endl;)
+}
 
 template<typename Per>
 House<Per>::~House()

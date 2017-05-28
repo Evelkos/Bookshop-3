@@ -9,6 +9,11 @@ std::ostream& operator << (std::ostream &os, Warehouse &w)
   return os;
 }
 
+Warehouse::~Warehouse()
+{
+  D(std::cout<<"Usuwam magazyn"<<std::endl;)
+}
+
 void Warehouse::show()
 {
   unsigned int i;
@@ -36,6 +41,8 @@ void Warehouse::add(int n, int pos, Book *bn)
 
   if(bo.size() < bo.max_size() && area > bo.size()/factor)
     bo.insert(bo.begin()+pos, 1, boo);
+  else
+    std::cout<<"Nie mozna juz dodac zadnej ksiazki"<<std::endl;
 }
 
 //dodawanie ksiazek do magazynu na poczatku dzialania programu - dodaje wszystkie ksiazki

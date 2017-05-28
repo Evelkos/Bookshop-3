@@ -2,7 +2,7 @@
 #define DEBUG_HEAD_HPP_INCLUDED
 
 #ifndef DEBUG
-    #define DEBUG 0
+    #define DEBUG 1
 #endif // DEBUG
 
 #if DEBUG
