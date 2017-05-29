@@ -171,17 +171,22 @@ void Bookshop::payment()
   }
 }
 
+//UWAGA TRZEBA WZIAC POD UWAGE POWIEKSZONE N!!!
+
 //usuwa ksiazke o zadanym numerze, zwraca do budzetu 30% ceny hurtowej egzemplarzy
 void Bookshop::delete_book(unsigned n){ bo.erase(bo.begin()+n); }
+
+//wyswietla liste ksiazek, pobiera numer, usuwa ksiazke o zadanym numerze, zwraca czesc kosztow
+void Bookshop::delete_book() {unsigned n; this->show(); n = load_n(); n--; n%=bo.size(); (*this)+(bo[n].b->get_price()*(bo[n].n)); this->delete_book(n);}
 
 //usuwa klienta, ktorego numer zostal dany
 void Bookshop::delete_customers(unsigned n)  {n%=cust.size(); House<Customer> *b; b = cust[n-1]; cust.erase(cust.begin()+n-1); delete b;}
 
 //wyswietla liste klientow, pobiera numer i usuwa klientow o zadanym numerze
-void Bookshop::delete_customers(){unsigned n; this->show_customers(); std::cout<<"Usun: "; n = load_n(); n%=cust.size(); this->delete_customers(n);}
+void Bookshop::delete_customers(){unsigned n; this->show_customers(); std::cout<<"Usun: "; n = load_n(); n--; n%=cust.size(); this->delete_customers(n);}
 
 //usuwa pracownika, ktorego numer zostal dany
 void Bookshop::delete_employee(unsigned n)   {n%=emp.size(); House<Employee> *b; b = emp[n-1];  emp.erase(emp.begin()+n-1); delete b;}
 
 //wyswietla liste pracownikow, pobiera numer i usuwa pracownika o zadanym numerze
-void Bookshop::delete_employee() {unsigned n; this->show_employees(); std::cout<<"Usun: "; n = load_n(); n%=emp.size(); this->delete_employee(n);}
+void Bookshop::delete_employee() {unsigned n; this->show_employees(); std::cout<<"Usun: "; n = load_n(); n--; n%=emp.size(); this->delete_employee(n);}

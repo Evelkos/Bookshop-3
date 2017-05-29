@@ -29,6 +29,7 @@ class Bookshop : public Warehouse
   void add_employee(std::string, std::string, unsigned, std::vector<std::string*>&, std::vector<std::string*>&);
   void add_customers(unsigned, std::string, std::string, unsigned, std::vector<std::string*>&, std::vector<std::string*>&);
   void delete_book(unsigned n);
+  void delete_book();
   void delete_employee(unsigned n);
   void delete_employee();
   void delete_customers(unsigned n);
@@ -38,7 +39,6 @@ class Bookshop : public Warehouse
   void show_customers();
   void show_employees();
   void show_ord();
-  int show_books_c();
 
   friend std::ostream& operator<< (std::ostream&, Bookshop*);
   Bookshop& operator= (Bookshop &b2);

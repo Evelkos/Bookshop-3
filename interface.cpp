@@ -17,7 +17,7 @@ void main_menu(Owner &ow, std::vector<std::string*>&names, std::vector<std::stri
     load(choice1, 2);
     switch (choice1[0])
     {
-      case '1':     ow_menu1(ow, names, surnames);                                            break;
+      case '1':     ow_menu1(ow, names, surnames);                                  break;
       case '2': //pracownik
         break;
       case '3': //klient
@@ -40,7 +40,7 @@ void ow_menu1(Owner &ow, std::vector<std::string*>&names, std::vector<std::strin
   choice1[0] = '0';
 
   while(choice1[0] != '5'){
-    std::cout<<std::endl<<"Wlasciciel: ";
+    std::cout<<std::endl<<"Wlasciciel:"<<std::endl;
     std::cout<<"1. wyswietl liste ksiegarni"<<std::endl;
     std::cout<<"2. stworz nowa ksiegarnie"<<std::endl;
     std::cout<<"3. usun ksiegarnie"<<std::endl;
@@ -49,12 +49,12 @@ void ow_menu1(Owner &ow, std::vector<std::string*>&names, std::vector<std::strin
     load(choice1, 2);
     switch(choice1[0])
     {
-      case '1':     ow.show_bs();                                           break;
-      case '2':     ow.add_bs();                                            break;
-      case '3':     ow.delete_bs();                                         break;
-      case '4':     ow_menu2(ow, names, surnames);
-      case '5':                                                             break;
-      default:      std::cout<<"Nie ma takiej mozliwosci"<<std::endl;       break;
+      case '1':     ow.show_bs();                                                   break;
+      case '2':     ow.add_bs();                                                    break;
+      case '3':     ow.delete_bs();                                                 break;
+      case '4':     ow_menu2(ow, names, surnames);                                  break;
+      case '5':                                                                     break;
+      default:      std::cout<<"Nie ma takiej mozliwosci"<<std::endl;               break;
     }
   }
 }
@@ -81,14 +81,72 @@ void ow_menu2(Owner &ow, std::vector<std::string*>&names, std::vector<std::strin
 
     switch(choice1[0])
     {
-      case '1':     bs->show_employees();                                       break;
-      case '2':     bs->add_employee("D", bs->get_loc(), 20, names, surnames);  break;
-      case '3':     bs->delete_employee();                                      break;
-      case '4':     bs->payment();                                              break;
-      case '5':     ow.get_cash(bs);                                            break;
-      case '6':     if(i < ow.get_size()) i++; else i = 0;                      break;
-      case '7':                                                                 break;
-      default:      std::cout<<"Nie ma takiej mozliwosci"<<std::endl;           break;
+      case '1':     bs->show_employees();                                           break;
+      case '2':     bs->add_employee("D", bs->get_loc(), 20, names, surnames);      break;
+      case '3':     bs->delete_employee();                                          break;
+      case '4':     bs->payment();                                                  break;
+      case '5':     ow.get_cash(bs);                                                break;
+      case '6':     if(i < ow.get_size()) i++; else i = 0;                          break;
+      case '7':                                                                     break;
+      default:      std::cout<<"Nie ma takiej mozliwosci"<<std::endl;               break;
     }
   }
+}
+
+//menu pracownika - ogolne
+void em_menu1(Owner &ow)
+{
+  char choice[2];
+  unsigned i = 0;
+  choice[0] = '0';
+
+  while(choice[0] != '3')
+  {
+    std::cout<<"PRACOWNIK"<<std::endl;
+    std::cout<<"1. Wybierz pracownika"<<std::endl;
+    std::cout<<"2. Przejdz do nastepnej ksiegarni"<<std::endl;
+    std::cout<<"3. Wyjscie"<<std::endl;
+    load(choice, 2);
+
+    switch(choice[0])
+    {
+      case '1':     std::cout<<"JESZCZE NIC TU NIE MA"<<std::endl;                  break;
+      case '2':     if(i < ow.get_size()) i++; else i = 0;                          break;
+      case '3':                                                                     break;
+      default:      std::cout<<"Nie ma takiej mozliwosci."<<std::endl;              break;
+    }
+  }
+}
+
+//menu pracownika - konkretny pracownik
+void em_menu2(Employee *em, Bookshop *bs)
+{
+  int number;
+  char choice[2];
+  choice[0] = '0';
+  if(em != NULL  && bs != NULL)
+  {
+    while(choice[0] != '6'){
+      std::cout<<std::endl<<"Pracownik "<<em->get_name()<<" "<<em->get_surname()<<std::endl;
+      std::cout<<"\"Hmm... co by tu zrobic?\""<<std::endl;
+      std::cout<<"1. Pokaz liste wszystkich ksiazek"<<std::endl;
+      std::cout<<"2. Dopisz ksiazke do zamowienia"<<std::endl;
+      std::cout<<"3. Zloz zamowienie"<<std::endl;
+      std::cout<<"4. Wyswietl aktualne zamowienie"<<std::endl;
+      std::cout<<"5. Wycofaj ksiazke z ksiegarni"<<std::endl;
+      std::cout<<"6. Stan za kasa i czekaj na klientow"<<std::endl;
+      load(choice, 2);
+      switch(choice[0])
+      {
+        case '1':       bs->show();                                                     break;
+        case '2':       std::cout<<"JESZCZE NIC TU NIE MA"<<std::endl;                  break;
+        case '3':       std::cout<<"JESZCZE NIC TU NIE MA"<<std::endl;                  break;
+        case '4':       bs->show_ord();                                                 break;
+        case '5':           break;
+        case '6':           break;
+        default:        std::cout<<"Nie ma takiej mozliwosci."<<std::endl<<std::endl;   break;
+      }
+    }
+  }
+  else std::cout<<"Blad: w tej ksiegarni nie ma jeszcze zadnych pracownikow"<<std::endl;
 }

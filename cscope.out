@@ -1,0 +1,7959 @@
+cscope 15 $HOME/Pulpit/Projekt3               0000037183
+	@/home/ewelina/Pulpit/Projekt3/book.cpp
+
+1 
+	~"book.hµ
+"
+
+3 
+	gBook
+::
+	$Book
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+a
+, std::¡ršg 
+p
+, 
+´
+, 
+y
+, 
+·g
+): 
+	`Çme
+Ò), 
+	`authÜ
+×), 
+	`publish”
+Õ), 
+	`´iû
+Õr), 
+	`y—r
+(y), 
+	$·ges
+(
+·g
+)
+
+5 
+	`D
+(
+¡d
+::
+cout
+ <<"TwÜzksŸzke"<<¡d::
+’dl
+;)
+
+6 
+	}
+}
+
+9 
+	gBook
+::~
+	$Book
+()
+
+11 
+	`D
+(
+¡d
+::
+cout
+<<"Usuwamy ksŸzke!"<<¡d::
+’dl
+;)
+
+12 
+	}
+}
+
+15 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (
+¡d
+::o¡»am &
+os
+, 
+	gBook
+ &
+	gb
+)
+
+17 
+	gos
+<<
+	gb
+.
+	gÇme
+<<" "<<b.
+	gauthÜ
+<<" "<<b.
+	gpublish”
+<<" "<<b.
+	g´iû
+<<" "<<b.
+	gy—r
+<<" "<<b.
+	g·ges
+<<" "<<
+	g¡d
+::
+’dl
+;
+
+18  
+	gos
+;
+
+22 
+	g¡d
+::
+i¡»am
+& 
+Ý”©Ü
+ >> (
+¡d
+::i¡»am &
+is
+, 
+	gBook
+ &
+	gb
+)
+
+24 
+	gis
+>>
+	gb
+.
+	gÇme
+>>b.
+	gauthÜ
+>>b.
+	gpublish”
+>>b.
+	g´iû
+>>b.
+	gy—r
+>>b.
+	g·ges
+;
+
+25  
+	gis
+;
+
+29 
+	gBook
+& Book::
+Ý”©Ü
+ = (
+Book
+ &
+b2
+)
+
+31 
+this
+->
+Çme
+ = 
+b2
+.
+g‘_Çme
+();
+
+32 
+	gthis
+->
+	gauthÜ
+ = 
+b2
+.
+g‘_authÜ
+();
+
+33 
+	gthis
+->
+	gpublish”
+ = 
+b2
+.
+g‘_publish”
+();
+
+34 
+	gthis
+->
+	g´iû
+ = 
+b2
+.
+g‘_´iû
+();
+
+35 
+	gthis
+->
+	gy—r
+ = 
+b2
+.
+g‘_y—r
+();
+
+36 
+	gthis
+->
+	g·ges
+ = 
+b2
+.
+g‘_·ges
+();
+
+38  *
+	gthis
+;
+
+41 
+boÞ
+ 
+	gBook
+::
+Ý”©Ü
+ > (
+Book
+ &
+b2
+)
+
+43 
+boÞ
+ 
+f
+;
+
+44 if(
+	gthis
+->
+	gÇme
+ > 
+	gb2
+.
+g‘_Çme
+())
+
+45 
+	gf
+ = 
+Œue
+;
+
+48 if(
+	gthis
+->
+	gauthÜ
+ > 
+	gb2
+.
+g‘_authÜ
+())
+
+49 
+	gf
+ = 
+Œue
+;
+
+52 if(
+	gthis
+->
+	gpublish”
+ > 
+	gb2
+.
+g‘_publish”
+())
+
+53 
+	gf
+ = 
+Œue
+;
+
+55 
+	gf
+ = 
+çl£
+;
+
+58  
+	gf
+;
+
+61 
+boÞ
+ 
+	gBook
+::
+Ý”©Ü
+<(
+Book
+ &
+b2
+)
+
+63 
+boÞ
+ 
+f
+;
+
+64 if(
+	gthis
+->
+	gÇme
+ < 
+	gb2
+.
+g‘_Çme
+())
+
+65 
+	gf
+ = 
+Œue
+;
+
+68 if(
+	gthis
+->
+	gauthÜ
+ < 
+	gb2
+.
+g‘_authÜ
+())
+
+69 
+	gf
+ = 
+Œue
+;
+
+72 if(
+	gthis
+->
+	gpublish”
+ < 
+	gb2
+.
+g‘_publish”
+())
+
+73 
+	gf
+ = 
+Œue
+;
+
+75 
+	gf
+ = 
+çl£
+;
+
+78  
+	gf
+;
+
+81 
+boÞ
+ 
+	gBook
+::
+Ý”©Ü
+ =ð(
+Book
+& 
+o
+)
+
+83 
+boÞ
+ 
+i
+ = 
+çl£
+;
+
+84 if(
+	gthis
+->
+g‘_Çme
+(è=ð
+o
+.g‘_Çme(è&& 
+this
+->
+g‘_authÜ
+(è=ðo.g‘_authÜ(è&&his->
+g‘_publish”
+() == o.get_publisher())
+
+85 
+i
+ = 
+Œue
+;
+
+86  
+	gi
+;
+
+90 
+	$quªt™y_´
+(
+y—r
+, 
+·ges
+)
+
+92  
+y—r
+*
+·ges
+/44000;
+
+93 
+	}
+}
+
+	@/home/ewelina/Pulpit/Projekt3/book.hpp
+
+1 #iâdeà
+book_h
+
+
+2 
+	#book_h
+
+
+	)
+
+4 
+	~"debug_h—d.hµ
+"
+
+5 
+	~<io¡»am
+>
+
+6 
+	~<c¡dlib
+>
+
+8 þas 
+	cBook
+
+
+10 
+	m¡d
+::
+¡ršg
+ 
+Çme
+, 
+	mauthÜ
+, 
+	mpublish”
+;
+
+11 
+	m´iû
+;
+
+12 
+	my—r
+, 
+	m·ges
+;
+
+14 
+	mpublic
+:
+
+15 
+Book
+(
+¡d
+::
+¡ršg
+ = "-", std::string = "-", std::string = "-", = 0.0, = 0, = 0);
+
+16 ~
+Book
+();
+
+18 
+	m¡d
+::
+¡ršg
+ 
+	$g‘_Çme
+(è{ 
+Çme
+;}
+
+19 
+¡d
+::
+¡ršg
+ 
+	$g‘_authÜ
+(è{ 
+authÜ
+;
+	}
+}
+
+20 
+	g¡d
+::
+¡ršg
+ 
+	$g‘_publish”
+(è{ 
+publish”
+;
+	}
+}
+
+21 
+	$g‘_´iû
+(è{ 
+´iû
+;
+	}
+}
+
+22 
+	$g‘_y—r
+(è{ 
+y—r
+;
+	}
+}
+
+23 
+	$g‘_·ges
+(è{ 
+·ges
+;
+	}
+}
+
+25 
+	$£t_Çme
+(
+¡d
+::
+¡ršg
+ 
+n
+è{
+Çme
+ =‚;
+	}
+}
+
+26 
+	$£t_authÜ
+(
+¡d
+::
+¡ršg
+ 
+a
+è{
+authÜ
+ =‡;
+	}
+}
+
+27 
+	$£t_publish”
+(
+¡d
+::
+¡ršg
+ 
+p
+è{
+publish”
+ =…;
+	}
+}
+
+28 
+	$£t_´iû
+(
+´
+è{
+´iû
+ =…r;
+	}
+}
+
+29 
+	$£t_y—r
+(
+y
+è{
+y—r
+ = y;
+	}
+}
+
+30 
+	$£t_·ges
+(
+·g
+è{
+·ges
+ =…ag;
+	}
+}
+
+32 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (
+¡d
+::o¡»am &
+os
+, 
+	gBook
+ &
+	gb
+);
+
+33 
+ä›nd
+ 
+	g¡d
+::
+i¡»am
+& 
+Ý”©Ü
+ >> (
+¡d
+::i¡»am&, 
+	gBook
+&);
+
+34 
+	gBook
+& 
+	gÝ”©Ü
+ = (
+Book
+ &
+b2
+);
+
+35 
+boÞ
+ 
+	gÝ”©Ü
+ > (
+	gBook
+ &
+	gb2
+);
+
+36 
+boÞ
+ 
+	gÝ”©Ü
+ < (
+	gBook
+ &
+	gb2
+);
+
+37 
+boÞ
+ 
+	gÝ”©Ü
+ =ð(
+Book
+& 
+o
+);
+
+41 
+	sBookn
+
+
+43 
+Book
+ *
+	mb
+;
+
+44 
+	mn
+;
+
+47 
+quªt™y_´
+(, );
+
+	@/home/ewelina/Pulpit/Projekt3/bookshop.cpp
+
+1 
+	~"bookshÝ.hµ
+"
+
+2 
+	~<ùime
+>
+
+4 
+	gBookshÝ
+::
+numBookshÝs
+ = 0;
+
+7 
+	gBookshÝ
+::
+	$BookshÝ
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+l
+, 
+a
+, 
+b
+): 
+	`W¬ehou£
+Ò,† ,‡), 
+	$budg‘
+(
+b
+)
+
+9 
+numBookshÝs
+++;
+
+10 
+	`D
+(
+¡d
+::
+cout
+ <<"TwÜzksig¬n›"<<¡d::
+’dl
+;)
+
+11 
+	}
+}
+
+14 
+	gBookshÝ
+::~
+	$BookshÝ
+()
+
+16 
+Hou£
+<
+Cu¡om”
+> *
+c
+;
+
+17 
+Hou£
+<
+Em¶oy“
+> *
+e
+;
+
+19 
+numBookshÝs
+--;
+
+21 
+cu¡
+.
+	`size
+() > 0)
+
+23 
+¡d
+::
+cout
+<<"AAAAAAAAAAAA - usuwª› kl›Áow?"<<¡d::
+’dl
+;
+
+24 
+c
+ = 
+cu¡
+[cu¡.
+	`size
+()-1];
+
+25 
+cu¡
+.
+	`pÝ_back
+();
+
+26 
+d–‘e
+ 
+c
+;
+
+28 
+emp
+.
+	`size
+() > 0)
+
+30 
+¡d
+::
+cout
+<<"BBBBBBBBBBB - usuwª›…¿cownikow?"<<¡d::
+’dl
+;
+
+31 
+e
+ = 
+emp
+[emp.
+	`size
+()-1];
+
+32 
+emp
+.
+	`pÝ_back
+();
+
+33 
+d–‘e
+ 
+e
+;
+
+35 
+	`D
+(
+¡d
+::
+cout
+ <<"Niszczksig¬n›"<<¡d::
+’dl
+;)
+
+36 
+	}
+}
+
+39 
+	gBookshÝ
+& BookshÝ::
+Ý”©Ü
+ = (
+BookshÝ
+ &
+b2
+)
+
+41 
+this
+->
+£t_Çme
+(
+b2
+.
+g‘_Çme
+());
+
+42 
+	gthis
+->
+£t_loc
+(
+b2
+.
+g‘_loc
+());
+
+43 
+	gthis
+->
+£t_budg‘
+(
+b2
+.
+g‘_budg‘
+());
+
+44 
+	gthis
+->
+	gÜd
+.
+þ—r
+();
+
+45 
+	gthis
+->
+	gemp
+.
+þ—r
+();
+
+46 
+	gthis
+->
+	gcu¡
+.
+þ—r
+();
+
+47  *
+	gthis
+;
+
+51 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (
+¡d
+::o¡»am &
+os
+, 
+	gBookshÝ
+ &
+	gb
+)
+
+53 
+	gos
+<<
+	gb
+.
+g‘_Çme
+()<<" "<<b.
+g‘_loc
+()<<" "<<b.
+g‘_budg‘
+()<<
+	g¡d
+::
+’dl
+;
+
+54  
+	gos
+;
+
+58 
+	gBookshÝ
+::
+	$show_cu¡om”s
+()
+
+60 
+i
+;
+
+61 if(
+cu¡
+.
+	`em±y
+())
+
+62 
+¡d
+::
+cout
+<<"N› m¨jeszczzadnych kl›Áow"<<¡d::
+’dl
+;
+
+65 
+¡d
+::
+cout
+<<"Li¡¨kl›Áow:"<<¡d::
+’dl
+;
+
+66 
+i
+ = 0 ; i < 
+cu¡
+.
+	`size
+() ; i++)
+
+67 
+¡d
+::
+cout
+<<
+i
++1<<". "<<*(
+cu¡
+[i]);
+
+69 
+	}
+}
+
+72 
+	gBookshÝ
+::
+	$show_em¶oy“s
+()
+
+74 
+i
+;
+
+75 if(
+emp
+.
+	`em±y
+())
+
+76 
+¡d
+::
+cout
+<<"N› m¨jeszczzaznych…¿cownikow"<<¡d::
+’dl
+;
+
+79 
+¡d
+::
+cout
+<<"Li¡¨´acownikow:"<<¡d::
+’dl
+;
+
+80 
+i
+ = 0 ; i < 
+emp
+.
+	`size
+() ; i++)
+
+81 
+¡d
+::
+cout
+<<*(
+emp
+[
+i
+]);
+
+83 
+	}
+}
+
+86 
+	gBookshÝ
+::
+	$show_Üd
+()
+
+88 
+i
+;
+
+89 if(
+Üd
+.
+	`em±y
+())
+
+90 
+¡d
+::
+cout
+<<"ZadÃ zamow›n›‚› je¡‡ktu®n› zlozÚe"<<¡d::
+’dl
+;
+
+93 
+¡d
+::
+cout
+<<"Zamow›n›:"<<¡d::
+’dl
+;
+
+94 
+i
+ = 0 ; i < 
+Üd
+.
+	`size
+() ; i++)
+
+95 
+¡d
+::
+cout
+<<*(
+Üd
+[
+i
+].
+b
+);
+
+97 
+	}
+}
+
+102 
+	gBookshÝ
+::
+add_cu¡om”s
+(
+n
+, 
+¡d
+::
+¡ršg
+ 
+Ç
+, std::¡ršg 
+l
+, 
+a
+, std::
+veùÜ
+<¡d::¡ršg*> &
+Çmes
+, std::veùÜ<¡d::¡ršg*> &
+suºames
+)
+
+104 
+Hou£
+<
+Cu¡om”
+> *
+h
+;
+
+105 if(
+	gcu¡
+.
+size
+(è< cu¡.
+max_size
+())
+
+107 
+	gh
+ = 
+Ãw
+ 
+Hou£
+<
+Cu¡om”
+>(
+Ç
+, 
+	gl
+, 
+	ga
+);
+
+108 
+	gh
+->
+add_šhab
+(
+n
+, 
+Çmes
+, 
+suºames
+);
+
+109 
+	gcu¡
+.
+push_back
+(
+h
+);
+
+114 
+	gBookshÝ
+::
+add_em¶oy“
+(
+¡d
+::
+¡ršg
+ 
+Ç
+, std::¡ršg 
+l
+, 
+a
+, std::
+veùÜ
+<¡d::¡ršg*> &
+Çmes
+, std::veùÜ<¡d::¡ršg*> &
+suºames
+)
+
+116 
+Hou£
+<
+Em¶oy“
+> *
+h
+ = 
+nuÎ±r
+;
+
+117 if(
+	gemp
+.
+size
+(è<ƒmp.
+max_size
+())
+
+119 
+	gh
+ = 
+Ãw
+ 
+Hou£
+<
+Em¶oy“
+>(
+Ç
+, 
+	gl
+, 
+	ga
+);
+
+120 
+	gh
+->
+add_šhab
+(1, 
+Çmes
+, 
+suºames
+);
+
+121 
+	gemp
+.
+push_back
+(
+h
+);
+
+164 
+	gBookshÝ
+::
+	$·ym’t
+()
+
+166 
+i
+;
+
+167 
+i
+ = 0 ; i < 
+emp
+.
+	`size
+() ; i++)
+
+169 (*
+this
+)-this->
+emp
+[
+i
+]->
+	`g‘_šhab
+(0)->
+	`g‘_§Ïry
+();
+
+170 
+emp
+[
+i
+]->
+	`g‘_šhab
+(0)->
+	`£t_mÚey
+Ómp[i]->g‘_šhab(0)->
+	`g‘_mÚey
+()+emp[i]->g‘_šhab(0)->
+	`g‘_§Ïry
+());
+
+172 
+	}
+}
+
+175 
+	gBookshÝ
+::
+	$d–‘e_book
+(
+n
+){ 
+bo
+.
+	`”a£
+(bo.
+	`begš
+()+n); 
+	}
+}
+
+178 
+	gBookshÝ
+::
+	$d–‘e_cu¡om”s
+(
+n
+è{n%=
+cu¡
+.
+	`size
+(); 
+Hou£
+<
+Cu¡om”
+> *
+b
+; b = cu¡[n-1]; cu¡.
+	`”a£
+(cu¡.
+	`begš
+()+n-1); 
+d–‘e
+ b;
+	}
+}
+
+181 
+	gBookshÝ
+::
+	$d–‘e_cu¡om”s
+(){
+n
+; 
+this
+->
+	`show_cu¡om”s
+(); 
+¡d
+::
+cout
+<<"Usun: ";‚ = 
+	`lßd_n
+();‚%=
+cu¡
+.
+	`size
+();his->
+	`d–‘e_cu¡om”s
+Ò);
+	}
+}
+
+184 
+	gBookshÝ
+::
+	$d–‘e_em¶oy“
+(
+n
+è{n%=
+emp
+.
+	`size
+(); 
+Hou£
+<
+Em¶oy“
+> *
+b
+; b =ƒmp[n-1];ƒmp.
+	`”a£
+Ómp.
+	`begš
+()+n-1); 
+d–‘e
+ b;
+	}
+}
+
+187 
+	gBookshÝ
+::
+	$d–‘e_em¶oy“
+(è{
+n
+; 
+this
+->
+	`show_em¶oy“s
+(); 
+¡d
+::
+cout
+<<"Usun: ";‚ = 
+	`lßd_n
+();‚%=
+emp
+.
+	`size
+();his->
+	`d–‘e_em¶oy“
+Ò);
+	}
+}
+
+	@/home/ewelina/Pulpit/Projekt3/bookshop.hpp
+
+1 #iâdeà
+bookshÝ_h
+
+
+2 
+	#bookshÝ_h
+
+
+	)
+
+4 
+	~"hou£.hµ
+"
+
+5 
+	~"w¬ehou£.hµ
+"
+
+7 * 
+lßd
+(*, 
+Ëngth
+);
+
+8 
+lßd_n
+();
+
+10 þas 
+	cBookshÝ
+ : 
+public
+ 
+W¬ehou£
+
+
+12 
+public
+:
+
+13 
+budg‘
+;
+
+14 
+	m¡d
+::
+veùÜ
+<
+Bookn
+> 
+Üd
+;
+
+15 
+	m¡d
+::
+veùÜ
+<
+Hou£
+<
+Em¶oy“
+>*> 
+emp
+;
+
+16 
+	m¡d
+::
+veùÜ
+<
+Hou£
+<
+Cu¡om”
+>*> 
+cu¡
+;
+
+18 
+	m´Ùeùed
+:
+
+19 
+numBookshÝs
+;
+
+21 
+	mpublic
+:
+
+22 
+BookshÝ
+(
+¡d
+::
+¡ršg
+ = "Ksiegarnia", std::string = "Miasto", = 0, = 0);
+
+23 ~
+BookshÝ
+();
+
+25 
+	$g‘_numBookshÝs
+(){ 
+numBookshÝs
+;}
+
+26 
+	$g‘_budg‘
+(è{ 
+budg‘
+;
+	}
+}
+
+27 
+	$£t_budg‘
+(
+b
+è{
+budg‘
+ = b;
+	}
+}
+
+28 
+add_book
+();
+
+29 
+add_em¶oy“
+(
+¡d
+::
+¡ršg
+, std::¡ršg, , std::
+veùÜ
+<std::string*>&, std::vector<std::string*>&);
+
+30 
+add_cu¡om”s
+(, 
+¡d
+::
+¡ršg
+, std::¡ršg, , std::
+veùÜ
+<std::string*>&, std::vector<std::string*>&);
+
+31 
+d–‘e_book
+(
+n
+);
+
+32 
+d–‘e_em¶oy“
+(
+n
+);
+
+33 
+d–‘e_em¶oy“
+();
+
+34 
+d–‘e_cu¡om”s
+(
+n
+);
+
+35 
+d–‘e_cu¡om”s
+();
+
+36 
+·ym’t
+();
+
+38 
+show_cu¡om”s
+();
+
+39 
+show_em¶oy“s
+();
+
+40 
+show_Üd
+();
+
+41 
+show_books_c
+();
+
+43 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+<< (
+¡d
+::o¡»am&, 
+	gBookshÝ
+*);
+
+44 
+	gBookshÝ
+& 
+	gÝ”©Ü
+ð(
+BookshÝ
+ &
+b2
+);
+
+45 
+	gÝ”©Ü
+ +(
+	gp
+){
+	gthis
+->
+	gbudg‘
++=
+p
+;}
+
+46 
+	gÝ”©Ü
+ -(
+	gn
+è{ 
+	gthis
+->
+	gbudg‘
+-=
+n
+;}
+
+	@/home/ewelina/Pulpit/Projekt3/building.hpp
+
+1 #iâdeà
+buždšg_hµ
+
+
+2 
+	#buždšg_hµ
+
+
+	)
+
+4 
+	~<veùÜ
+>
+
+5 
+	~"book.hµ
+"
+
+7 cÚ¡ 
+	gçùÜ
+ = 5;
+
+8 cÚ¡ 
+	gçùÜ1
+ = 20;
+
+10 þas 
+	cBuždšg
+
+
+12 
+	m´Ùeùed
+:
+
+13 
+¡d
+::
+¡ršg
+ 
+Çme
+, 
+	mloc
+;
+
+14 
+	m¬—
+;
+
+17 
+	mpublic
+:
+
+18 
+	$Buždšg
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+l
+, 
+a
+): 
+	`Çme
+Ò), 
+	`loc
+Ö), 
+	$¬—
+(
+a
+) {}
+
+19 
+¡d
+::
+¡ršg
+ 
+	$g‘_Çme
+(è{ 
+Çme
+;
+	}
+}
+
+20 
+	g¡d
+::
+¡ršg
+ 
+	$g‘_loc
+(è{ 
+loc
+;
+	}
+}
+
+21 
+	$g‘_¬—
+(è{ 
+¬—
+;
+	}
+}
+
+22 
+	$£t_Çme
+(
+¡d
+::
+¡ršg
+ 
+n
+è{
+Çme
+ =‚;
+	}
+}
+
+23 
+	$£t_loc
+(
+¡d
+::
+¡ršg
+ 
+l
+è{
+loc
+ =†;
+	}
+}
+
+24 
+	$£t_¬—
+(
+a
+è{
+¬—
+ =‡;
+	}
+}
+
+26 
+vœtu®
+ 
+show
+() = 0;
+
+27 
+vœtu®
+ 
+»£t
+() = 0;
+
+	@/home/ewelina/Pulpit/Projekt3/customer.cpp
+
+1 
+	~"cu¡om”.hµ
+"
+
+2 
+	~<c¡dlib
+>
+
+3 
+	~<ùime
+>
+
+5 
+	gCu¡om”
+::
+	$Cu¡om”
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+s
+, 
+m
+): 
+	$P”sÚ
+(
+n
+, 
+s
+, 
+m
+)
+
+7 
+	`D
+(
+¡d
+::
+cout
+<<"TwÜzymy kl›Áa"<<¡d::
+’dl
+;)
+
+8 
+	}
+}
+
+10 
+	gCu¡om”
+::~
+	$Cu¡om”
+()
+
+12 
+	`D
+(
+¡d
+::
+cout
+<<"Usuwamy kž’"<<¡d::
+’dl
+;)
+
+13 
+	}
+}
+
+15 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+<<(
+¡d
+::o¡»am &
+os
+, 
+	gCu¡om”
+ &
+	gc
+)
+
+17 
+	gos
+ << 
+	gc
+.
+g‘_Çme
+()<<" "<<c.
+g‘_suºame
+(è<<" "<<c.
+g‘_mÚey
+()<<
+	g¡d
+::
+’dl
+;
+
+18  
+	gos
+;
+
+22 
+	gCu¡om”
+& Cu¡om”::
+Ý”©Ü
+ = (
+Cu¡om”
+ &
+c2
+)
+
+24 
+this
+->
+Çme
+ = 
+c2
+.
+g‘_Çme
+();
+
+25 
+	gthis
+->
+	gsuºame
+ = 
+c2
+.
+g‘_suºame
+();
+
+26 
+	gthis
+->
+	gmÚey
+ = 
+c2
+.
+g‘_mÚey
+();
+
+27  *
+	gthis
+;
+
+	@/home/ewelina/Pulpit/Projekt3/customer.hpp
+
+1 #iâdeà
+cu¡om”_h
+
+
+2 
+	#cu¡om”_h
+
+
+	)
+
+4 
+	~<veùÜ
+>
+
+5 
+	~"book.hµ
+"
+
+6 
+	~"³rsÚ.hµ
+"
+
+8 þas 
+	cCu¡om”
+ : 
+public
+ 
+P”sÚ
+
+
+10 
+public
+:
+
+11 
+Cu¡om”
+(
+¡d
+::
+¡ršg
+ = "Klient", std::string = "Ksiegarni", = 0);
+
+12 ~
+Cu¡om”
+();
+
+14 
+buy
+(
+Book
+&);
+
+15 
+wÜk
+();
+
+17 
+	mÝ”©Ü
+ +=(
+m
+è{
+this
+->
+£t_mÚey
+Ñhis->
+g‘_mÚey
+() + m);}
+
+18 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+<< (
+¡d
+::o¡»am&, 
+	gCu¡om”
+&);
+
+19 
+	gCu¡om”
+& 
+	gÝ”©Ü
+ð(
+Cu¡om”
+ &
+c2
+);
+
+22 
+Cu¡om”
+* 
+Ãw_cu¡
+(
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+	@/home/ewelina/Pulpit/Projekt3/debug_head.hpp
+
+1 #iâdeà
+DEBUG_HEAD_HPP_INCLUDED
+
+
+2 
+	#DEBUG_HEAD_HPP_INCLUDED
+
+
+	)
+
+4 #iâdeà
+DEBUG
+
+
+5 
+	#DEBUG
+ 1
+
+	)
+
+8 #ià
+DEBUG
+
+
+9 
+	#D
+(
+x
+è
+	)
+x
+
+11 
+	#D
+(
+x
+)
+
+	)
+
+	@/home/ewelina/Pulpit/Projekt3/employee.cpp
+
+1 
+	~"em¶oy“.hµ
+"
+
+3 
+	gEm¶oy“
+::
+	$Em¶oy“
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+s
+, 
+m
+, 
+§l
+): 
+	`P”sÚ
+Ò, s, m), 
+	$§Ïry
+(
+§l
+)
+
+5 
+	`D
+(
+¡d
+::
+cout
+<<"Z©rudnŸmy…¿cownika"<<¡d::
+’dl
+;)
+
+6 
+	}
+}
+
+8 
+	gEm¶oy“
+::~
+	$Em¶oy“
+()
+
+10 
+	`D
+(
+¡d
+::
+cout
+<<"Zw®nŸmy…¿cownika."<<¡d::
+’dl
+;)
+
+11 
+	}
+}
+
+13 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+<< (
+¡d
+::o¡»am &
+os
+, 
+	gEm¶oy“
+ &
+	ge
+)
+
+15 
+	gos
+<<
+	ge
+.
+g‘_Çme
+()<<" "<<e.
+g‘_suºame
+()<<" "<<e.
+g‘_mÚey
+()<<"zl"<<
+	g¡d
+::
+’dl
+;  os;
+
+18 
+	gEm¶oy“
+& Em¶oy“::
+Ý”©Ü
+ð(
+Em¶oy“
+ &
+e2
+)
+
+20 
+this
+->
+Çme
+ = 
+e2
+.
+g‘_Çme
+();
+
+21 
+	gthis
+->
+	gsuºame
+ = 
+e2
+.
+g‘_suºame
+();
+
+22 
+	gthis
+->
+	gmÚey
+ = 
+e2
+.
+g‘_mÚey
+();
+
+23  *
+	gthis
+;
+
+	@/home/ewelina/Pulpit/Projekt3/employee.hpp
+
+1 #iâdeà
+em¶oy“_h
+
+
+2 
+	#em¶oy“_h
+
+
+	)
+
+4 
+	~"book.hµ
+"
+
+5 
+	~"³rsÚ.hµ
+"
+
+7 þas 
+	cEm¶oy“
+: 
+public
+ 
+P”sÚ
+
+
+9 
+§Ïry
+;
+
+10 
+	mpublic
+:
+
+12 
+Em¶oy“
+(
+¡d
+::
+¡ršg
+ = "-", std::string = "-", = 0, = 0);
+
+13 ~
+Em¶oy“
+();
+
+14 
+	$g‘_§Ïry
+(è{ 
+§Ïry
+;}
+
+15 
+	$£t_§Ïry
+(
+§l
+è{
+§Ïry
+ = s®;
+	}
+}
+
+17 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (
+¡d
+::o¡»am&, 
+	gEm¶oy“
+&);
+
+18 
+	gEm¶oy“
+& 
+	gÝ”©Ü
+ð(
+Em¶oy“
+ &
+e2
+);
+
+	@/home/ewelina/Pulpit/Projekt3/functions.cpp
+
+1 
+	~"funùiÚs.hµ
+"
+
+4 * 
+	$lßd
+(*
+wÜds
+, 
+Ëngth
+){
+
+5 *
+»suÉ
+;
+
+6 *
+wEnd
+;
+
+7 
+»suÉ
+ = 
+	`fg‘s
+(
+wÜds
+, 
+Ëngth
+, 
+¡dš
+);
+
+8 if(
+wÜds
+ !ð
+NULL
+){
+
+9 
+wEnd
+ = 
+	`¡rchr
+(
+wÜds
+, '\n');
+
+10 if(
+wEnd
+ !ð
+NULL
+)
+
+11 *
+wEnd
+ = '\0';
+
+13 
+	`g‘ch¬
+() != '\n');
+
+16  
+»suÉ
+;
+
+17 
+	}
+}
+
+20 
+	$lßd_n
+(){
+
+21 
+numb”
+[10];
+
+22 
+i
+, 
+j
+ = 0;
+
+23 
+»suÉ
+ = 0;
+
+25 
+	`lßd
+(
+numb”
+, 10);
+
+26 
+i
+ = 0 ; i < 
+	`¡¾’
+(
+numb”
+) ; i++)
+
+28 if((
+numb”
+[
+i
+] - '0') >= 0 && (number[i] - '0') <=9)
+
+29 
+»suÉ
+ =„esuÉ*10+(
+numb”
+[
+i
+] - '0');
+
+30 if(
+numb”
+[
+i
+] == '.')
+
+32 
+i
+++; i < 
+	`¡¾’
+(
+numb”
+) ; i++)
+
+34 if(
+numb”
+[
+i
+] - '0' >ð0 &&‚umb”[i] - '0' <=9 && 
+j
+ == 0)
+
+36 
+»suÉ
+ +ð0.1*(
+numb”
+[
+i
+] - '0');
+
+37 
+j
+++;
+
+39 if(
+numb”
+[
+i
+] - '0' >ð0 &&‚umb”[i] - '0' <=9 && 
+j
+ == 1)
+
+41 
+»suÉ
+ +ð0.01*(
+numb”
+[
+i
+] - '0');
+
+48  
+»suÉ
+;
+
+49 
+	}
+}
+
+52 
+d©a
+(
+¡d
+::
+veùÜ
+<
+Book
+*> &
+books
+, std::veùÜ<¡d::
+¡ršg
+*> &
+Çmes
+, std::veùÜ<¡d::¡ršg*> &
+suºames
+)
+
+54 
+n
+ = 0;
+
+55 
+Book
+ *
+	gbo
+;
+
+56 
+	g¡d
+::
+¡ršg
+ 
+lše
+, *
+	gl
+;
+
+57 
+	gy
+, 
+	g·g
+;
+
+59 
+¤ªd
+(
+time
+(
+NULL
+));
+
+62 
+	g¡d
+::
+if¡»am
+ 
+fže
+;
+
+63 
+	gfže
+.
+Ý’
+( "data.txt" );
+
+65 if(
+	gfže
+.
+good
+(è=ð
+çl£
+)
+
+66 
+¡d
+::
+cout
+<<"BLAD: bÏd…odcza odczytu bliku"<<¡d::
+’dl
+;
+
+69 !
+	gfže
+.
+eof
+())
+
+71 
+g‘lše
+(
+fže
+, 
+lše
+);
+
+72 if(
+	glše
+[0] =ð'#' && 
+books
+.
+size
+(è< books.
+max_size
+())
+
+74 
+bo
+ = 
+Ãw
+ 
+Book
+();
+
+75 
+g‘lše
+(
+fže
+, 
+lše
+); 
+	gbo
+->
+£t_Çme
+(line);
+
+76 
+g‘lše
+(
+fže
+, 
+lše
+); 
+	gbo
+->
+£t_authÜ
+(line);
+
+77 
+g‘lše
+(
+fže
+, 
+lše
+); 
+	gbo
+->
+£t_publish”
+(line);
+
+78 
+	gy
+ = 
+¿nd
+()%50+1967; 
+	gbo
+->
+£t_y—r
+(
+y
+);
+
+79 
+	g·g
+ = 
+¿nd
+()%400+154; 
+	gbo
+->
+£t_·ges
+(
+·g
+);
+
+81 
+	gn
+ = 
+pos™iÚ
+(
+books
+, 
+bo
+);
+
+82 if(
+	gbooks
+.
+size
+(è< books.
+max_size
+())
+
+83 
+	gbooks
+.
+š£¹
+(
+books
+.
+begš
+(è+ 
+n
+, 
+bo
+);
+
+85 if(
+	glše
+[0] == '%' )
+
+87 
+g‘lše
+(
+fže
+, 
+lše
+);
+
+88 
+	glše
+[0] != '%')
+
+90 
+l
+ = 
+Ãw
+ 
+¡d
+::
+¡ršg
+(
+lše
+);
+
+91 if(
+	gÇmes
+.
+size
+(è<‚ames.
+max_size
+())
+
+92 
+	gÇmes
+.
+push_back
+(
+l
+);
+
+93 
+g‘lše
+(
+fže
+, 
+lše
+);
+
+96 if(
+	glše
+[0] == '*')
+
+98 
+g‘lše
+(
+fže
+, 
+lše
+);
+
+99 
+	glše
+[0] != '*')
+
+101 
+l
+ = 
+Ãw
+ 
+¡d
+::
+¡ršg
+(
+lše
+);
+
+102 if(
+	gsuºames
+.
+size
+(è< suºames.
+max_size
+())
+
+103 
+	gsuºames
+.
+push_back
+(
+l
+);
+
+104 
+g‘lše
+(
+fže
+, 
+lše
+);
+
+110 
+	gfže
+.
+þo£
+();
+
+114 
+d–‘e_d©a
+(
+¡d
+::
+veùÜ
+<
+Book
+*> &
+books
+, std::veùÜ<¡d::
+¡ršg
+*> &
+Çmes
+, std::veùÜ<¡d::¡ršg*> &
+suºames
+)
+
+116 
+Book
+ *
+b
+;
+
+117 
+	g¡d
+::
+¡ršg
+ *
+s
+;
+
+118 
+	g¡d
+::
+cout
+<<
+¡d
+::
+’dl
+<<"Czyszczenie danych"<<std::endl;
+
+119 !
+	gbooks
+.
+em±y
+())
+
+121 
+	gb
+ = 
+books
+[books.
+size
+()-1];
+
+122 
+	gbooks
+.
+pÝ_back
+();
+
+123 
+d–‘e
+ 
+	gb
+;
+
+125 !
+	gÇmes
+.
+em±y
+())
+
+127 
+	gs
+ = 
+Çmes
+[Çmes.
+size
+()-1];
+
+128 
+	gÇmes
+.
+pÝ_back
+();
+
+129 
+d–‘e
+ 
+	gs
+;
+
+130 
+D
+(
+¡d
+::
+cout
+<<"Usuwª› imiÚ"<<¡d::
+’dl
+;);
+
+132 !
+	gsuºames
+.
+em±y
+())
+
+134 
+	gs
+ = 
+suºames
+[suºames.
+size
+()-1];
+
+135 
+	gsuºames
+.
+pÝ_back
+();
+
+136 
+d–‘e
+ 
+	gs
+;
+
+137 
+D
+(
+¡d
+::
+cout
+<<"Usuwª›‚azwisk"<<¡d::
+’dl
+;);
+
+141 
+Ãw_book
+(
+¡d
+::
+veùÜ
+<
+Book
+*> &
+books
+)
+
+143 
+Book
+ *
+nb
+;
+
+144 
+	gwÜd
+[
+MAX_L
+];
+
+145 
+	gn
+;
+
+147 
+	gnb
+ = 
+Ãw
+ 
+Book
+();
+
+148 
+¤ªd
+(
+time
+(
+NULL
+));
+
+150 
+	g¡d
+::
+cout
+<<"TYTUL: ";
+
+151 
+	gnb
+->
+£t_Çme
+(
+lßd
+(
+wÜd
+, 
+MAX_L
+));
+
+152 
+	g¡d
+::
+cout
+<<"AUTOR: ";
+
+153 
+	gnb
+->
+£t_authÜ
+(
+lßd
+(
+wÜd
+, 
+MAX_L
+));
+
+154 
+	g¡d
+::
+cout
+<<"WYDAWCA: ";
+
+155 
+	gnb
+->
+£t_publish”
+(
+lßd
+(
+wÜd
+, 
+MAX_L
+));
+
+156 
+	gn
+ = 
+¿nd
+()%50+1967;
+
+157 
+	gnb
+->
+£t_y—r
+(
+n
+);
+
+158 
+	gn
+ = 
+¿nd
+()%400+154;
+
+159 
+	gnb
+->
+£t_·ges
+(
+n
+);
+
+161 
+	gn
+ = 
+pos™iÚ
+(
+books
+, 
+nb
+);
+
+162 
+	gbooks
+.
+š£¹
+(
+books
+.
+begš
+(è+ 
+n
+, 
+nb
+);
+
+	@/home/ewelina/Pulpit/Projekt3/functions.hpp
+
+1 #iâdeà
+funùiÚs_hµ
+
+
+2 
+	#funùiÚs_hµ
+
+
+	)
+
+4 
+	~<io¡»am
+>
+
+5 
+	~<c¡ršg
+>
+
+6 
+	~<c¡dlib
+>
+
+7 
+	~<veùÜ
+>
+
+8 
+	~<f¡»am
+>
+
+9 
+	~"book.hµ
+"
+
+11 cÚ¡ 
+	gMAX_L
+ = 30;
+
+13 * 
+lßd
+(*, );
+
+14 
+lßd_n
+();
+
+15 
+d©a
+(
+¡d
+::
+veùÜ
+<
+Book
+*>&, std::veùÜ<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+16 
+d–‘e_d©a
+(
+¡d
+::
+veùÜ
+<
+Book
+*>&, std::veùÜ<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+17 
+Ãw_book
+(
+¡d
+::
+veùÜ
+<
+Book
+*>&);
+
+19 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gT
+>
+
+20 
+show_vec
+(
+¡d
+::
+veùÜ
+<
+T
+*> &
+vec
+)
+
+22 
+i
+;
+
+23 
+	gi
+ = 0 ; i < 
+	gvec
+.
+size
+() ; i++)
+
+24 
+	g¡d
+::
+cout
+<<*(
+vec
+[
+i
+]);
+
+27 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gT
+>
+
+28 
+pos™iÚ
+(
+¡d
+::
+veùÜ
+<
+T
+*>& 
+vec
+, T *
+ob
+)
+
+30 
+	gi
+ = 0;
+
+31 if(
+	gvec
+.
+em±y
+(è|| *
+	gob
+ < *(vec[
+i
+]è|| *ob =ð*(
+vec
+[i]))
+
+32 
+i
+ = 0;
+
+35 
+	gi
+ < 
+	gvec
+.
+size
+())
+
+37 if(*
+	gob
+ < *(
+	gvec
+[
+i
+]))
+
+39 
+	gi
+++;
+
+42  
+	gi
+;
+
+	@/home/ewelina/Pulpit/Projekt3/house.hpp
+
+1 #iâdeà
+hou£_h
+
+
+2 
+	#hou£_h
+
+
+	)
+
+4 
+	~"buždšg.hµ
+"
+
+5 
+	~"cu¡om”.hµ
+"
+
+6 
+	~"em¶oy“.hµ
+"
+
+7 
+	~<veùÜ
+>
+
+8 
+	~<c¡dlib
+>
+
+9 
+	~<ùime
+>
+
+11 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+12 þas 
+	cHou£
+: 
+public
+ 
+Buždšg
+
+
+14 
+¡d
+::
+veùÜ
+<
+P”
+*> 
+šhab
+;
+
+15 
+	m¡d
+::
+veùÜ
+<
+Book
+*> 
+sh–f
+;
+
+17 
+	mpublic
+:
+
+18 
+Hou£
+<
+P”
+>(
+¡d
+::
+¡ršg
+ = "Dom", 
+	m¡d
+::string = "Miasto", = 100);
+
+19 ~
+	mHou£
+<
+	mP”
+>();
+
+20 
+add
+(
+Book
+ *
+bn
+, 
+pos
+);
+
+21 
+add_šhab
+(, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+22 
+P”
+* 
+	$g‘_šhab
+(
+n
+è{n%=
+šhab
+.
+	`size
+();  inhab[n];};
+
+23 
+vœtu®
+ 
+	`show
+();
+
+24 
+vœtu®
+ 
+	`»£t
+();
+
+26 
+ä›nd
+ 
+¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (¡d::o¡»am& 
+os
+, 
+Hou£
+<
+P”
+>& 
+h
+)
+
+28 
+i
+ = 0 ; i < 
+h
+.
+šhab
+.
+	`size
+(è; i++è
+os
+<<h.šhab[i]->
+	`g‘_Çme
+()<<" "<<h.šhab[i]->
+	`g‘_suºame
+()<<" "<<h.šhab[i]->
+	`g‘_mÚey
+()<<
+¡d
+::
+’dl
+;
+
+29 
+os
+<<
+¡d
+::
+’dl
+;
+
+30  
+os
+;
+
+31 
+	}
+}
+
+34 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+35 
+	gHou£
+<
+	gP”
+>::
+	$Hou£
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+l
+, 
+a
+): 
+	$Buždšg
+(
+n
+, 
+l
+, 
+a
+)
+
+37 
+	`D
+(
+¡d
+::
+cout
+<<"TwÜzdom"<<¡d::
+’dl
+;)
+
+38 
+	}
+}
+
+40 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+41 
+	gHou£
+<
+	gP”
+>::~
+	$Hou£
+()
+
+43 
+P”
+ *
+p
+;
+
+44 
+sh–f
+.
+	`þ—r
+();
+
+45 !
+šhab
+.
+	`em±y
+())
+
+47 
+p
+ = 
+šhab
+[šhab.
+	`size
+()-1];
+
+48 
+šhab
+.
+	`pÝ_back
+();
+
+49 
+d–‘e
+ 
+p
+;
+
+51 
+	`D
+(
+¡d
+::
+cout
+<<"Usuwamy dom"<<¡d::
+’dl
+;)
+
+52 
+	}
+}
+
+55 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+56 
+	gHou£
+<
+	gP”
+>::
+	$show
+()
+
+58 
+i
+;
+
+59 
+i
+ = 0 ; i < 
+sh–f
+.
+	`size
+() ; i++)
+
+60 
+¡d
+::
+cout
+<<*(
+sh–f
+[
+i
+]);
+
+61 
+	}
+}
+
+64 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+65 
+	gHou£
+<
+	gP”
+>::
+	$»£t
+(è{ 
+sh–f
+.
+	`þ—r
+(); 
+	}
+}
+
+68 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+69 
+	gHou£
+<
+	gP”
+>::
+	$add
+(
+Book
+ *
+bn
+, 
+pos
+)
+
+71 if(
+sh–f
+.
+	`size
+(è< sh–f.
+	`max_size
+(è&& 
+¬—
+ > sh–f.size()/
+çùÜ
+)
+
+72 
+sh–f
+.
+	`š£¹
+(sh–f.
+	`begš
+()+
+pos
+, 1, 
+bn
+);
+
+73 
+	}
+}
+
+75 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+76 
+	gHou£
+<
+	gP”
+>::
+add_šhab
+(
+n
+, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*> &
+Çmes
+, std::veùÜ<¡d::¡ršg*> &
+suºames
+)
+
+78 
+i
+;
+
+79 
+P”
+ *
+	g³
+;
+
+80 
+	g¡d
+::
+¡ršg
+ 
+sur
+, 
+	gÇm
+;
+
+82 if(!
+	gsuºames
+.
+em±y
+())
+
+84 
+	gi
+ = 
+¿nd
+()%(
+suºames
+.
+size
+());
+
+85 
+	gsur
+ = *
+suºames
+[
+i
+];
+
+87 
+	gsur
+ = "Kowalski";
+
+89 
+¤ªd
+(
+time
+(
+NULL
+));
+
+90 
+	gn
+ > 0 && 
+	g¬—
+/
+	gçùÜ1
+ > 
+	gthis
+->
+	gšhab
+.
+size
+())
+
+92 if(!
+	gÇmes
+.
+em±y
+())
+
+94 
+	gi
+ = 
+¿nd
+()%(
+Çmes
+.
+size
+());
+
+95 
+	gÇm
+ = *
+Çmes
+[
+i
+];
+
+97 
+	gÇm
+ = "Jan";
+
+98 
+	gi
+ = 
+¿nd
+()%20000+5000;
+
+99 
+	g³
+ = 
+Ãw
+ 
+P”
+(
+Çm
+, 
+sur
+, 
+i
+/100);
+
+100 
+	gthis
+->
+	gšhab
+.
+push_back
+(
+³
+);
+
+101 
+	gn
+--;
+
+	@/home/ewelina/Pulpit/Projekt3/interface.cpp
+
+1 
+	~"š‹rçû.hµ
+"
+
+5 
+maš_m’u
+(
+OwÃr
+ &
+ow
+, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&
+Çmes
+, std::veùÜ<¡d::¡ršg*>&
+suºames
+)
+
+7 
+choiû1
+[2];
+
+8 
+	gchoiû1
+[0] = '0';
+
+10 
+	gchoiû1
+[0] != '5'){
+
+11 
+¡d
+::
+cout
+<<¡d::
+’dl
+<<"Wybierz osobe"<<std::endl;
+
+12 
+	g¡d
+::
+cout
+<<"1. WÏscic›l"<<
+¡d
+::
+’dl
+;
+
+13 
+	g¡d
+::
+cout
+<<"2. P¿cownik"<<
+¡d
+::
+’dl
+;
+
+14 
+	g¡d
+::
+cout
+<<"3. Kl›Á"<<
+¡d
+::
+’dl
+;
+
+15 
+	g¡d
+::
+cout
+<<"4. Te¡y"<<
+¡d
+::
+’dl
+;
+
+16 
+	g¡d
+::
+cout
+<<"5. KÚ›c"<<
+¡d
+::
+’dl
+;
+
+17 
+lßd
+(
+choiû1
+, 2);
+
+18 
+	gchoiû1
+[0])
+
+20 '1': 
+ow_m’u1
+(
+ow
+, 
+Çmes
+, 
+suºames
+); ;
+
+30 
+¡d
+::
+cout
+<<"N› m¨k›j mozliwosci"<<¡d::
+’dl
+;
+
+37 
+ow_m’u1
+(
+OwÃr
+ &
+ow
+, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&
+Çmes
+, std::veùÜ<¡d::¡ršg*>&
+suºames
+)
+
+39 
+choiû1
+[2];
+
+40 
+	gchoiû1
+[0] = '0';
+
+42 
+	gchoiû1
+[0] != '5'){
+
+43 
+¡d
+::
+cout
+<<¡d::
+’dl
+<<"Wlasciciel: ";
+
+44 
+	g¡d
+::
+cout
+<<"1. wysw›Ž†i¡ks›g¬ni"<<
+¡d
+::
+’dl
+;
+
+45 
+	g¡d
+::
+cout
+<<"2. stwÜz‚ow¨ks›g¬n›"<<
+¡d
+::
+’dl
+;
+
+46 
+	g¡d
+::
+cout
+<<"3. usuÀks›g¬n›"<<
+¡d
+::
+’dl
+;
+
+47 
+	g¡d
+::
+cout
+<<"4. z¬zadzaj ks›g¬nŸ"<<
+¡d
+::
+’dl
+;
+
+48 
+	g¡d
+::
+cout
+<<"5. wyjsc›"<<
+¡d
+::
+’dl
+;
+
+49 
+lßd
+(
+choiû1
+, 2);
+
+50 
+	gchoiû1
+[0])
+
+52 '1': 
+ow
+.
+show_bs
+(); ;
+
+53 '2': 
+ow
+.
+add_bs
+(); ;
+
+54 '3': 
+ow
+.
+d–‘e_bs
+(); ;
+
+55 '4': 
+ow_m’u2
+(
+ow
+, 
+Çmes
+, 
+suºames
+); ;
+
+57 : 
+¡d
+::
+cout
+<<"N› m¨k›j mozliwosci"<<¡d::
+’dl
+; ;
+
+63 
+ow_m’u2
+(
+OwÃr
+ &
+ow
+, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&
+Çmes
+, std::veùÜ<¡d::¡ršg*>&
+suºames
+)
+
+65 
+BookshÝ
+ *
+bs
+;
+
+66 
+	gchoiû1
+[2];
+
+67 
+	gi
+ = 0;
+
+68 
+	gchoiû1
+[0] = '0';
+
+70 
+	gchoiû1
+[0] != '7'){
+
+71 
+bs
+ = 
+ow
+.
+g‘_bs
+(
+i
+);
+
+72 
+	g¡d
+::
+cout
+<<
+¡d
+::
+’dl
+<<"Ksiegarnia "<<std::endl;
+
+73 
+	g¡d
+::
+cout
+<<"1. Wysw›Ž†i¡´acownikow"<<
+¡d
+::
+’dl
+;
+
+74 
+	g¡d
+::
+cout
+<<"2. Z©rudnij‚owegØ´acownika"<<
+¡d
+::
+’dl
+;
+
+75 
+	g¡d
+::
+cout
+<<"3. ZwÞnij…¿cownika"<<
+¡d
+::
+’dl
+;
+
+76 
+	g¡d
+::
+cout
+<<"4. Wy¶aø³nsj´acownikom"<<
+¡d
+::
+’dl
+;
+
+77 
+	g¡d
+::
+cout
+<<"5. Odb›rzu urg"<<
+¡d
+::
+’dl
+;
+
+78 
+	g¡d
+::
+cout
+<<"6. Na¡•Ç ks›g¬nŸ"<<
+¡d
+::
+’dl
+;
+
+79 
+	g¡d
+::
+cout
+<<"7. Wyjsc›"<<
+¡d
+::
+’dl
+;
+
+80 
+lßd
+(
+choiû1
+, 2);
+
+82 
+	gchoiû1
+[0])
+
+84 '1': 
+bs
+->
+show_em¶oy“s
+(); ;
+
+85 '2': 
+bs
+->
+add_em¶oy“
+("D", bs->
+g‘_loc
+(), 20, 
+Çmes
+, 
+suºames
+); ;
+
+86 '3': 
+bs
+->
+d–‘e_em¶oy“
+(); ;
+
+87 '4': 
+bs
+->
+·ym’t
+(); ;
+
+88 '5': 
+ow
+.
+g‘_ÿsh
+(
+bs
+); ;
+
+89 '6': if(
+i
+ < 
+ow
+.
+g‘_size
+()èi++; 
+	gi
+ = 0; ;
+
+91 : 
+¡d
+::
+cout
+<<"N› m¨k›j mozliwosci"<<¡d::
+’dl
+; ;
+
+	@/home/ewelina/Pulpit/Projekt3/interface.hpp
+
+1 #iâdeà
+š‹rçû_hµ
+
+
+2 
+	#š‹rçû_hµ
+
+
+	)
+
+4 
+	~"owÃr.hµ
+"
+
+6 
+maš_m’u
+(
+OwÃr
+&, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+7 
+ow_m’u1
+(
+OwÃr
+&, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+8 
+ow_m’u2
+(
+OwÃr
+&, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+	@/home/ewelina/Pulpit/Projekt3/main.cpp
+
+1 
+	~<io¡»am
+>
+
+2 
+	~"bookshÝ.hµ
+"
+
+3 
+	~"funùiÚs.hµ
+"
+
+4 
+usšg
+ 
+Çme¥aû
+ 
+	g¡d
+;
+
+6 
+d©a
+(
+veùÜ
+<
+Book
+*>&, veùÜ<
+¡ršg
+*>&, vector<string*>&);
+
+10 
+	$maš
+()
+
+12 
+veùÜ
+<
+Book
+*> 
+books
+;
+
+13 
+veùÜ
+<
+¡ršg
+*> 
+Çmes
+;
+
+14 
+veùÜ
+<
+¡ršg
+*> 
+suºames
+;
+
+17 
+BookshÝ
+ 
+	`b
+("Ksiegarnia", "Ciechanow", 100, 999);
+
+18 
+	`d©a
+(
+books
+, 
+Çmes
+, 
+suºames
+);
+
+19 
+cout
+<<
+’dl
+<<
+b
+<<endl;
+
+25 
+b
+.
+	`add_cu¡om”s
+(2, "Dom", "C›chªow", 100, 
+Çmes
+, 
+suºames
+);
+
+26 
+b
+.
+	`show_cu¡om”s
+();
+
+27 
+b
+.
+	`add_cu¡om”s
+(2, "Dom2", "C›chªow", 100, 
+Çmes
+, 
+suºames
+);
+
+28 
+b
+.
+	`show_cu¡om”s
+();
+
+29 
+b
+.
+	`d–‘e_cu¡om”s
+(1);
+
+31 
+	`d–‘e_d©a
+(
+books
+, 
+Çmes
+, 
+suºames
+);
+
+32 
+cout
+<<
+’dl
+;
+
+34 
+	}
+}
+
+	@/home/ewelina/Pulpit/Projekt3/owner.cpp
+
+1 
+	~"owÃr.hµ
+"
+
+3 
+	gOwÃr
+::
+	$OwÃr
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+s
+, 
+b
+): 
+	$P”sÚ
+(
+n
+, 
+s
+, 
+b
+è{
+	`D
+(
+¡d
+::
+cout
+<<"TwÜzwÏscic›Ï."<<¡d::
+’dl
+;)
+	}
+}
+
+5 
+	gOwÃr
+::~
+	$OwÃr
+()
+
+7 
+BookshÝ
+ *
+b
+;
+
+8 
+bs
+.
+	`size
+() > 0)
+
+10 
+b
+ = 
+bs
+[bs.
+	`size
+()-1];
+
+11 
+bs
+.
+	`pÝ_back
+();
+
+12 
+d–‘e
+ 
+b
+;
+
+14 
+	`D
+(
+¡d
+::
+cout
+<<"NiszczwÏscic›Ï."<<¡d::
+’dl
+;)
+
+15 
+	}
+}
+
+18 
+	gOwÃr
+::
+	$show_bs
+()
+
+20 
+i
+;
+
+21 if(
+bs
+.
+	`em±y
+())
+
+22 
+¡d
+::
+cout
+<<"N› m¨jeszczzaznych ks›g¬ni"<<¡d::
+’dl
+;
+
+25 
+¡d
+::
+cout
+<<"Li¡¨ks›g¬ni:"<<¡d::
+’dl
+;
+
+26 
+i
+ = 0 ; i < 
+bs
+.
+	`size
+() ; i++)
+
+27 
+¡d
+::
+cout
+<<*(
+bs
+[
+i
+]);
+
+29 
+	}
+}
+
+32 
+	gOwÃr
+::
+	$add_bs
+()
+
+34 
+a
+;
+
+35 
+n
+[20], 
+c
+[20];
+
+36 
+b
+;
+
+37 
+BookshÝ
+ *
+nbs
+;
+
+39 
+¡d
+::
+cout
+<<¡d::
+’dl
+<<"Nowa ksiegarnia: "<<std::endl;
+
+40 
+¡d
+::
+cout
+<<"Nazwa: "; 
+	`lßd
+(
+n
+, 
+MAX_L
+);
+
+41 
+¡d
+::
+cout
+<<"MŸ¡o: "; 
+	`lßd
+(
+c
+, 
+MAX_L
+);
+
+42 
+¡d
+::
+cout
+<<"Budz‘: "; 
+b
+ = 
+	`lßd_n
+();
+
+43 
+¡d
+::
+cout
+<<"Pow›rzchnŸ: "; 
+a
+ = 
+	`lßd_n
+();
+
+44 
+mÚey
+ -ð
+b
+;
+
+46 if(
+mÚey
+ < 0è{
+¡d
+::
+cout
+<<"BANKRUCTWO!"<<¡d::
+’dl
+; 
+	`ex™
+(0);}
+
+48 if(
+bs
+.
+	`size
+(è< bs.
+	`max_size
+())
+
+50 
+nbs
+ = 
+Ãw
+ 
+	`BookshÝ
+(
+n
+, 
+c
+, 
+a
+, 
+b
+);
+
+51 
+bs
+.
+	`push_back
+(
+nbs
+);
+
+54 
+¡d
+::
+cout
+<<"N› mozÇ dodaøkÞejÃj ks›g¬ni"<<¡d::
+’dl
+;
+
+55 
+	}
+}
+
+57 
+	gOwÃr
+::
+	$add_bs
+(
+n
+[
+MAX_L
+], 
+c
+[MAX_L], 
+a
+, 
+b
+)
+
+59 
+BookshÝ
+ *
+nbs
+;
+
+60 
+mÚey
+ -ð
+b
+;
+
+61 if(
+mÚey
+ < 0è{
+¡d
+::
+cout
+<<"BANKRUCTWO!"<<¡d::
+’dl
+; 
+	`ex™
+(0);}
+
+63 if(
+bs
+.
+	`size
+(è< bs.
+	`max_size
+())
+
+65 
+nbs
+ = 
+Ãw
+ 
+	`BookshÝ
+(
+n
+, 
+c
+, 
+a
+, 
+b
+);
+
+66 
+bs
+.
+	`push_back
+(
+nbs
+);
+
+69 
+¡d
+::
+cout
+<<"N› mozÇ dodaøkÞejÃj ks›g¬ni"<<¡d::
+’dl
+;
+
+70 
+	}
+}
+
+73 
+	gOwÃr
+::
+	$d–‘e_bs
+(
+n
+è{ 
+BookshÝ
+ *
+b
+;‚%=
+bs
+.
+	`size
+(); b = bs[n-1]; bs.
+	`”a£
+(bs.
+	`begš
+(è+‚ -1); 
+d–‘e
+ b;
+	}
+}
+
+75 
+	gOwÃr
+::
+	$d–‘e_bs
+(è{
+n
+; 
+this
+->
+	`show_bs
+(); 
+¡d
+::
+cout
+<<"Usun: ";‚ = 
+	`lßd_n
+();his->
+	`d–‘e_bs
+Ò);
+	}
+}
+
+77 
+	gOwÃr
+::
+	$g‘_ÿsh
+(
+BookshÝ
+* 
+b
+)
+
+79 
+mÚ
+;
+
+80 
+¡d
+::
+cout
+<<*
+b
+<<"Podaj o ile chcesz…omniejszyc budzet ksiegarni: ";
+
+81 dØ{ 
+mÚ
+ = 
+	`lßd_n
+(); } mÚ < 0 || mÚ > 
+b
+->
+	`g‘_budg‘
+());
+
+82 *
+b
+ - 
+mÚ
+;
+
+83 
+mÚey
+ +ð
+mÚ
+;
+
+84 
+	}
+}
+
+	@/home/ewelina/Pulpit/Projekt3/owner.hpp
+
+1 #iâdeà
+owÃr_hµ
+
+
+2 
+	#owÃr_hµ
+
+
+	)
+
+4 
+	~"bookshÝ.hµ
+"
+
+5 
+	~"³rsÚ.hµ
+"
+
+6 
+	~"funùiÚs.hµ
+"
+
+8 þas 
+	cOwÃr
+: 
+public
+ 
+P”sÚ
+
+
+10 
+¡d
+::
+veùÜ
+<
+BookshÝ
+*> 
+bs
+;
+
+12 
+	mpublic
+:
+
+13 
+OwÃr
+(
+¡d
+::
+¡ršg
+ = "Wlasciciel", std::string = "Ksiegarni", = 0.0);
+
+14 ~
+OwÃr
+();
+
+15 
+	$g‘_size
+(è{ 
+bs
+.
+	`size
+();}
+
+16 
+BookshÝ
+* 
+	$g‘_bs
+(
+n
+è{ 
+bs
+[n];
+	}
+}
+
+18 
+show_bs
+();
+
+19 
+add_bs
+();
+
+20 
+add_bs
+(*, *, , );
+
+21 
+show_Üd”
+(
+BookshÝ
+*);
+
+22 
+d–‘e_bs
+();
+
+23 
+d–‘e_bs
+();
+
+24 
+acû±
+(
+BookshÝ
+*);
+
+25 
+g‘_ÿsh
+(
+BookshÝ
+*);
+
+	@/home/ewelina/Pulpit/Projekt3/person.hpp
+
+1 #iâdeà
+³rsÚ_h
+
+
+2 
+	#³rsÚ_h
+
+
+	)
+
+4 þas 
+	cP”sÚ
+
+
+6 
+	m´Ùeùed
+:
+
+8 
+¡d
+::
+¡ršg
+ 
+Çme
+;
+
+9 
+	m¡d
+::
+¡ršg
+ 
+suºame
+;
+
+10 
+	mmÚey
+;
+
+12 
+	mpublic
+:
+
+14 
+P”sÚ
+(
+¡d
+::
+¡ršg
+ 
+n
+ = "-", std::¡ršg 
+s
+ = "-", 
+m
+ = 0.00): 
+Çme
+Ò), 
+suºame
+(s), 
+	$mÚey
+(
+m
+) {};
+
+16 
+¡d
+::
+¡ršg
+ 
+	$g‘_Çme
+(è{ 
+Çme
+;
+	}
+}
+
+17 
+	g¡d
+::
+¡ršg
+ 
+	$g‘_suºame
+(è{ 
+suºame
+;
+	}
+}
+
+18 
+	$g‘_mÚey
+(è{ 
+mÚey
+;
+	}
+}
+
+20 
+	$£t_Çme
+(
+¡d
+::
+¡ršg
+ 
+n
+è{
+Çme
+ =‚;
+	}
+}
+
+21 
+	$£t_suºame
+(
+¡d
+::
+¡ršg
+ 
+s
+è{
+suºame
+ = s;
+	}
+}
+
+22 
+	$£t_mÚey
+(
+m
+è{
+mÚey
+ = m;
+	}
+}
+
+	@/home/ewelina/Pulpit/Projekt3/warehouse.cpp
+
+1 
+	~"w¬ehou£.hµ
+"
+
+2 
+	~"funùiÚs.hµ
+"
+
+4 
+	gW¬ehou£
+::
+	$W¬ehou£
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+l
+, 
+a
+): 
+	$Buždšg
+(
+n
+, 
+l
+, 
+a
+){
+	}
+}
+
+6 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (
+¡d
+::o¡»am &
+os
+, 
+	gW¬ehou£
+ &
+	gw
+)
+
+8 
+	gos
+<<
+	gw
+.
+	gÇme
+<<" "<<w.
+	gloc
+<<" "<<w.
+	g¬—
+<<
+	g¡d
+::
+’dl
+;
+
+9  
+	gos
+;
+
+12 
+	gW¬ehou£
+::~
+	$W¬ehou£
+()
+
+14 
+	`D
+(
+¡d
+::
+cout
+<<"Usuwam magazyn"<<¡d::
+’dl
+;)
+
+15 
+	}
+}
+
+17 
+	gW¬ehou£
+::
+	$show
+()
+
+19 
+i
+;
+
+20 if(
+bo
+.
+	`em±y
+())
+
+21 
+¡d
+::
+cout
+<<"N› m¨jeszczzadnych ksŸzek"<<¡d::
+’dl
+;
+
+23 
+i
+ = 0 ; i < 
+bo
+.
+	`size
+() ; i++)
+
+24 
+¡d
+::
+cout
+<<*(
+bo
+[
+i
+].
+b
+);
+
+25 
+	}
+}
+
+28 
+	gW¬ehou£
+::
+	$»£t
+()
+
+30 
+i
+;
+
+31 
+i
+ = 0 ; i < 
+bo
+.
+	`size
+() ; i++)
+
+32 
+bo
+[
+i
+].
+n
+ = 10;
+
+33 
+	}
+}
+
+36 
+	gW¬ehou£
+::
+	$add
+(
+n
+, 
+pos
+, 
+Book
+ *
+bn
+)
+
+38 
+Bookn
+ 
+boo
+;
+
+39 
+boo
+.
+b
+ = 
+bn
+;
+
+40 
+boo
+.
+n
+ = 0;
+
+42 if(
+bo
+.
+	`size
+(è< bo.
+	`max_size
+(è&& 
+¬—
+ > bo.size()/
+çùÜ
+)
+
+43 
+bo
+.
+	`š£¹
+(bo.
+	`begš
+()+
+pos
+, 1, 
+boo
+);
+
+45 
+¡d
+::
+cout
+<<"N› mozÇ juz dodaøzadÃj ksŸzki"<<¡d::
+’dl
+;
+
+46 
+	}
+}
+
+49 
+	gW¬ehou£
+::
+add_®l
+(
+n
+, 
+¡d
+::
+veùÜ
+<
+Book
+*> &
+books
+)
+
+51 
+i
+;
+
+52 
+Bookn
+ 
+	gboo
+;
+
+53 
+	gboo
+.
+	gn
+ = 
+n
+;
+
+55 
+	gi
+ = 0 ; i < 
+	gbooks
+.
+size
+() ; i++)
+
+57 
+	gboo
+.
+	gb
+ = 
+books
+[
+i
+];
+
+58 if(
+	gbo
+.
+size
+(è< bo.
+max_size
+(è&& 
+	g¬—
+ > bo.size()/
+	gçùÜ
+)
+
+59 
+	gbo
+.
+push_back
+(
+boo
+);
+
+65 
+	gW¬ehou£
+::
+	$d–‘e_b
+(
+n
+è{ 
+bo
+.
+	`”a£
+(bo.
+	`begš
+()+n); 
+	}
+}
+
+	@/home/ewelina/Pulpit/Projekt3/warehouse.hpp
+
+1 #iâdeà
+w¬ehou£_hµ
+
+
+2 
+	#w¬ehou£_hµ
+
+
+	)
+
+4 
+	~"buždšg.hµ
+"
+
+6 þas 
+	cW¬ehou£
+: 
+public
+ 
+Buždšg
+
+
+8 
+´Ùeùed
+:
+
+9 
+¡d
+::
+veùÜ
+<
+Bookn
+> 
+bo
+;
+
+11 
+	mpublic
+:
+
+12 
+W¬ehou£
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::string, );
+
+13 ~
+W¬ehou£
+();
+
+14 
+vœtu®
+ 
+show
+();
+
+15 
+vœtu®
+ 
+»£t
+();
+
+16 
+add
+(, , 
+Book
+*);
+
+17 
+add_®l
+(, 
+¡d
+::
+veùÜ
+<
+Book
+*>&);
+
+18 
+d–‘e_b
+(
+n
+);
+
+20 
+W¬ehou£
+(
+¡d
+::
+¡ršg
+ 
+n
+ = "Magazyn", std::¡ršg 
+l
+ = "MŸ¡o", 
+a
+ = 100): 
+	$Buždšg
+(
+n
+, 
+l
+, 
+a
+) {};
+
+21 
+ä›nd
+ 
+¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (¡d::o¡»am&, 
+W¬ehou£
+&);
+
+22 
+	}
+};
+
+	@book.hpp
+
+1 #iâdeà
+book_h
+
+
+2 
+	#book_h
+
+
+	)
+
+4 
+	~"debug_h—d.hµ
+"
+
+5 
+	~<io¡»am
+>
+
+6 
+	~<c¡dlib
+>
+
+8 þas 
+	cBook
+
+
+10 
+	m¡d
+::
+¡ršg
+ 
+Çme
+, 
+	mauthÜ
+, 
+	mpublish”
+;
+
+11 
+	m´iû
+;
+
+12 
+	my—r
+, 
+	m·ges
+;
+
+14 
+	mpublic
+:
+
+15 
+Book
+(
+¡d
+::
+¡ršg
+ = "-", std::string = "-", std::string = "-", = 0.0, = 0, = 0);
+
+16 ~
+Book
+();
+
+18 
+	m¡d
+::
+¡ršg
+ 
+	$g‘_Çme
+(è{ 
+Çme
+;}
+
+19 
+¡d
+::
+¡ršg
+ 
+	$g‘_authÜ
+(è{ 
+authÜ
+;
+	}
+}
+
+20 
+	g¡d
+::
+¡ršg
+ 
+	$g‘_publish”
+(è{ 
+publish”
+;
+	}
+}
+
+21 
+	$g‘_´iû
+(è{ 
+´iû
+;
+	}
+}
+
+22 
+	$g‘_y—r
+(è{ 
+y—r
+;
+	}
+}
+
+23 
+	$g‘_·ges
+(è{ 
+·ges
+;
+	}
+}
+
+25 
+	$£t_Çme
+(
+¡d
+::
+¡ršg
+ 
+n
+è{
+Çme
+ =‚;
+	}
+}
+
+26 
+	$£t_authÜ
+(
+¡d
+::
+¡ršg
+ 
+a
+è{
+authÜ
+ =‡;
+	}
+}
+
+27 
+	$£t_publish”
+(
+¡d
+::
+¡ršg
+ 
+p
+è{
+publish”
+ =…;
+	}
+}
+
+28 
+	$£t_´iû
+(
+´
+è{
+´iû
+ =…r;
+	}
+}
+
+29 
+	$£t_y—r
+(
+y
+è{
+y—r
+ = y;
+	}
+}
+
+30 
+	$£t_·ges
+(
+·g
+è{
+·ges
+ =…ag;
+	}
+}
+
+32 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (
+¡d
+::o¡»am &
+os
+, 
+	gBook
+ &
+	gb
+);
+
+33 
+ä›nd
+ 
+	g¡d
+::
+i¡»am
+& 
+Ý”©Ü
+ >> (
+¡d
+::i¡»am&, 
+	gBook
+&);
+
+34 
+	gBook
+& 
+	gÝ”©Ü
+ = (
+Book
+ &
+b2
+);
+
+35 
+boÞ
+ 
+	gÝ”©Ü
+ > (
+	gBook
+ &
+	gb2
+);
+
+36 
+boÞ
+ 
+	gÝ”©Ü
+ < (
+	gBook
+ &
+	gb2
+);
+
+37 
+boÞ
+ 
+	gÝ”©Ü
+ =ð(
+Book
+& 
+o
+);
+
+41 
+	sBookn
+
+
+43 
+Book
+ *
+	mb
+;
+
+44 
+	mn
+;
+
+47 
+quªt™y_´
+(, );
+
+	@bookshop.hpp
+
+1 #iâdeà
+bookshÝ_h
+
+
+2 
+	#bookshÝ_h
+
+
+	)
+
+4 
+	~"hou£.hµ
+"
+
+5 
+	~"w¬ehou£.hµ
+"
+
+7 * 
+lßd
+(*, 
+Ëngth
+);
+
+8 
+lßd_n
+();
+
+10 þas 
+	cBookshÝ
+ : 
+public
+ 
+W¬ehou£
+
+
+12 
+public
+:
+
+13 
+budg‘
+;
+
+14 
+	m¡d
+::
+veùÜ
+<
+Bookn
+> 
+Üd
+;
+
+15 
+	m¡d
+::
+veùÜ
+<
+Hou£
+<
+Em¶oy“
+>*> 
+emp
+;
+
+16 
+	m¡d
+::
+veùÜ
+<
+Hou£
+<
+Cu¡om”
+>*> 
+cu¡
+;
+
+18 
+	m´Ùeùed
+:
+
+19 
+numBookshÝs
+;
+
+21 
+	mpublic
+:
+
+22 
+BookshÝ
+(
+¡d
+::
+¡ršg
+ = "Ksiegarnia", std::string = "Miasto", = 0, = 0);
+
+23 ~
+BookshÝ
+();
+
+25 
+	$g‘_numBookshÝs
+(){ 
+numBookshÝs
+;}
+
+26 
+	$g‘_budg‘
+(è{ 
+budg‘
+;
+	}
+}
+
+27 
+	$£t_budg‘
+(
+b
+è{
+budg‘
+ = b;
+	}
+}
+
+28 
+add_book
+();
+
+29 
+add_em¶oy“
+(
+¡d
+::
+¡ršg
+, std::¡ršg, , std::
+veùÜ
+<std::string*>&, std::vector<std::string*>&);
+
+30 
+add_cu¡om”s
+(, 
+¡d
+::
+¡ršg
+, std::¡ršg, , std::
+veùÜ
+<std::string*>&, std::vector<std::string*>&);
+
+31 
+d–‘e_book
+(
+n
+);
+
+32 
+d–‘e_em¶oy“
+(
+n
+);
+
+33 
+d–‘e_em¶oy“
+();
+
+34 
+d–‘e_cu¡om”s
+(
+n
+);
+
+35 
+d–‘e_cu¡om”s
+();
+
+36 
+·ym’t
+();
+
+38 
+show_cu¡om”s
+();
+
+39 
+show_em¶oy“s
+();
+
+40 
+show_Üd
+();
+
+41 
+show_books_c
+();
+
+43 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+<< (
+¡d
+::o¡»am&, 
+	gBookshÝ
+*);
+
+44 
+	gBookshÝ
+& 
+	gÝ”©Ü
+ð(
+BookshÝ
+ &
+b2
+);
+
+45 
+	gÝ”©Ü
+ +(
+	gp
+){
+	gthis
+->
+	gbudg‘
++=
+p
+;}
+
+46 
+	gÝ”©Ü
+ -(
+	gn
+è{ 
+	gthis
+->
+	gbudg‘
+-=
+n
+;}
+
+	@building.hpp
+
+1 #iâdeà
+buždšg_hµ
+
+
+2 
+	#buždšg_hµ
+
+
+	)
+
+4 
+	~<veùÜ
+>
+
+5 
+	~"book.hµ
+"
+
+7 cÚ¡ 
+	gçùÜ
+ = 5;
+
+8 cÚ¡ 
+	gçùÜ1
+ = 20;
+
+10 þas 
+	cBuždšg
+
+
+12 
+	m´Ùeùed
+:
+
+13 
+¡d
+::
+¡ršg
+ 
+Çme
+, 
+	mloc
+;
+
+14 
+	m¬—
+;
+
+17 
+	mpublic
+:
+
+18 
+	$Buždšg
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+l
+, 
+a
+): 
+	`Çme
+Ò), 
+	`loc
+Ö), 
+	$¬—
+(
+a
+) {}
+
+19 
+¡d
+::
+¡ršg
+ 
+	$g‘_Çme
+(è{ 
+Çme
+;
+	}
+}
+
+20 
+	g¡d
+::
+¡ršg
+ 
+	$g‘_loc
+(è{ 
+loc
+;
+	}
+}
+
+21 
+	$g‘_¬—
+(è{ 
+¬—
+;
+	}
+}
+
+22 
+	$£t_Çme
+(
+¡d
+::
+¡ršg
+ 
+n
+è{
+Çme
+ =‚;
+	}
+}
+
+23 
+	$£t_loc
+(
+¡d
+::
+¡ršg
+ 
+l
+è{
+loc
+ =†;
+	}
+}
+
+24 
+	$£t_¬—
+(
+a
+è{
+¬—
+ =‡;
+	}
+}
+
+26 
+vœtu®
+ 
+show
+() = 0;
+
+27 
+vœtu®
+ 
+»£t
+() = 0;
+
+	@customer.hpp
+
+1 #iâdeà
+cu¡om”_h
+
+
+2 
+	#cu¡om”_h
+
+
+	)
+
+4 
+	~<veùÜ
+>
+
+5 
+	~"book.hµ
+"
+
+6 
+	~"³rsÚ.hµ
+"
+
+8 þas 
+	cCu¡om”
+ : 
+public
+ 
+P”sÚ
+
+
+10 
+public
+:
+
+11 
+Cu¡om”
+(
+¡d
+::
+¡ršg
+ = "Klient", std::string = "Ksiegarni", = 0);
+
+12 ~
+Cu¡om”
+();
+
+14 
+buy
+(
+Book
+&);
+
+15 
+wÜk
+();
+
+17 
+	mÝ”©Ü
+ +=(
+m
+è{
+this
+->
+£t_mÚey
+Ñhis->
+g‘_mÚey
+() + m);}
+
+18 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+<< (
+¡d
+::o¡»am&, 
+	gCu¡om”
+&);
+
+19 
+	gCu¡om”
+& 
+	gÝ”©Ü
+ð(
+Cu¡om”
+ &
+c2
+);
+
+22 
+Cu¡om”
+* 
+Ãw_cu¡
+(
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+	@debug_head.hpp
+
+1 #iâdeà
+DEBUG_HEAD_HPP_INCLUDED
+
+
+2 
+	#DEBUG_HEAD_HPP_INCLUDED
+
+
+	)
+
+4 #iâdeà
+DEBUG
+
+
+5 
+	#DEBUG
+ 1
+
+	)
+
+8 #ià
+DEBUG
+
+
+9 
+	#D
+(
+x
+è
+	)
+x
+
+11 
+	#D
+(
+x
+)
+
+	)
+
+	@employee.hpp
+
+1 #iâdeà
+em¶oy“_h
+
+
+2 
+	#em¶oy“_h
+
+
+	)
+
+4 
+	~"book.hµ
+"
+
+5 
+	~"³rsÚ.hµ
+"
+
+7 þas 
+	cEm¶oy“
+: 
+public
+ 
+P”sÚ
+
+
+9 
+§Ïry
+;
+
+10 
+	mpublic
+:
+
+12 
+Em¶oy“
+(
+¡d
+::
+¡ršg
+ = "-", std::string = "-", = 0, = 0);
+
+13 ~
+Em¶oy“
+();
+
+14 
+	$g‘_§Ïry
+(è{ 
+§Ïry
+;}
+
+15 
+	$£t_§Ïry
+(
+§l
+è{
+§Ïry
+ = s®;
+	}
+}
+
+17 
+ä›nd
+ 
+	g¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (
+¡d
+::o¡»am&, 
+	gEm¶oy“
+&);
+
+18 
+	gEm¶oy“
+& 
+	gÝ”©Ü
+ð(
+Em¶oy“
+ &
+e2
+);
+
+	@functions.hpp
+
+1 #iâdeà
+funùiÚs_hµ
+
+
+2 
+	#funùiÚs_hµ
+
+
+	)
+
+4 
+	~<io¡»am
+>
+
+5 
+	~<c¡ršg
+>
+
+6 
+	~<c¡dlib
+>
+
+7 
+	~<veùÜ
+>
+
+8 
+	~<f¡»am
+>
+
+9 
+	~"book.hµ
+"
+
+11 cÚ¡ 
+	gMAX_L
+ = 30;
+
+13 * 
+lßd
+(*, );
+
+14 
+lßd_n
+();
+
+15 
+d©a
+(
+¡d
+::
+veùÜ
+<
+Book
+*>&, std::veùÜ<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+16 
+d–‘e_d©a
+(
+¡d
+::
+veùÜ
+<
+Book
+*>&, std::veùÜ<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+17 
+Ãw_book
+(
+¡d
+::
+veùÜ
+<
+Book
+*>&);
+
+19 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gT
+>
+
+20 
+show_vec
+(
+¡d
+::
+veùÜ
+<
+T
+*> &
+vec
+)
+
+22 
+i
+;
+
+23 
+	gi
+ = 0 ; i < 
+	gvec
+.
+size
+() ; i++)
+
+24 
+	g¡d
+::
+cout
+<<*(
+vec
+[
+i
+]);
+
+27 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gT
+>
+
+28 
+pos™iÚ
+(
+¡d
+::
+veùÜ
+<
+T
+*>& 
+vec
+, T *
+ob
+)
+
+30 
+	gi
+ = 0;
+
+31 if(
+	gvec
+.
+em±y
+(è|| *
+	gob
+ < *(vec[
+i
+]è|| *ob =ð*(
+vec
+[i]))
+
+32 
+i
+ = 0;
+
+35 
+	gi
+ < 
+	gvec
+.
+size
+())
+
+37 if(*
+	gob
+ < *(
+	gvec
+[
+i
+]))
+
+39 
+	gi
+++;
+
+42  
+	gi
+;
+
+	@house.hpp
+
+1 #iâdeà
+hou£_h
+
+
+2 
+	#hou£_h
+
+
+	)
+
+4 
+	~"buždšg.hµ
+"
+
+5 
+	~"cu¡om”.hµ
+"
+
+6 
+	~"em¶oy“.hµ
+"
+
+7 
+	~<veùÜ
+>
+
+8 
+	~<c¡dlib
+>
+
+9 
+	~<ùime
+>
+
+11 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+12 þas 
+	cHou£
+: 
+public
+ 
+Buždšg
+
+
+14 
+¡d
+::
+veùÜ
+<
+P”
+*> 
+šhab
+;
+
+15 
+	m¡d
+::
+veùÜ
+<
+Book
+*> 
+sh–f
+;
+
+17 
+	mpublic
+:
+
+18 
+Hou£
+<
+P”
+>(
+¡d
+::
+¡ršg
+ = "Dom", 
+	m¡d
+::string = "Miasto", = 100);
+
+19 ~
+	mHou£
+<
+	mP”
+>();
+
+20 
+add
+(
+Book
+ *
+bn
+, 
+pos
+);
+
+21 
+add_šhab
+(, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+22 
+P”
+* 
+	$g‘_šhab
+(
+n
+è{n%=
+šhab
+.
+	`size
+();  inhab[n];};
+
+23 
+vœtu®
+ 
+	`show
+();
+
+24 
+vœtu®
+ 
+	`»£t
+();
+
+26 
+ä›nd
+ 
+¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (¡d::o¡»am& 
+os
+, 
+Hou£
+<
+P”
+>& 
+h
+)
+
+28 
+i
+ = 0 ; i < 
+h
+.
+šhab
+.
+	`size
+(è; i++è
+os
+<<h.šhab[i]->
+	`g‘_Çme
+()<<" "<<h.šhab[i]->
+	`g‘_suºame
+()<<" "<<h.šhab[i]->
+	`g‘_mÚey
+()<<
+¡d
+::
+’dl
+;
+
+29 
+os
+<<
+¡d
+::
+’dl
+;
+
+30  
+os
+;
+
+31 
+	}
+}
+
+34 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+35 
+	gHou£
+<
+	gP”
+>::
+	$Hou£
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::¡ršg 
+l
+, 
+a
+): 
+	$Buždšg
+(
+n
+, 
+l
+, 
+a
+)
+
+37 
+	`D
+(
+¡d
+::
+cout
+<<"TwÜzdom"<<¡d::
+’dl
+;)
+
+38 
+	}
+}
+
+40 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+41 
+	gHou£
+<
+	gP”
+>::~
+	$Hou£
+()
+
+43 
+P”
+ *
+p
+;
+
+44 
+sh–f
+.
+	`þ—r
+();
+
+45 !
+šhab
+.
+	`em±y
+())
+
+47 
+p
+ = 
+šhab
+[šhab.
+	`size
+()-1];
+
+48 
+šhab
+.
+	`pÝ_back
+();
+
+49 
+d–‘e
+ 
+p
+;
+
+51 
+	`D
+(
+¡d
+::
+cout
+<<"Usuwamy dom"<<¡d::
+’dl
+;)
+
+52 
+	}
+}
+
+55 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+56 
+	gHou£
+<
+	gP”
+>::
+	$show
+()
+
+58 
+i
+;
+
+59 
+i
+ = 0 ; i < 
+sh–f
+.
+	`size
+() ; i++)
+
+60 
+¡d
+::
+cout
+<<*(
+sh–f
+[
+i
+]);
+
+61 
+	}
+}
+
+64 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+65 
+	gHou£
+<
+	gP”
+>::
+	$»£t
+(è{ 
+sh–f
+.
+	`þ—r
+(); 
+	}
+}
+
+68 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+69 
+	gHou£
+<
+	gP”
+>::
+	$add
+(
+Book
+ *
+bn
+, 
+pos
+)
+
+71 if(
+sh–f
+.
+	`size
+(è< sh–f.
+	`max_size
+(è&& 
+¬—
+ > sh–f.size()/
+çùÜ
+)
+
+72 
+sh–f
+.
+	`š£¹
+(sh–f.
+	`begš
+()+
+pos
+, 1, 
+bn
+);
+
+73 
+	}
+}
+
+75 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gP”
+>
+
+76 
+	gHou£
+<
+	gP”
+>::
+add_šhab
+(
+n
+, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*> &
+Çmes
+, std::veùÜ<¡d::¡ršg*> &
+suºames
+)
+
+78 
+i
+;
+
+79 
+P”
+ *
+	g³
+;
+
+80 
+	g¡d
+::
+¡ršg
+ 
+sur
+, 
+	gÇm
+;
+
+82 if(!
+	gsuºames
+.
+em±y
+())
+
+84 
+	gi
+ = 
+¿nd
+()%(
+suºames
+.
+size
+());
+
+85 
+	gsur
+ = *
+suºames
+[
+i
+];
+
+87 
+	gsur
+ = "Kowalski";
+
+89 
+¤ªd
+(
+time
+(
+NULL
+));
+
+90 
+	gn
+ > 0 && 
+	g¬—
+/
+	gçùÜ1
+ > 
+	gthis
+->
+	gšhab
+.
+size
+())
+
+92 if(!
+	gÇmes
+.
+em±y
+())
+
+94 
+	gi
+ = 
+¿nd
+()%(
+Çmes
+.
+size
+());
+
+95 
+	gÇm
+ = *
+Çmes
+[
+i
+];
+
+97 
+	gÇm
+ = "Jan";
+
+98 
+	gi
+ = 
+¿nd
+()%20000+5000;
+
+99 
+	g³
+ = 
+Ãw
+ 
+P”
+(
+Çm
+, 
+sur
+, 
+i
+/100);
+
+100 
+	gthis
+->
+	gšhab
+.
+push_back
+(
+³
+);
+
+101 
+	gn
+--;
+
+	@interface.hpp
+
+1 #iâdeà
+š‹rçû_hµ
+
+
+2 
+	#š‹rçû_hµ
+
+
+	)
+
+4 
+	~"owÃr.hµ
+"
+
+6 
+maš_m’u
+(
+OwÃr
+&, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+7 
+ow_m’u1
+(
+OwÃr
+&, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+8 
+ow_m’u2
+(
+OwÃr
+&, 
+¡d
+::
+veùÜ
+<¡d::
+¡ršg
+*>&, std::vector<std::string*>&);
+
+	@owner.hpp
+
+1 #iâdeà
+owÃr_hµ
+
+
+2 
+	#owÃr_hµ
+
+
+	)
+
+4 
+	~"bookshÝ.hµ
+"
+
+5 
+	~"³rsÚ.hµ
+"
+
+6 
+	~"funùiÚs.hµ
+"
+
+8 þas 
+	cOwÃr
+: 
+public
+ 
+P”sÚ
+
+
+10 
+¡d
+::
+veùÜ
+<
+BookshÝ
+*> 
+bs
+;
+
+12 
+	mpublic
+:
+
+13 
+OwÃr
+(
+¡d
+::
+¡ršg
+ = "Wlasciciel", std::string = "Ksiegarni", = 0.0);
+
+14 ~
+OwÃr
+();
+
+15 
+	$g‘_size
+(è{ 
+bs
+.
+	`size
+();}
+
+16 
+BookshÝ
+* 
+	$g‘_bs
+(
+n
+è{ 
+bs
+[n];
+	}
+}
+
+18 
+show_bs
+();
+
+19 
+add_bs
+();
+
+20 
+add_bs
+(*, *, , );
+
+21 
+show_Üd”
+(
+BookshÝ
+*);
+
+22 
+d–‘e_bs
+();
+
+23 
+d–‘e_bs
+();
+
+24 
+acû±
+(
+BookshÝ
+*);
+
+25 
+g‘_ÿsh
+(
+BookshÝ
+*);
+
+	@person.hpp
+
+1 #iâdeà
+³rsÚ_h
+
+
+2 
+	#³rsÚ_h
+
+
+	)
+
+4 þas 
+	cP”sÚ
+
+
+6 
+	m´Ùeùed
+:
+
+8 
+¡d
+::
+¡ršg
+ 
+Çme
+;
+
+9 
+	m¡d
+::
+¡ršg
+ 
+suºame
+;
+
+10 
+	mmÚey
+;
+
+12 
+	mpublic
+:
+
+14 
+P”sÚ
+(
+¡d
+::
+¡ršg
+ 
+n
+ = "-", std::¡ršg 
+s
+ = "-", 
+m
+ = 0.00): 
+Çme
+Ò), 
+suºame
+(s), 
+	$mÚey
+(
+m
+) {};
+
+16 
+¡d
+::
+¡ršg
+ 
+	$g‘_Çme
+(è{ 
+Çme
+;
+	}
+}
+
+17 
+	g¡d
+::
+¡ršg
+ 
+	$g‘_suºame
+(è{ 
+suºame
+;
+	}
+}
+
+18 
+	$g‘_mÚey
+(è{ 
+mÚey
+;
+	}
+}
+
+20 
+	$£t_Çme
+(
+¡d
+::
+¡ršg
+ 
+n
+è{
+Çme
+ =‚;
+	}
+}
+
+21 
+	$£t_suºame
+(
+¡d
+::
+¡ršg
+ 
+s
+è{
+suºame
+ = s;
+	}
+}
+
+22 
+	$£t_mÚey
+(
+m
+è{
+mÚey
+ = m;
+	}
+}
+
+	@warehouse.hpp
+
+1 #iâdeà
+w¬ehou£_hµ
+
+
+2 
+	#w¬ehou£_hµ
+
+
+	)
+
+4 
+	~"buždšg.hµ
+"
+
+6 þas 
+	cW¬ehou£
+: 
+public
+ 
+Buždšg
+
+
+8 
+´Ùeùed
+:
+
+9 
+¡d
+::
+veùÜ
+<
+Bookn
+> 
+bo
+;
+
+11 
+	mpublic
+:
+
+12 
+W¬ehou£
+(
+¡d
+::
+¡ršg
+ 
+n
+, std::string, );
+
+13 ~
+W¬ehou£
+();
+
+14 
+vœtu®
+ 
+show
+();
+
+15 
+vœtu®
+ 
+»£t
+();
+
+16 
+add
+(, , 
+Book
+*);
+
+17 
+add_®l
+(, 
+¡d
+::
+veùÜ
+<
+Book
+*>&);
+
+18 
+d–‘e_b
+(
+n
+);
+
+20 
+W¬ehou£
+(
+¡d
+::
+¡ršg
+ 
+n
+ = "Magazyn", std::¡ršg 
+l
+ = "MŸ¡o", 
+a
+ = 100): 
+	$Buždšg
+(
+n
+, 
+l
+, 
+a
+) {};
+
+21 
+ä›nd
+ 
+¡d
+::
+o¡»am
+& 
+Ý”©Ü
+ << (¡d::o¡»am&, 
+W¬ehou£
+&);
+
+22 
+	}
+};
+
+	@
+1
+.
+1
+/usr/include
+33
+1037
+/home/ewelina/Pulpit/Projekt3/book.cpp
+/home/ewelina/Pulpit/Projekt3/book.hpp
+/home/ewelina/Pulpit/Projekt3/bookshop.cpp
+/home/ewelina/Pulpit/Projekt3/bookshop.hpp
+/home/ewelina/Pulpit/Projekt3/building.hpp
+/home/ewelina/Pulpit/Projekt3/customer.cpp
+/home/ewelina/Pulpit/Projekt3/customer.hpp
+/home/ewelina/Pulpit/Projekt3/debug_head.hpp
+/home/ewelina/Pulpit/Projekt3/employee.cpp
+/home/ewelina/Pulpit/Projekt3/employee.hpp
+/home/ewelina/Pulpit/Projekt3/functions.cpp
+/home/ewelina/Pulpit/Projekt3/functions.hpp
+/home/ewelina/Pulpit/Projekt3/house.hpp
+/home/ewelina/Pulpit/Projekt3/interface.cpp
+/home/ewelina/Pulpit/Projekt3/interface.hpp
+/home/ewelina/Pulpit/Projekt3/main.cpp
+/home/ewelina/Pulpit/Projekt3/owner.cpp
+/home/ewelina/Pulpit/Projekt3/owner.hpp
+/home/ewelina/Pulpit/Projekt3/person.hpp
+/home/ewelina/Pulpit/Projekt3/warehouse.cpp
+/home/ewelina/Pulpit/Projekt3/warehouse.hpp
+book.hpp
+bookshop.hpp
+building.hpp
+customer.hpp
+debug_head.hpp
+employee.hpp
+functions.hpp
+house.hpp
+interface.hpp
+owner.hpp
+person.hpp
+warehouse.hpp
