@@ -46,7 +46,7 @@ class Bookshop : public Warehouse
   void show_employees();
   void show_ord();
 
-  friend std::ostream& operator<< (std::ostream&, Bookshop*);
+  friend std::ostream& operator<< (std::ostream&, Bookshop&);
   Bookshop& operator= (Bookshop &b2);
   void operator +(float p){this->budget+=p;}
   void  operator -(float n) { this->budget-=n;}

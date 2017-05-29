@@ -50,7 +50,7 @@ Bookshop& Bookshop::operator = (Bookshop &b2)
 //przeciazenie operatora wyjscia
 std::ostream& operator << (std::ostream &os, Bookshop &b)
 {
-  os<<b.get_name()<<" "<<b.get_loc()<<" "<<b.get_area()<<" "<<b.get_budget()<<std::endl;
+  os<<b.get_name()<<" "<<b.get_loc()<<" "<<b.get_budget()<<std::endl;
   return os;
 }
 

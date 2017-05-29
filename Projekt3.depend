@@ -38,7 +38,7 @@
 	"bookshop.hpp"
 	<ctime>
 
-1496086552 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
+1496094061 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
 	"house.hpp"
 	"warehouse.hpp"
 
@@ -78,7 +78,7 @@
 	"warehouse.hpp"
 	"functions.hpp"
 
-1496092831 source:/home/ewelina/Pulpit/Projekt3/owner.cpp
+1496093186 source:/home/ewelina/Pulpit/Projekt3/owner.cpp
 	"owner.hpp"
 
 1496076229 /home/ewelina/Pulpit/Projekt3/owner.hpp
