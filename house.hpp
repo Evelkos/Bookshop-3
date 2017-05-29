@@ -25,7 +25,7 @@ class House: public Building    //dom, w ktorym mieszka jedna rodzina
 
   friend std::ostream& operator << (std::ostream& os, House<Per>& h)     //wyswietla wszystkich mieszkancow domu
   {
-    for(unsigned i = 0 ; i < h.inhab.size() ; i++) os<<h.inhab[i]->get_name()<<" "<<h.inhab[i]->get_surname()<<" "<<h.inhab[i]->get_money()<<std::endl;
+    for(unsigned i = 0 ; i < h.inhab.size() ; i++){os<<h.inhab[i]->get_name()<<" "<<h.inhab[i]->get_surname()<<" "<<h.inhab[i]->get_money();}
     os<<std::endl;
     return os;
   }

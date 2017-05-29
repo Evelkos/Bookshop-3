@@ -38,7 +38,7 @@ void Owner::show_bs()
 //tworzy nowa ksiegarnie
 void Owner::add_bs()
 {
-  int a;
+  unsigned a;
   char n[20], c[20];
   double b;
   Bookshop *nbs;
@@ -56,6 +56,7 @@ void Owner::add_bs()
   {
     nbs = new Bookshop(n, c, a, b);
     bs.push_back(nbs);
+    std::cout<<(*nbs);          //uzywany jest operator dla magazynu - czemu?
   }
   else
     std::cout<<"Nie mozna dodac kolejnej ksiegarni"<<std::endl;
@@ -77,9 +78,34 @@ void Owner::add_bs(char n[MAX_L], char c[MAX_L], unsigned a, double b)
 }
 
 //usuwa ksiegarnie o zadanym numerze (aktualnie na liscie)
-void Owner::delete_bs(unsigned n)  { Bookshop *b; n%=bs.size(); b = bs[n-1]; bs.erase(bs.begin() + n -1); delete b;}
+void Owner::delete_bs(unsigned n)
+{
+  Bookshop *b;
+  if(bs.size() > 0)
+  {
+    n--;
+    n%=bs.size();
+    b = bs[n];
+    bs.erase(bs.begin() + n);
+    delete b;
+  }
+  else
+    std::cout<<"Nie mozna usunac zadnej ksiegarni"<<std::endl;
+}
 
-void Owner::delete_bs() {unsigned n; this->show_bs(); if(bs.size() > 0){std::cout<<"Usun: "; n = load_n();  this->delete_bs(n);}}
+void Owner::delete_bs()
+{
+  unsigned n;
+  if(bs.size() > 0)
+  {
+    this->show_bs();
+    std::cout<<"Usun: ";
+    n = load_n();
+    this->delete_bs(n);
+  }
+  else
+    std::cout<<"Nie mozna usunac zadnej ksiegarni"<<std::endl;
+}
 
 void Owner::get_cash(Bookshop* b)
 {
@@ -89,13 +115,3 @@ void Owner::get_cash(Bookshop* b)
   *b - mon;
   money += mon;
 }
-
-/*
-//wyswietlanie zlozonego przez pracownikow zamowienia
-void Owner::show_order(Bookshop *current)
-{
-  if(current->get_oA() == 0)
-    std::cout<<"Zadne zamowienie nie jest aktualnie zlozone"<<std::endl;
-  else
-    show_l(current->get_order());
-}*/

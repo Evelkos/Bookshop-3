@@ -4,7 +4,7 @@
 int Bookshop::numBookshops = 0;
 
 //konstruktor
-Bookshop::Bookshop(std::string n, std::string l, unsigned int a, double b): Warehouse(n, l , a), budget(b)
+Bookshop::Bookshop(std::string n, std::string l, unsigned int a, double b): budget(b), Warehouse(n, l , a)
 {
   numBookshops++;
   D(std::cout <<"Tworze ksigarnie"<<std::endl;)
@@ -50,7 +50,7 @@ Bookshop& Bookshop::operator = (Bookshop &b2)
 //przeciazenie operatora wyjscia
 std::ostream& operator << (std::ostream &os, Bookshop &b)
 {
-  os<<b.get_name()<<" "<<b.get_loc()<<" "<<b.get_budget()<<std::endl;
+  os<<b.get_name()<<" "<<b.get_loc()<<" "<<b.get_area()<<" "<<b.get_budget()<<std::endl;
   return os;
 }
 
@@ -122,11 +122,15 @@ void Bookshop::add_customers(std::vector<std::string*> &names, std::vector<std::
 //tworzy nowego pracownika
 void Bookshop::add_employee(std::string na, std::string l, unsigned a, std::vector<std::string*> &names, std::vector<std::string*> &surnames)
 {
+  double sal;
   House<Employee> *h = nullptr;
   if(emp.size() < emp.max_size())
   {
    h = new House<Employee>(na, l, a);
    h->add_inhab(1, names, surnames);
+   std::cout<<"Podaj pensje pracownika: ";
+   sal = load_n();
+   h->get_inhab(0)->set_salary(sal);
    emp.push_back(h);
   }
 }
@@ -135,29 +139,100 @@ void Bookshop::add_employee(std::string na, std::string l, unsigned a, std::vect
 void Bookshop::payment()
 {
   unsigned i;
-  for(i = 0 ; i < emp.size() ; i++)
+  if(emp.size() > 0)
   {
-    (*this)-this->emp[i]->get_inhab(0)->get_salary();
-    emp[i]->get_inhab(0)->set_money(emp[i]->get_inhab(0)->get_money()+emp[i]->get_inhab(0)->get_salary());
+    for(i = 0 ; i < emp.size() ; i++)
+    {
+      std::cout<<"PENSJA: "<<(emp[i]->get_inhab(0)->get_salary())<<std::endl;
+      std::cout<<"BUDZET: "<<budget<<std::endl;
+      std::cout<<"ODEJMOWANIE: "<<budget - (emp[i]->get_inhab(0)->get_salary());
+      budget -= (emp[i]->get_inhab(0)->get_salary());
+      emp[i]->get_inhab(0)->set_money(emp[i]->get_inhab(0)->get_money()+emp[i]->get_inhab(0)->get_salary());
+    }
   }
+  else
+    std::cout<<"Nie ma komu wyplacic pensji"<<std::endl;
 }
 
 //UWAGA TRZEBA WZIAC POD UWAGE POWIEKSZONE N!! AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 //wyswietla liste ksiazek, pobiera numer, usuwa ksiazke o zadanym numerze, zwraca czesc kosztow
-void Bookshop::delete_book() {unsigned n; this->show(); n = load_n(); n%=bo.size(); (*this)+(bo[n].b->get_price()*(bo[n].n)); this->delete_b(n);}
+void Bookshop::delete_book()
+{
+  if(bo.size() > 0)
+  {
+    unsigned n;
+    this->show();
+    n = load_n();
+    n%=bo.size();
+    (*this)+(bo[n].b->get_price()*(bo[n].n));
+    this->delete_b(n);
+  }
+  else
+    std::cout<<"Brak ksiazek do usuniecia"<<std::endl;
+}
 
 //usuwa klienta, ktorego numer zostal dany
-void Bookshop::delete_customers(unsigned n)  {n%=cust.size(); House<Customer> *b; b = cust[n-1]; cust.erase(cust.begin()+n-1); delete b;}
+void Bookshop::delete_customers(unsigned n)
+{
+  if(bo.size() > 0)
+  {
+    n%=cust.size();
+    House<Customer> *b;
+    b = cust[n-1];
+    cust.erase(cust.begin()+n-1);
+    delete b;
+  }
+  else
+    std::cout<<"Brak ksiazek do usuniecia"<<std::endl;
+}
 
 //wyswietla liste klientow, pobiera numer i usuwa klientow o zadanym numerze
-void Bookshop::delete_customers(){unsigned n; this->show_customers(); std::cout<<"Usun: "; n = load_n(); n%=cust.size(); this->delete_customers(n);}
+void Bookshop::delete_customers()
+{
+  unsigned n;
+  if(cust.size())
+  {
+    this->show_customers();
+    std::cout<<"Usun: ";
+    n = load_n();
+    n%=cust.size();
+    this->delete_customers(n);
+  }
+  else
+    std::cout<<"Brak klientow do usuniecia"<<std::endl;
+}
 
 //usuwa pracownika, ktorego numer zostal dany
-void Bookshop::delete_employee(unsigned n)   {n%=emp.size(); House<Employee> *b; b = emp[n-1];  emp.erase(emp.begin()+n-1); delete b;}
+void Bookshop::delete_employee(unsigned n)
+{
+  House<Employee> *h;
+  if(emp.size() > 0)
+  {
+    n--;
+    n%=emp.size();
+    h = emp[n];
+    emp.erase(emp.begin()+n);
+    delete h;
+  }
+  else
+    std::cout<<"Brak pracownikow do usuniecia"<<std::endl;
+}
 
 //wyswietla liste pracownikow, pobiera numer i usuwa pracownika o zadanym numerze
-void Bookshop::delete_employee() {unsigned n; this->show_employees(); std::cout<<"Usun: "; n = load_n(); n%=emp.size(); this->delete_employee(n);}
+void Bookshop::delete_employee()
+{
+  unsigned n;
+  if(emp.size() > 0)
+  {
+    this->show_employees();
+    std::cout<<"Usun: ";
+    n = load_n();
+    this->delete_employee(n);
+  }
+  else
+    std::cout<<"Brak pracownikow do usuniecia"<<std::endl;
+}
 
 //skladanie zamowienia - po 5 sztuk danej ksiazki na kazda pozycje
 void Bookshop::order(Warehouse &w)

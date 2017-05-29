@@ -90,7 +90,7 @@ void ow_menu2(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::vec
         case '3':     bs->delete_employee();                                              break;
         case '4':     bs->payment();                                                      break;
         case '5':     ow.get_cash(bs);                                                    break;
-        case '6':     if(i < ow.get_size()) i++; else i = 0;                              break;
+        case '6':     if(i < ow.get_size()-1) i++; else i = 0;                            break;
         case '7':                                                                         break;
         default:      std::cout<<"Nie ma takiej mozliwosci"<<std::endl;                   break;
       }

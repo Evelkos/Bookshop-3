@@ -5,7 +5,7 @@ Warehouse::Warehouse(std::string n, std::string l, int a): Building(n, l, a){}
 
 std::ostream& operator << (std::ostream &os, Warehouse &w)
 {
-  os<<w.name<<"  "<<w.loc<<"  "<<w.area<<std::endl;
+  os<<w.name<<"  "<<w.loc<<"  "<<w.area<<"ASDASDFASFAFSAF"<<std::endl;
   return os;
 }
 
