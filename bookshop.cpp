@@ -64,7 +64,7 @@ void Bookshop::show_customers()
   {
     std::cout<<"Lista klientow:"<<std::endl;
     for(i = 0 ; i < cust.size() ; i++)
-      std::cout<<*(cust[i]);
+      std::cout<<i+1<<". "<<*(cust[i]);
   }
 }
 
@@ -123,30 +123,6 @@ void Bookshop::add_employee(std::string na, std::string l, unsigned a, std::vect
 }
 
 /*
-//wyswietla liste kandydatow
-void Bookshop::choose_emp(names, surnames)
-{
-  int n[10];
-  unsigned i;
-
-
-  if(names.size() <= 0)   {  names.resize(10);     names.push_back("Jan");  }
-  if(surnames.size() <= 0){  surnames.resize(10);  surnames.push_back("Kowalski")}
-
-  for(i = 0 ; i < 5 ; i++)
-  {
-    srand(time(NULL));
-    if(names.size() < names.max_size())
-      n[i] = rand()%(names.size());
-    if(surnames.size() < surnames.max_size())
-      n[i+1] = rand()%(surnames.size());
-    std::cout<<i<<". "<<names[i]<<" "<<surnames[i+1]<<std::endl;
-  }
-
-  std::cout<<"Wybierz numer kandydata: ";
-}*/
-
-/*
 //wysylanie zamowienia (w domysle: przez pracownika)
 void Bookshop::order_e()
 {
@@ -183,11 +159,29 @@ void Bookshop::order_e()
   }
 }
 */
+
+//wyplata pencji pracownikom
+void Bookshop::payment()
+{
+  unsigned i;
+  for(i = 0 ; i < emp.size() ; i++)
+  {
+    (*this)-this->emp[i]->get_inhab(0)->get_salary();
+    emp[i]->get_inhab(0)->set_money(emp[i]->get_inhab(0)->get_money()+emp[i]->get_inhab(0)->get_salary());
+  }
+}
+
 //usuwa ksiazke o zadanym numerze, zwraca do budzetu 30% ceny hurtowej egzemplarzy
-void Bookshop::delete_book(int n){ bo.erase(bo.begin()+n); }
+void Bookshop::delete_book(unsigned n){ bo.erase(bo.begin()+n); }
 
 //usuwa klienta, ktorego numer zostal dany
-void Bookshop::delete_customers(int n)  { House<Customer> *b; b = cust[n-1]; cust.erase(cust.begin()+n-1); delete b;}
+void Bookshop::delete_customers(unsigned n)  {n%=cust.size(); House<Customer> *b; b = cust[n-1]; cust.erase(cust.begin()+n-1); delete b;}
+
+//wyswietla liste klientow, pobiera numer i usuwa klientow o zadanym numerze
+void Bookshop::delete_customers(){unsigned n; this->show_customers(); std::cout<<"Usun: "; n = load_n(); n%=cust.size(); this->delete_customers(n);}
 
 //usuwa pracownika, ktorego numer zostal dany
-void Bookshop::delete_employee(int n)   { House<Employee> *b; b = emp[n-1];  emp.erase(emp.begin()+n-1); delete b;}
+void Bookshop::delete_employee(unsigned n)   {n%=emp.size(); House<Employee> *b; b = emp[n-1];  emp.erase(emp.begin()+n-1); delete b;}
+
+//wyswietla liste pracownikow, pobiera numer i usuwa pracownika o zadanym numerze
+void Bookshop::delete_employee() {unsigned n; this->show_employees(); std::cout<<"Usun: "; n = load_n(); n%=emp.size(); this->delete_employee(n);}

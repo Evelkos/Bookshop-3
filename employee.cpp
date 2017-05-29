@@ -1,6 +1,6 @@
 #include"employee.hpp"
 
-Employee::Employee(std::string n, std::string s, double m): Person(n, s, m)
+Employee::Employee(std::string n, std::string s, double m, double sal): Person(n, s, m), salary(sal)
 {
   D(std::cout<<"Zatrudniamy pracownika"<<std::endl;)
 }

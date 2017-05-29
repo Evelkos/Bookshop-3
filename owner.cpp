@@ -70,49 +70,20 @@ void Owner::add_bs(char n[MAX_L], char c[MAX_L], unsigned a, double b)
 }
 
 //usuwa ksiegarnie o zadanym numerze (aktualnie na liscie)
-void Owner::delete_bs(int n)  { Bookshop *b; b = bs[n-1]; bs.erase(bs.begin() + n -1); delete b;}
+void Owner::delete_bs(unsigned n)  { Bookshop *b; n%=bs.size(); b = bs[n-1]; bs.erase(bs.begin() + n -1); delete b;}
 
-/*
-//akceptowanie zlozonego zamowienia
-void Owner::accept(Bookshop *b)
+void Owner::delete_bs() {unsigned n; this->show_bs(); std::cout<<"Usun: "; n = load_n();  this->delete_bs(n);}
+
+void Owner::get_cash(Bookshop* b)
 {
-  List<Book> *curr, *f;
-  Book *currB;
-  char choice[2];
-  choice[0] = '0';
-
-  if(b->get_oA() == 0)
-    std::cout<<std::endl<<"Aktualnie nie ma zlozonych zadnych zamowien"<<std::endl;
-  else if((curr = b->get_order()) != NULL)
-  {
-    show_order(b);
-    std::cout<<std::endl<<"Czy akceptujesz zamowienie?"<<std::endl<<"1. Tak"<<std::endl<<"2. Nie"<<std::endl;
-    load(choice, 2);
-    if(choice[0] == '1')
-    {
-      do
-      {
-        f = find_o(*(curr->get_obj()), b->get_firstB());  //wyszukiwanie zamowionej ksiazki na liscie w ksiegarni
-        if(f != NULL)
-        {
-          currB = f->get_obj();
-          if((b->get_budget() - curr->get_obj()->get_number()*quantity_pr(currB->get_year(), currB->get_pages())) >= 0)  //bo ilosc stron i rok sa takie same
-          {
-            *b - curr->get_obj()->get_number()*quantity_pr(currB->get_year(), currB->get_pages());
-            currB->set_number(currB->get_number()+curr->get_obj()->get_number());
-          }
-          else
-            break;
-        }
-        curr = curr->get_next();
-      }while(curr != b->get_order());
-    }
-    while(b->get_order() != NULL)
-      b->set_order(delete_o(1, b->get_order()));
-    b->set_oA(0);
-  }
+  double mon;
+  std::cout<<*b<<"Podaj o ile chcesz pomniejszyc budzet ksiegarni: ";
+  do  {  mon = load_n();  } while(mon < 0 || mon > b->get_budget());
+  *b - mon;
+  money += mon;
 }
 
+/*
 //wyswietlanie zlozonego przez pracownikow zamowienia
 void Owner::show_order(Bookshop *current)
 {
@@ -120,17 +91,4 @@ void Owner::show_order(Bookshop *current)
     std::cout<<"Zadne zamowienie nie jest aktualnie zlozone"<<std::endl;
   else
     show_l(current->get_order());
-}
-
-void Owner::get_cash(Bookshop *bs)
-{
-  double number;
-  std::cout<<bs;
-  std::cout<<"Podaj o ile chcesz pomniejszyc budzet ksiegarni: ";
-  do
-  {
-    number = load_n();
-  }while(number < 0 || number > bs->get_budget());
-  *bs - number;
-  budget += number;
 }*/

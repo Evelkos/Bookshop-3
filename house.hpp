@@ -19,12 +19,14 @@ class House: public Building    //dom, w ktorym mieszka jedna rodzina
   ~House<Per>();
   void add(Book *bn, int pos);
   void add_inhab(unsigned int, std::vector<std::string*>&, std::vector<std::string*>&);
+  Per* get_inhab(unsigned n) {n%=inhab.size(); return inhab[n];};
   void virtual show();
   void virtual reset();
 
   friend std::ostream& operator << (std::ostream& os, House<Per>& h)     //wyswietla wszystkich mieszkancow domu
   {
     for(unsigned i = 0 ; i < h.inhab.size() ; i++) os<<h.inhab[i]->get_name()<<" "<<h.inhab[i]->get_surname()<<" "<<h.inhab[i]->get_money()<<std::endl;
+    os<<std::endl;
     return os;
   }
 };
