@@ -11,6 +11,10 @@ class Warehouse: public Building
   public:
   Warehouse(std::string n, std::string, int);
   ~Warehouse();
+
+  unsigned get_bo_size() {return bo.size();}
+  Book* get_bo_b(unsigned n) {n%=bo.size(); return bo[n].b;}
+
   virtual void show();                  //wyswietla liste ksiazek znajdujacych sie w magazynie
   virtual void reset();                 //"resetuje" liczbe ksiazek w magazynie (ustawia wszystkie na okreslona liczbe)
   void add(int, int, Book*);            //dodaje nowa (juz utworzona) ksiazke do magazynu

@@ -14,6 +14,13 @@ Owner::~Owner()
   D(std::cout<<"Niszcze wlasciciela."<<std::endl;)
 }
 
+//przeciazenie operatora wyjscia
+std::ostream& operator << (std::ostream &os, Owner &ow)
+{
+  os<<ow.get_name()<<" "<<ow.get_surname()<<" "<<ow.get_money()<<std::endl;
+  return os;
+}
+
 //pokazuje liste ksiegarni
 void Owner::show_bs()
 {
@@ -72,7 +79,7 @@ void Owner::add_bs(char n[MAX_L], char c[MAX_L], unsigned a, double b)
 //usuwa ksiegarnie o zadanym numerze (aktualnie na liscie)
 void Owner::delete_bs(unsigned n)  { Bookshop *b; n%=bs.size(); b = bs[n-1]; bs.erase(bs.begin() + n -1); delete b;}
 
-void Owner::delete_bs() {unsigned n; this->show_bs(); std::cout<<"Usun: "; n = load_n();  this->delete_bs(n);}
+void Owner::delete_bs() {unsigned n; this->show_bs(); if(bs.size() > 0){std::cout<<"Usun: "; n = load_n();  this->delete_bs(n);}}
 
 void Owner::get_cash(Bookshop* b)
 {

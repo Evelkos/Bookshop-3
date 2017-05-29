@@ -62,4 +62,4 @@ void Warehouse::add_all(int n, std::vector<Book*> &books)
   }
 }
 
-void Warehouse::delete_b(int n) {  bo.erase(bo.begin()+n);  }
+void Warehouse::delete_b(int n) {  bo.erase(bo.begin()+n-1);  }

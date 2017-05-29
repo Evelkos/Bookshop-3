@@ -29,12 +29,18 @@ class Bookshop : public Warehouse
   void add_employee(std::string, std::string, unsigned, std::vector<std::string*>&, std::vector<std::string*>&);
   void add_customers(unsigned, std::string, std::string, unsigned, std::vector<std::string*>&, std::vector<std::string*>&);
   void delete_book(unsigned n);
+  void add_customers(std::vector<std::string*>&, std::vector<std::string*>&);
   void delete_book();
   void delete_employee(unsigned n);
   void delete_employee();
   void delete_customers(unsigned n);
   void delete_customers();
   void payment();
+  void order(Warehouse &w);
+  Employee* choose_emp();
+  House<Customer>* choose_cust();
+
+
 
   void show_customers();
   void show_employees();

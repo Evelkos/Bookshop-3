@@ -12,7 +12,8 @@ class Owner: public Person
   public:
   Owner(std::string = "Wlasciciel", std::string = "Ksiegarni", double = 0.0);
   ~Owner();
-  unsigned get_size() {return bs.size();}
+  friend std::ostream& operator << (std::ostream&, Owner&);
+  unsigned get_size() {return bs.size();}       //zwraca liczbe ksiegarni
   Bookshop* get_bs(unsigned n) {return bs[n];}
 
   void show_bs();
