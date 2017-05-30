@@ -24,6 +24,7 @@ class Bookshop : public Warehouse
 
   static int get_numBookshops(){return numBookshops;}
   double get_budget() {return budget;}
+  unsigned get_emp_size() {return emp.size();}
   void set_budget(double b) {budget = b;}
   void add_book();
   void add_employee(std::string, std::string, unsigned, std::vector<std::string*>&, std::vector<std::string*>&);
@@ -39,13 +40,9 @@ class Bookshop : public Warehouse
   void order(Warehouse &w);
   Employee* choose_emp();
   House<Customer>* choose_cust();
-
-
-
   void show_customers();
   void show_employees();
   void show_ord();
-
   friend std::ostream& operator<< (std::ostream&, Bookshop&);
   Bookshop& operator= (Bookshop &b2);
   void operator +(float p){this->budget+=p;}

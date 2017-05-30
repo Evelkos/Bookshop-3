@@ -12,7 +12,7 @@ Employee::~Employee()
 
 std::ostream& operator<< (std::ostream &os, Employee &e)
 {
-  os<<e.get_name()<<" "<<e.get_surname()<<" "<<e.get_money()<<"zl"<<std::endl; return os;
+  os<<e.get_name()<<" "<<e.get_surname()<<" "<<e.get_salary()<<"zl"<<std::endl; return os;
 }
 
 Employee& Employee::operator= (Employee &e2)

@@ -1,11 +1,14 @@
 #include "warehouse.hpp"
 #include "functions.hpp"
 
-Warehouse::Warehouse(std::string n, std::string l, int a): Building(n, l, a){}
+Warehouse::Warehouse(std::string n, std::string l, int a): Building(n, l, a)
+{
+  D(std::cout<<"Tworze magazyn"<<std::endl;)
+}
 
 std::ostream& operator << (std::ostream &os, Warehouse &w)
 {
-  os<<w.name<<"  "<<w.loc<<"  "<<w.area<<"ASDASDFASFAFSAF"<<std::endl;
+  os<<w.name<<"  "<<w.loc<<"  "<<w.area<<std::endl;
   return os;
 }
 
@@ -33,7 +36,7 @@ void Warehouse::reset()
 }
 
 //dodawanie pojedynczej ksiazki do magazynu - ma isc w parze z tworzeniem nowej ksiazki
-void Warehouse::add(int n, int pos, Book *bn)
+void Warehouse::add(unsigned n, unsigned pos, Book *bn)
 {
   Bookn boo;
   boo.b = bn;
@@ -46,20 +49,36 @@ void Warehouse::add(int n, int pos, Book *bn)
 }
 
 //dodawanie ksiazek do magazynu na poczatku dzialania programu - dodaje wszystkie ksiazki
-void Warehouse::add_all(int n, std::vector<Book*> &books)
+void Warehouse::add_all(unsigned n, std::vector<Book*> &books)
 {
-  unsigned int i;
+  unsigned i;
   Bookn boo;
   boo.n = n;
 
   for(i = 0 ; i < books.size() ; i++)
   {
     boo.b = books[i];
-    if(bo.size() < bo.max_size() && area > bo.size()/factor)
+    if(bo.size() < bo.max_size() && bo.size() < area/factor)
       bo.push_back(boo);
     else
       break;
   }
 }
 
-void Warehouse::delete_b(int n) {  bo.erase(bo.begin()+n-1);  }
+void Warehouse::delete_b(unsigned n) {  bo.erase(bo.begin()+n);  }
+
+void Warehouse::delete_b()
+{
+  unsigned n;
+  if(bo.size() > 0)
+  {
+    this->show();
+    std::cout<<"Usun: ";
+    n = load_n();
+    n--;
+    n%=bo.size();
+    this->delete_b(n);
+  }
+  else
+    std::cout<<"Brak pracownikow do usuniecia"<<std::endl;
+}

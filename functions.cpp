@@ -45,6 +45,7 @@ double load_n(){
       break;
     }
   }
+  if(result < 0)   result*=(-1);  //ujemne liczby nie sa w programie potrzebne
   return result;
 }
 
@@ -138,11 +139,11 @@ void delete_data(std::vector<Book*> &books, std::vector<std::string*> &names, st
   }
 }
 
-void new_book(std::vector<Book*> &books)
+unsigned new_book(std::vector<Book*> &books)
 {
   Book *nb;
   char word[MAX_L];
-  unsigned int n;
+  unsigned n;
 
   nb = new Book();
   srand(time(NULL));
@@ -153,11 +154,11 @@ void new_book(std::vector<Book*> &books)
   nb->set_author(load(word, MAX_L));
   std::cout<<"WYDAWCA: ";
   nb->set_publisher(load(word, MAX_L));
-  n = rand()%50+1967;
-  nb->set_year(n);
-  n = rand()%400+154;
-  nb->set_pages(n);
+  nb->set_year(rand()%50+1967);
+  nb->set_pages(rand()%400+154);
 
   n = position(books, nb);
   books.insert(books.begin() + n, nb);
+
+  return n; //sprawdzic
 }

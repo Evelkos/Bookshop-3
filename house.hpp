@@ -25,7 +25,7 @@ class House: public Building    //dom, w ktorym mieszka jedna rodzina
 
   friend std::ostream& operator << (std::ostream& os, House<Per>& h)     //wyswietla wszystkich mieszkancow domu
   {
-    for(unsigned i = 0 ; i < h.inhab.size() ; i++){os<<h.inhab[i]->get_name()<<" "<<h.inhab[i]->get_surname()<<" "<<h.inhab[i]->get_money();}
+    for(unsigned i = 0 ; i < h.inhab.size() ; i++){os<<h.inhab[i]->get_name()<<" "<<h.inhab[i]->get_surname()<<" "<<h.inhab[i]->get_money()<< "   ";}
     os<<std::endl;
     return os;
   }
@@ -56,8 +56,15 @@ template<typename Per>
 void House<Per>::show()
 {
   unsigned int i;
-  for(i = 0 ; i < shelf.size() ; i++)
-    std::cout<<*(shelf[i]);
+  if(shelf.size() > 0)
+  {
+    std::cout<<"Lista ksiazek rodziny:"<<std::endl;
+    for(i = 0 ; i < shelf.size() ; i++)
+      std::cout<<*(shelf[i]);
+  }
+
+  else
+    std::cout<<"Nie ma jeszcze zanych ksiazek"<<std::endl;
 }
 
 //wirtualnia funkcja reset - usuniecie wszystkich ksiazek z polki

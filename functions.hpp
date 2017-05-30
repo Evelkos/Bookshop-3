@@ -14,7 +14,7 @@ char* load(char*, int);
 double load_n();
 void data(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
 void delete_data(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
-void new_book(std::vector<Book*>&);
+unsigned new_book(std::vector<Book*>&);
 
 template<typename T>
 void show_vec(std::vector<T*> &vec)

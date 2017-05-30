@@ -6,8 +6,9 @@ void main_menu(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::ve
   char choice1[2];
   choice1[0] = '0';
 
+
   while(choice1[0] != '6'){
-    std::cout<<std::endl<<"Wybierz osobe"<<std::endl;
+    std::cout<<std::endl<<"MENU GLOWNE"<<std::endl;
     std::cout<<"1. Wlasciciel"<<std::endl;
     std::cout<<"2. Pracownik"<<std::endl;
     std::cout<<"3. Klient"<<std::endl;
@@ -19,8 +20,7 @@ void main_menu(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::ve
     {
       case '1':     ow_menu1(ow, w, names, surnames);                                   break;
       case '2':     em_menu1(ow, w);                                                    break;
-      case '3': //klient
-        break;
+      case '3':     cu_menu1(ow, names, surnames);                                      break;
       case '4': //testy
         break;
       case '5':
@@ -69,11 +69,11 @@ void ow_menu2(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::vec
   choice1[0] = '0';
 
   if(ow.get_size() > 0)
-    {
+  {
     while(choice1[0] != '7')
     {
       bs = ow.get_bs(i);
-      std::cout<<std::endl<<"Ksiegarnia "<<(*bs)<<std::endl;
+      std::cout<<std::endl<<"Ksiegarnia "<<(*bs);
       std::cout<<"1. Wyswietl liste pracownikow"<<std::endl;
       std::cout<<"2. Zatrudnij nowego pracownika"<<std::endl;
       std::cout<<"3. Zwolnij pracownika"<<std::endl;
@@ -96,6 +96,8 @@ void ow_menu2(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::vec
       }
     }
   }
+  else
+    std::cout<<"Nie ma jeszcze ksiegarni, ktora mozna zarzadzac"<<std::endl;
 }
 
 //menu pracownika - ogolne
@@ -105,25 +107,29 @@ void em_menu1(Owner &ow, Warehouse &w)
   char choice[2];
   unsigned i = 0;
   choice[0] = '0';
-
-  bs = ow.get_bs(i);
-
-  while(choice[0] != '3')
+  if(ow.get_size() > 0)
   {
-    std::cout<<"PRACOWNIK"<<std::endl;
-    std::cout<<"1. Wybierz pracownika"<<std::endl;
-    std::cout<<"2. Przejdz do nastepnej ksiegarni"<<std::endl;
-    std::cout<<"3. Wyjscie"<<std::endl;
-    load(choice, 2);
+    bs = ow.get_bs(i);
 
-    switch(choice[0])
+    while(choice[0] != '3')
     {
-      case '1':     em_menu2((bs->choose_emp()), bs, w);                                break;
-      case '2':     if(i < ow.get_size()) i++; else i = 0;                              break;
-      case '3':                                                                         break;
-      default:      std::cout<<"Nie ma takiej mozliwosci."<<std::endl;                  break;
+      std::cout<<std::endl<<"PRACOWNIK - ksiegarnia "<<bs->get_name()<<" w "<<bs->get_loc()<<std::endl;
+      std::cout<<"1. Wybierz pracownika"<<std::endl;
+      std::cout<<"2. Przejdz do nastepnej ksiegarni"<<std::endl;
+      std::cout<<"3. Wyjscie"<<std::endl;
+      load(choice, 2);
+
+      switch(choice[0])
+      {
+        case '1':     em_menu2((bs->choose_emp()), bs, w);                                break;
+        case '2':     if(i < ow.get_size()-1) i++; else i = 0;                            break;
+        case '3':                                                                         break;
+        default:      std::cout<<"Nie ma takiej mozliwosci."<<std::endl;                  break;
+      }
     }
   }
+  else
+    std::cout<<"Nie ma zadnej ksiegarni. Nie mozne byc zadnych pracownikow"<<std::endl;
 }
 
 //menu pracownika - konkretny pracownik
@@ -134,7 +140,7 @@ void em_menu2(Employee *em, Bookshop *bs, Warehouse &w)
   if(em != nullptr)
   {
     while(choice[0] != '5'){
-      std::cout<<std::endl<<"Pracownik "<<(*em)<<std::endl;
+      std::cout<<std::endl<<"Pracownik "<<(*em);
       std::cout<<"\"Hmm... co by tu zrobic?\""<<std::endl;
       std::cout<<"1. Pokaz liste wszystkich ksiazek"<<std::endl;
       std::cout<<"2. Zloz zamowienie"<<std::endl;
@@ -160,6 +166,7 @@ void em_menu2(Employee *em, Bookshop *bs, Warehouse &w)
 void cu_menu1(Owner &ow, std::vector<std::string*> &names, std::vector<std::string*> &surnames)
 {
   Bookshop *bs;
+  House<Customer> *h;
   char choice[2];
   unsigned i = 0;
   choice[0] = '0';
@@ -167,11 +174,10 @@ void cu_menu1(Owner &ow, std::vector<std::string*> &names, std::vector<std::stri
   if(ow.get_size() > 0)     //mozna zamienic ze statyczna liczba wszystkich ksiegarni!
   {
     bs = ow.get_bs(i);
-
     while(choice[0] != '6')
     {
       bs = ow.get_bs(i);
-      std::cout<<std::endl<<"KLIENT - ksiegarnia "<<*bs<<std::endl;
+      std::cout<<std::endl<<"KLIENT - ksiegarnia "<<bs->get_name()<<" w "<<bs->get_loc()<<std::endl;
       std::cout<<"1. Wyswietl liste klientow"<<std::endl;
       std::cout<<"2. Stworz rodzine nowych klientow"<<std::endl;
       std::cout<<"3. Usun rodzine klientow"<<std::endl;
@@ -185,13 +191,36 @@ void cu_menu1(Owner &ow, std::vector<std::string*> &names, std::vector<std::stri
         case '1':       bs->show_customers();                                           break;
         case '2':       bs->add_customers(names, surnames);                             break;
         case '3':       bs->delete_customers();                                         break;
-        case '4':       std::cout<<"Jeszcze nic tu nie ma"<<std::endl;                  break;
-        case '5':       if(i < ow.get_size()) i++; else i = 0;                          break;
-        case '6':       bs->choose_cust()->show();                                      break;
+        case '4':       h = bs->choose_cust(); if( h!= nullptr) h->show();              break;
+        case '5':       if(i < ow.get_size()-1) i++; else i = 0;                        break;
+        case '6':                                                                       break;
         default:        std::cout<<"Nie ma takiej mozliwosci."<<std::endl;              break;
       }
     }
   }
   else
     std::cout<<"Nie istnieje zadna ksiegarnia. Nie moze byc zadnych klientow"<<std::endl;
+}
+
+void wa_menu(Warehouse &w, std::vector<Book*> &books)
+{
+  unsigned n;
+  char choice[2];
+  choice[0] = '0';
+
+  while(choice[0] != '3')
+  {
+    std::cout<<std::endl<<"Magazyn "<<w<<std::endl;
+    std::cout<<"1. Wyswietl liste ksiazek"<<std::endl;
+    std::cout<<"2. Dodaj noda ksiazke do oferty"<<std::endl;
+    std::cout<<"3. Wyjscie"<<std::endl;
+    load(choice, 2);
+
+    switch (choice[0])
+    {
+      case '1':         w.show();                                                       break;
+      case '2':         n = new_book(books); w.add(0, n, books.at(n));                  break;
+      case '3':                                                                         break;
+    }
+  }
 }

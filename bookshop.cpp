@@ -4,7 +4,7 @@
 int Bookshop::numBookshops = 0;
 
 //konstruktor
-Bookshop::Bookshop(std::string n, std::string l, unsigned int a, double b): budget(b), Warehouse(n, l , a)
+Bookshop::Bookshop(std::string n, std::string l, unsigned int a, double b): Warehouse(n, l , a), budget(b)
 {
   numBookshops++;
   D(std::cout <<"Tworze ksigarnie"<<std::endl;)
@@ -62,7 +62,7 @@ void Bookshop::show_customers()
     std::cout<<"Nie ma jeszcze zadnych klientow"<<std::endl;
   else
   {
-    std::cout<<"Lista klientow:"<<std::endl;
+    std::cout<<std::endl<<"Lista klientow:"<<std::endl;
     for(i = 0 ; i < cust.size() ; i++)
       std::cout<<i+1<<". "<<*(cust[i]);
   }
@@ -76,7 +76,7 @@ void Bookshop::show_employees()
     std::cout<<"Nie ma jeszcze zaznych pracownikow"<<std::endl;
   else
   {
-    std::cout<<"Lista pracownikow:"<<std::endl;
+    std::cout<<std::endl<<"Lista pracownikow:"<<std::endl;
     for(i = 0 ; i < emp.size() ; i++)
       std::cout<<*(emp[i]);
   }
@@ -143,11 +143,13 @@ void Bookshop::payment()
   {
     for(i = 0 ; i < emp.size() ; i++)
     {
-      std::cout<<"PENSJA: "<<(emp[i]->get_inhab(0)->get_salary())<<std::endl;
-      std::cout<<"BUDZET: "<<budget<<std::endl;
-      std::cout<<"ODEJMOWANIE: "<<budget - (emp[i]->get_inhab(0)->get_salary());
       budget -= (emp[i]->get_inhab(0)->get_salary());
       emp[i]->get_inhab(0)->set_money(emp[i]->get_inhab(0)->get_money()+emp[i]->get_inhab(0)->get_salary());
+      if(budget < 0)
+      {
+        std::cout<<"BANKRUCTWO!"<<std::endl;
+        exit(0);
+      }
     }
   }
   else
@@ -175,16 +177,15 @@ void Bookshop::delete_book()
 //usuwa klienta, ktorego numer zostal dany
 void Bookshop::delete_customers(unsigned n)
 {
-  if(bo.size() > 0)
+  House<Customer> *b;
+  if(cust.size() > 0)
   {
-    n%=cust.size();
-    House<Customer> *b;
-    b = cust[n-1];
-    cust.erase(cust.begin()+n-1);
+    b = cust[n];
+    cust.erase(cust.begin()+n);
     delete b;
   }
   else
-    std::cout<<"Brak ksiazek do usuniecia"<<std::endl;
+    std::cout<<"Brak klientow do usuniecia"<<std::endl;
 }
 
 //wyswietla liste klientow, pobiera numer i usuwa klientow o zadanym numerze
@@ -196,6 +197,7 @@ void Bookshop::delete_customers()
     this->show_customers();
     std::cout<<"Usun: ";
     n = load_n();
+    n--;
     n%=cust.size();
     this->delete_customers(n);
   }
@@ -209,8 +211,6 @@ void Bookshop::delete_employee(unsigned n)
   House<Employee> *h;
   if(emp.size() > 0)
   {
-    n--;
-    n%=emp.size();
     h = emp[n];
     emp.erase(emp.begin()+n);
     delete h;
@@ -228,6 +228,8 @@ void Bookshop::delete_employee()
     this->show_employees();
     std::cout<<"Usun: ";
     n = load_n();
+    n--;
+    n%=emp.size();
     this->delete_employee(n);
   }
   else
@@ -240,44 +242,64 @@ void Bookshop::order(Warehouse &w)
   unsigned n;
   Bookn boo;
   boo.n = 5;
-  std::cout<<"Lista ksiazek dostepnych w magazynie"<<std::endl;
-  w.show();
-  std::cout<<"Podaj ktore pozycje chcesz zamowic (zamowionych zostanie 5 sztuk kazdej wybranej pozycji). Wpisz 0, aby zakonczyc zamowienie"<<std::endl;
-  do
+  if(w.get_bo_size() > 0)
   {
+    std::cout<<"Lista ksiazek dostepnych w magazynie"<<std::endl;
+    w.show();
+    std::cout<<"Podaj ktore pozycje chcesz zamowic (zamowionych zostanie 5 sztuk kazdej wybranej pozycji). Wpisz 0, aby zakonczyc zamowienie"<<std::endl;
     n = load_n();
-    n--;
-    n%=w.get_bo_size();
-    boo.b = w.get_bo_b(n);
-
-    if(ord.size() < ord.max_size())
-      ord.push_back(boo);
-    else
+    while(n != 0)
     {
-      std::cout<<"Nie mozna dodac kolejnej ksiazki do zamowienia"<<std::endl;
-      break;
+      n--;
+      n%=w.get_bo_size();
+      boo.b = w.get_bo_b(n);
+
+      if(ord.size() < ord.max_size())
+        ord.push_back(boo);
+      else
+      {
+        std::cout<<"Nie mozna dodac kolejnej ksiazki do zamowienia"<<std::endl;
+        break;
+      }
+      n = load_n();
     }
-  }while(n!=0);
+  }
+  else
+    std::cout<<"W magazynie nie ma zadnych ksiazek"<<std::endl;
 }
 
 Employee* Bookshop::choose_emp()
 {
+  Employee *e = nullptr;
   unsigned n;
-  show_employees();
-  std::cout<<"Wybierz numer pracownika: ";
-  n = load_n();
-  n--;
-  n%=emp.size();
-  return emp[n]->get_inhab(n);
+  if(emp.size() > 0)
+  {
+    show_employees();
+    std::cout<<"Wybierz numer pracownika: ";
+    n = load_n();
+    n--;
+    n%=emp.size();
+    e = emp[n]->get_inhab(n);
+  }
+  else
+    std::cout<<"Nie ma jeszcze zadnych pracownikow"<<std::endl;
+  return e;
 }
 
 House<Customer>* Bookshop::choose_cust()
 {
+  House<Customer> *h = nullptr;
   unsigned n;
-  show_customers();
-  std::cout<<"Wybierz numer rodziny klientow: ";
-  n = load_n();
-  n--;
-  n%=cust.size();
-  return cust[n];
+  if(cust.size() > 0)
+  {
+    show_customers();
+    std::cout<<"Wybierz numer rodziny klientow: ";
+    n = load_n();
+    n--;
+    n%=cust.size();
+    h = cust[n];
+  }
+  else
+    std::cout<<"W ksiegarni nie ma jeszcze zadnych klientow"<<std::endl;
+  return h;
 }
