@@ -24,7 +24,7 @@ void Warehouse::show()
     std::cout<<"Nie ma jeszcze zadnych ksiazek"<<std::endl;
   else
     for(i = 0 ; i < bo.size() ; i++)
-      std::cout<<*(bo[i].b);
+      std::cout<<i+1<<". "<<*(bo[i].b)<<"Liczba egzemplarzy: "<<bo[i].n<<std::endl;
 }
 
 //cotygodniowe uzupelnianie magazynu
@@ -32,18 +32,18 @@ void Warehouse::reset()
 {
   unsigned int i;
   for(i = 0 ; i < bo.size() ; i++)
-  bo[i].n = 10;
+  bo[i].n = 20;
 }
 
 //dodawanie pojedynczej ksiazki do magazynu - ma isc w parze z tworzeniem nowej ksiazki
-void Warehouse::add(unsigned n, unsigned pos, Book *bn)
+void Warehouse::add(unsigned n, Book *bn)
 {
   Bookn boo;
   boo.b = bn;
-  boo.n = 0;
+  boo.n = n;
 
   if(bo.size() < bo.max_size() && area > bo.size()/factor)
-    bo.insert(bo.begin()+pos, 1, boo);
+    bo.push_back(boo);
   else
     std::cout<<"Nie mozna juz dodac zadnej ksiazki"<<std::endl;
 }

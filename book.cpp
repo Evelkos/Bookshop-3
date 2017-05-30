@@ -14,7 +14,7 @@ Book::~Book()
 
 std::ostream& operator << (std::ostream &os, Book &b)
 {
-  os<<b.name<<"  "<<b.author<<"  "<<b.publisher<<"  "<<b.price<<"  "<<b.year<<"  "<<b.pages<<"  "<<std::endl;
+  os<<b.name<<"  "<<b.author<<"  "<<b.publisher<<"  "<<2*(b.price)<<"  "<<b.year<<"  "<<b.pages<<"  "<<std::endl;
   return os;
 }
 

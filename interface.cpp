@@ -1,35 +1,36 @@
 #include "interface.hpp"
+#include <iomanip>
+
+extern void shopping(Owner&);
+extern void supply(Owner&, Warehouse&);
 
 //menu glowne
-void main_menu(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::vector<std::string*>&surnames)
+void main_menu(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::vector<std::string*>&surnames, std::vector<Book*> &books)
 {
   char choice1[2];
   choice1[0] = '0';
 
 
-  while(choice1[0] != '6'){
-    std::cout<<std::endl<<"MENU GLOWNE"<<std::endl;
+  while(choice1[0] != '7'){
+    std::cout<<std::endl<<std::setprecision(2)<<std::fixed<<"MENU GLOWNE"<<std::endl;
     std::cout<<"1. Wlasciciel"<<std::endl;
     std::cout<<"2. Pracownik"<<std::endl;
     std::cout<<"3. Klient"<<std::endl;
     std::cout<<"4. Magazyn"<<std::endl;
-    std::cout<<"5. Testy"<<std::endl;
-    std::cout<<"6. Koniec"<<std::endl;
+    std::cout<<"5. Nastepny dzien"<<std::endl;
+    std::cout<<"6. Testy"<<std::endl;
+    std::cout<<"7. Koniec"<<std::endl;
     load(choice1, 2);
     switch (choice1[0])
     {
-      case '1':     ow_menu1(ow, w, names, surnames);                                   break;
-      case '2':     em_menu1(ow, w);                                                    break;
-      case '3':     cu_menu1(ow, names, surnames);                                      break;
-      case '4': //testy
-        break;
-      case '5':
-        break;
-      case '6':
-        break;
-      default:
-        std::cout<<"Nie ma takiej mozliwosci"<<std::endl;
-        break;
+      case '1':     ow_menu1(ow, w, names, surnames);                                           break;
+      case '2':     em_menu1(ow, w);                                                            break;
+      case '3':     cu_menu1(ow, names, surnames);                                              break;
+      case '4':     wa_menu(w, books);                                                          break;
+      case '5':     std::cout<<"NOWY DZIEN"<<std::endl; shopping(ow); supply(ow, w); w.reset(); break;
+      case '6':                                                                                 break;
+      case '7':                                                                                 break;
+      default:      std::cout<<"Nie ma takiej mozliwosci"<<std::endl;                           break;
     }
   }
 }
@@ -204,7 +205,7 @@ void cu_menu1(Owner &ow, std::vector<std::string*> &names, std::vector<std::stri
 
 void wa_menu(Warehouse &w, std::vector<Book*> &books)
 {
-  unsigned n;
+  Book *nb;
   char choice[2];
   choice[0] = '0';
 
@@ -212,15 +213,16 @@ void wa_menu(Warehouse &w, std::vector<Book*> &books)
   {
     std::cout<<std::endl<<"Magazyn "<<w<<std::endl;
     std::cout<<"1. Wyswietl liste ksiazek"<<std::endl;
-    std::cout<<"2. Dodaj noda ksiazke do oferty"<<std::endl;
+    std::cout<<"2. Dodaj nowa ksiazke do oferty"<<std::endl;
     std::cout<<"3. Wyjscie"<<std::endl;
     load(choice, 2);
 
     switch (choice[0])
     {
       case '1':         w.show();                                                       break;
-      case '2':         n = new_book(books); w.add(0, n, books.at(n));                  break;
+      case '2':         nb = new_book(books); if(nb != nullptr)  w.add(0, nb);          break;
       case '3':                                                                         break;
+      default:          std::cout<<"Nie ma takiej mozliwosci"<<std::endl;               break;
     }
   }
 }

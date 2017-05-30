@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1495831686 source:/home/ewelina/Pulpit/Projekt3/book.cpp
+1496184098 source:/home/ewelina/Pulpit/Projekt3/book.cpp
 	"book.hpp"
 
 1495987729 /home/ewelina/Pulpit/Projekt3/book.hpp
@@ -9,10 +9,9 @@
 
 1496000614 /home/ewelina/Pulpit/Projekt3/debug_head.hpp
 
-1496087751 source:/home/ewelina/Pulpit/Projekt3/main.cpp
+1496184551 source:/home/ewelina/Pulpit/Projekt3/main.cpp
 	<iostream>
-	"bookshop.hpp"
-	"functions.hpp"
+	"owner.hpp"
 	"interface.hpp"
 
 1495986164 source:/home/ewelina/Pulpit/Projekt3/customer.cpp
@@ -34,22 +33,22 @@
 	"book.hpp"
 	"person.hpp"
 
-1496165900 source:/home/ewelina/Pulpit/Projekt3/bookshop.cpp
+1496184994 source:/home/ewelina/Pulpit/Projekt3/bookshop.cpp
 	"bookshop.hpp"
 	<ctime>
 
-1496161824 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
+1496183686 /home/ewelina/Pulpit/Projekt3/bookshop.hpp
 	"house.hpp"
 	"warehouse.hpp"
 
-1496166823 /home/ewelina/Pulpit/Projekt3/warehouse.hpp
+1496185052 /home/ewelina/Pulpit/Projekt3/warehouse.hpp
 	"building.hpp"
 
 1496001156 /home/ewelina/Pulpit/Projekt3/building.hpp
 	<vector>
 	"book.hpp"
 
-1496163200 /home/ewelina/Pulpit/Projekt3/house.hpp
+1496178717 /home/ewelina/Pulpit/Projekt3/house.hpp
 	"building.hpp"
 	"customer.hpp"
 	"employee.hpp"
@@ -57,7 +56,7 @@
 	<cstdlib>
 	<ctime>
 
-1496166514 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
+1496180098 source:/home/ewelina/Pulpit/Projekt3/functions.cpp
 	"functions.hpp"
 
 1495982408 source:/home/ewelina/Pulpit/Projekt3/Warehouse.cpp
@@ -66,7 +65,7 @@
 
 1495894452 source:/home/ewelina/Pulpit/Projekt3/house.cpp
 
-1496166514 /home/ewelina/Pulpit/Projekt3/functions.hpp
+1496177367 /home/ewelina/Pulpit/Projekt3/functions.hpp
 	<iostream>
 	<cstring>
 	<cstdlib>
@@ -74,7 +73,7 @@
 	<fstream>
 	"book.hpp"
 
-1496165900 source:/home/ewelina/Pulpit/Projekt3/warehouse.cpp
+1496184994 source:/home/ewelina/Pulpit/Projekt3/warehouse.cpp
 	"warehouse.hpp"
 	"functions.hpp"
 
@@ -86,9 +85,16 @@
 	"person.hpp"
 	"functions.hpp"
 
-1496162595 source:/home/ewelina/Pulpit/Projekt3/interface.cpp
+1496184551 source:/home/ewelina/Pulpit/Projekt3/interface.cpp
 	"interface.hpp"
+	<iomanip>
 
-1496076084 /home/ewelina/Pulpit/Projekt3/interface.hpp
+1496172375 /home/ewelina/Pulpit/Projekt3/interface.hpp
+	"owner.hpp"
+
+1496183698 source:/home/ewelina/Pulpit/Projekt3/day.cpp
+	"owner.hpp"
+
+1496180571 /home/ewelina/Pulpit/Projekt3/day.hpp
 	"owner.hpp"
 

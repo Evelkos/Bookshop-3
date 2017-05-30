@@ -20,14 +20,12 @@ Bookshop::~Bookshop()
 
   while(cust.size() > 0)
   {
-    std::cout<<"AAAAAAAAAAAA - usuwanie klientow?"<<std::endl;
     c = cust[cust.size()-1];
     cust.pop_back();
     delete c;
   }
   while(emp.size() > 0)
   {
-    std::cout<<"BBBBBBBBBBB - usuwanie pracownikow?"<<std::endl;
     e = emp[emp.size()-1];
     emp.pop_back();
     delete e;
@@ -92,7 +90,7 @@ void Bookshop::show_ord()
   {
     std::cout<<"Zamowienie:"<<std::endl;
     for(i = 0 ; i < ord.size() ; i++)
-      std::cout<<*(ord[i].b);
+      std::cout<<*(ord[i]->b);
   }
 }
 
@@ -166,6 +164,7 @@ void Bookshop::delete_book()
     unsigned n;
     this->show();
     n = load_n();
+    n--;
     n%=bo.size();
     (*this)+(bo[n].b->get_price()*(bo[n].n));
     this->delete_b(n);
@@ -240,32 +239,37 @@ void Bookshop::delete_employee()
 void Bookshop::order(Warehouse &w)
 {
   unsigned n;
-  Bookn boo;
-  boo.n = 5;
-  if(w.get_bo_size() > 0)
+  if(ord.empty())
   {
-    std::cout<<"Lista ksiazek dostepnych w magazynie"<<std::endl;
-    w.show();
-    std::cout<<"Podaj ktore pozycje chcesz zamowic (zamowionych zostanie 5 sztuk kazdej wybranej pozycji). Wpisz 0, aby zakonczyc zamowienie"<<std::endl;
-    n = load_n();
-    while(n != 0)
+    if(w.get_bo_size() > 0)
     {
-      n--;
-      n%=w.get_bo_size();
-      boo.b = w.get_bo_b(n);
-
-      if(ord.size() < ord.max_size())
-        ord.push_back(boo);
-      else
-      {
-        std::cout<<"Nie mozna dodac kolejnej ksiazki do zamowienia"<<std::endl;
-        break;
-      }
+      std::cout<<std::endl<<"Lista ksiazek dostepnych w magazynie"<<std::endl;
+      w.show();
+      std::cout<<"Podaj ktore pozycje chcesz zamowic (zamowionych zostanie 5 sztuk kazdej wybranej pozycji). Wpisz 0, aby zakonczyc zamowienie"<<std::endl;
+      std::cout<<"Numer: ";
       n = load_n();
+      while(n != 0)
+      {
+        n--;
+        n%=w.get_bo_size();
+//      std::cout<<"OTO KSIAZKA: "<<*w.get_bo_b(n);
+
+        if(ord.size() < ord.max_size())
+          ord.push_back(w.get_bo(n));
+        else
+        {
+          std::cout<<"Nie mozna dodac kolejnej ksiazki do zamowienia"<<std::endl;
+          break;
+        }
+        std::cout<<"Numer: ";
+        n = load_n();
+      }
     }
+    else
+      std::cout<<"W magazynie nie ma zadnych ksiazek"<<std::endl;
   }
   else
-    std::cout<<"W magazynie nie ma zadnych ksiazek"<<std::endl;
+    std::cout<<"Nie mozna zlozyc zamowienia, gdyz jedno zostalo juz zlozone"<<std::endl;
 }
 
 Employee* Bookshop::choose_emp()
@@ -302,4 +306,31 @@ House<Customer>* Bookshop::choose_cust()
   else
     std::cout<<"W ksiegarni nie ma jeszcze zadnych klientow"<<std::endl;
   return h;
+}
+
+//zakupy dokonywane przez jedna rodzine, pobierany numer rodziny (liczac od zera!)
+void Bookshop::f_shopping(unsigned n)
+{
+  Customer *c;
+  double pr;                                                //aktualna cena ksiazki
+  unsigned i, j;                                            //i-indeks czlonka rodziny, j-indeks wylosowanej ksiazki
+  srand(time(NULL));
+  for(i = 0 ; i < cust[n]->get_size() ; i++)
+  {
+    if(rand()%2 == 1)                                       //czy klient kupi ksiazke
+    {
+      c = cust[n]->get_inhab(i);
+      j = rand()%bo.size();                                 //losowanie ksiazki
+      pr = (bo[j].b->get_price())*2;                        //cena ksiazki w ksiegarni to 2x cena w magazynie
+      if(c->get_money() > pr)
+      {
+        *c += (-pr);
+        budget += pr;                                       //przeplyw gotowki
+        cust[n]->add(bo[j].b);
+        bo[j].n = bo[j].n -1;
+        if(bo[j].n <= 0)                                    //jesli liczba egzemplarzy = 0, to usuwamy ksiazke z ksiegarni
+          bo.erase(bo.begin() + j);
+      }
+    }
+  }
 }

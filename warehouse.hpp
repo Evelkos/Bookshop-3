@@ -14,10 +14,11 @@ class Warehouse: public Building
 
   unsigned get_bo_size() {return bo.size();}
   Book* get_bo_b(unsigned n) {n%=bo.size(); return bo[n].b;}
+  Bookn* get_bo(unsigned n) {n%=bo.size(); return &(bo[n]);}
 
   virtual void show();                  //wyswietla liste ksiazek znajdujacych sie w magazynie
   virtual void reset();                 //"resetuje" liczbe ksiazek w magazynie (ustawia wszystkie na okreslona liczbe)
-  void add(unsigned, unsigned, Book*);            //dodaje nowa (juz utworzona) ksiazke do magazynu
+  void add(unsigned, Book*);            //dodaje nowa (juz utworzona) ksiazke do magazynu
   void add_all(unsigned, std::vector<Book*>&);//dodaje do magazynu wszystkie ksiazki z wektora ksiazek
   void delete_b(unsigned n);
   void delete_b();

@@ -39,6 +39,7 @@
 		<Unit filename="building.hpp" />
 		<Unit filename="customer.cpp" />
 		<Unit filename="customer.hpp" />
+		<Unit filename="day.cpp" />
 		<Unit filename="debug_head.hpp" />
 		<Unit filename="employee.cpp" />
 		<Unit filename="employee.hpp" />

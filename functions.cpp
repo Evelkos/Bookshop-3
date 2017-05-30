@@ -52,7 +52,6 @@ double load_n(){
 
 void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vector<std::string*> &surnames)
 {
-  int n = 0;
   Book *bo;
   std::string line, *l;
   int y, pag;
@@ -78,10 +77,10 @@ void data(std::vector<Book*> &books, std::vector<std::string*> &names, std::vect
         getline(file, line);        bo->set_publisher(line);
         y = rand()%50+1967;         bo->set_year(y);
         pag = rand()%400+154;       bo->set_pages(pag);
+        bo->set_price(quantity_pr(bo->get_year(), bo->get_pages()));
 
-        n = position(books, bo);
         if(books.size() < books.max_size())
-          books.insert(books.begin() + n, bo);
+          books.push_back(bo);
       }
       else if(line[0] == '%' )                                  //wczytujemy imie
       {
@@ -139,26 +138,30 @@ void delete_data(std::vector<Book*> &books, std::vector<std::string*> &names, st
   }
 }
 
-unsigned new_book(std::vector<Book*> &books)
+Book* new_book(std::vector<Book*> &books)
 {
-  Book *nb;
+  Book *nb = nullptr;
   char word[MAX_L];
-  unsigned n;
 
-  nb = new Book();
-  srand(time(NULL));
+  if(books.size() < books.max_size())
+  {
+    nb = new Book();
+    srand(time(NULL));
+    if(nb != nullptr)
+    {
+      std::cout<<"TYTUL: ";
+      nb->set_name(load(word, MAX_L));
+      std::cout<<"AUTOR: ";
+      nb->set_author(load(word, MAX_L));
+      std::cout<<"WYDAWCA: ";
+      nb->set_publisher(load(word, MAX_L));
+      nb->set_year(rand()%50+1967);
+      nb->set_pages(rand()%400+154);
+      nb->set_price(quantity_pr(nb->get_year(), nb->get_pages()));
 
-  std::cout<<"TYTUL: ";
-  nb->set_name(load(word, MAX_L));
-  std::cout<<"AUTOR: ";
-  nb->set_author(load(word, MAX_L));
-  std::cout<<"WYDAWCA: ";
-  nb->set_publisher(load(word, MAX_L));
-  nb->set_year(rand()%50+1967);
-  nb->set_pages(rand()%400+154);
+      books.push_back(nb);
+    }
+  }
 
-  n = position(books, nb);
-  books.insert(books.begin() + n, nb);
-
-  return n; //sprawdzic
+  return nb; //sprawdzic
 }

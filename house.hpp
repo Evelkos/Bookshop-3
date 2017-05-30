@@ -17,9 +17,10 @@ class House: public Building    //dom, w ktorym mieszka jedna rodzina
   public:
   House<Per>(std::string = "Dom", std::string = "Miasto", unsigned int = 100);
   ~House<Per>();
-  void add(Book *bn, int pos);
+  void add(Book *bn);
   void add_inhab(unsigned int, std::vector<std::string*>&, std::vector<std::string*>&);
   Per* get_inhab(unsigned n) {n%=inhab.size(); return inhab[n];};
+  unsigned get_size() {return inhab.size();}
   void virtual show();
   void virtual reset();
 
@@ -73,10 +74,10 @@ void House<Per>::reset()  {  shelf.clear();  }
 
 //wstawianie nowo zakupionych ksiazek na polke
 template<typename Per>
-void House<Per>::add(Book *bn, int pos)
+void House<Per>::add(Book *bn)
 {
   if(shelf.size() < shelf.max_size() && area > shelf.size()/factor)
-    shelf.insert(shelf.begin()+pos, 1, bn);
+    shelf.push_back(bn);
 }
 
 template<typename Per>
