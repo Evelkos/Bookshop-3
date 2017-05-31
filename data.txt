@@ -1,21 +1,109 @@
 #
+Zwiadowcy
+John Flanagan
+WydA
+#
+Pan Lodowego Ogrodu 
+Jaroslaw Grzedowicz
+WydB
+#
+Zbrodnia i Kara
+Fiodor Dostojewski
+WydC
+#
+Piesn Lodu i Ognia
+George R.R Martin
+WydD
+#
+Gra Endera
+Orson Scott Card
+WydE
+#
+Rok 1984
+Orwell
+WydA
+#
+Chlopcy
+Jakub Cwiek
+WydB
+#
+Droga Cienia
+Brent Weeks
+WydC
+#
+Lod
+Dukaj
+WydD
+#
+Sherlock Holmes
+Arthur Conan Doyle
+WydE
+#
 Naprawa Samochodow Osobowych Fiat126p
 Zbigniew Klimecki
 WydA
-#
-Moja
-Mala
-Pulapka
-#
-Adrenalina
-Moze
-Zadziala
+
 %
 Jan
-Karol
+Michal
+Slawomir
+Maciej
+Piotr
+Zbigniew
+Wojciech
+Mariusz
+Zenon
+Henryk
+Robert
+Grzegorz
+Szymon
+Pawel
+Adam
+Bartosz
+Tomasz
+Marcin
+Ewelina
+Monika
+Agata
+Sylwia
+Agnieszka
+Anna
+Jadwiga
+Zofia
+Henryka
+Olga
+Aleksandra
+Dobrawa
+Dominika
+Ganda
+Roza
+Natalia
+Klara
+Liliana
+Antonina
 %
 
 *
 Pisarek
-Zalewski
+Chmiel
+Dlugopis
+Korytko
+Woda
+Dawid
+Szafarczyk
+Gicka
+Milczek
+Kowal
+Adamczyk
+Kucharczyk
+Okon
+Klatczyk
+Dabadaba
+Donica
+Wierzbic
+Grzyb
+Okon
+Panap
+Gruda
+Olowek
 *
