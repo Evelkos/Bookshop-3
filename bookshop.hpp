@@ -27,23 +27,24 @@ class Bookshop : public Warehouse
   unsigned get_emp_size() {return emp.size();}
   unsigned get_cust_size() {return cust.size();}
   Bookn* get_ord_n(unsigned n) {return ord[n];}
+  House<Customer>* get_cust_n(unsigned n) {return cust[n];}
   double get_budget() {return budget;}
   void set_budget(double b) {budget = b;}
+
   void clear_ord() {ord.clear();}
 
-  void add_book();
   void add_employee(std::string, std::string, unsigned, std::vector<std::string*>&, std::vector<std::string*>&);
   void add_customers(unsigned, std::string, std::string, unsigned, std::vector<std::string*>&, std::vector<std::string*>&);
   void add_customers(std::vector<std::string*>&, std::vector<std::string*>&);
+  void show_customers();
+  void show_employees();
+  void show_ord();
   void delete_book(unsigned n);
   void delete_book();
   void delete_employee(unsigned n);
   void delete_employee();
   void delete_customers(unsigned n);
   void delete_customers();
-  void show_customers();
-  void show_employees();
-  void show_ord();
   void payment();
   void order(Warehouse &w);
   Employee* choose_emp();

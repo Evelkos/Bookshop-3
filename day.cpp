@@ -11,8 +11,11 @@ void shopping(Owner &ow)
     for(i = 0 ; i < ow.get_size() ; i++)            //ksiegarnia
     {
       b = ow.get_bs(i);
-      for(j = 0 ; j < b->get_cust_size() ; j++)     //dom (przypisany do ksiegarni)
-        b->f_shopping(j);
+      if(b->get_emp_size() > 0)                     //do robienia zakupow potrzebny jest pracownik ksiegarni
+      {
+        for(j = 0 ; j < b->get_cust_size() ; j++)     //dom (przypisany do ksiegarni)
+          b->f_shopping(j);
+      }
     }
   }
 }

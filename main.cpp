@@ -3,7 +3,6 @@
 using namespace std;
 
 extern void data(vector<Book*>&, vector<string*>&, vector<string*>&);
-//extern const unsigned int factor;
 #include "interface.hpp"
 
 int main()

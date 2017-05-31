@@ -16,6 +16,7 @@ class Building
 
   public:
   Building(std::string n, std::string l, unsigned int a): name(n), loc(l), area(a) {}
+  virtual ~Building() {};
   std::string get_name() {return name;}
   std::string get_loc() {return loc;}
   unsigned int get_area() {return area;}
@@ -25,6 +26,13 @@ class Building
 
   void virtual show() = 0;
   void virtual reset() = 0;
+  //friend std::ostream& operator<< (std::ostream&, Building&);
 };
+
+//std::ostream& operator<< (std::ostream &os, Building &b)
+//{
+//  os<<b.get_name()<<" "<<b.get_loc()<<" "<<b.get_area()<<std::endl;
+  //return os;
+//}
 
 #endif // buildinh_hpp

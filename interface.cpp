@@ -3,6 +3,10 @@
 
 extern void shopping(Owner&);
 extern void supply(Owner&, Warehouse&);
+extern void test_ow();
+extern void test_bs(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
+extern void test_sh(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
+
 
 //menu glowne
 void main_menu(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::vector<std::string*>&surnames, std::vector<Book*> &books)
@@ -28,7 +32,7 @@ void main_menu(Owner &ow, Warehouse &w, std::vector<std::string*>&names, std::ve
       case '3':     cu_menu1(ow, names, surnames);                                              break;
       case '4':     wa_menu(w, books);                                                          break;
       case '5':     std::cout<<"NOWY DZIEN"<<std::endl; shopping(ow); supply(ow, w); w.reset(); break;
-      case '6':                                                                                 break;
+      case '6':     tests(books, names, surnames);                                              break;
       case '7':                                                                                 break;
       default:      std::cout<<"Nie ma takiej mozliwosci"<<std::endl;                           break;
     }
@@ -192,7 +196,7 @@ void cu_menu1(Owner &ow, std::vector<std::string*> &names, std::vector<std::stri
         case '1':       bs->show_customers();                                           break;
         case '2':       bs->add_customers(names, surnames);                             break;
         case '3':       bs->delete_customers();                                         break;
-        case '4':       h = bs->choose_cust(); if( h!= nullptr) h->show();              break;
+        case '4':       h = bs->choose_cust(); if( h!= nullptr) h->show();          break;
         case '5':       if(i < ow.get_size()-1) i++; else i = 0;                        break;
         case '6':                                                                       break;
         default:        std::cout<<"Nie ma takiej mozliwosci."<<std::endl;              break;
@@ -223,6 +227,35 @@ void wa_menu(Warehouse &w, std::vector<Book*> &books)
       case '2':         nb = new_book(books); if(nb != nullptr)  w.add(0, nb);          break;
       case '3':                                                                         break;
       default:          std::cout<<"Nie ma takiej mozliwosci"<<std::endl;               break;
+    }
+  }
+}
+
+void tests(std::vector<Book*> &books, std::vector<std::string*> &names, std::vector<std::string*> &surnames)
+{
+  char choice[2];
+  choice[0] = '0';
+  while(choice[0] != '7')
+  {
+    std::cout<<std::endl<<"Testy:"<<std::endl;
+    std::cout<<"1. Test wlasciciela"<<std::endl;
+    std::cout<<"2. Test ksiegarni"<<std::endl;
+    std::cout<<"3. Test pracownika"<<std::endl;
+    std::cout<<"4. Test klienta"<<std::endl;
+    std::cout<<"5. Test magzazynu"<<std::endl;
+    std::cout<<"6. Test zakupow"<<std::endl;
+    std::cout<<"7. Wyjscie"<<std::endl;
+    load(choice, 2);
+
+    switch (choice[0])
+    {
+      case '1':         test_ow();                                                      break;
+      case '2':         test_bs(books, names, surnames);                                break;
+      case '3': break;
+      case '4': break;
+      case '5': break;
+      case '6':         test_sh(books, names, surnames);                                break;
+      case '7': break;
     }
   }
 }

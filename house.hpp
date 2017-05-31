@@ -59,13 +59,13 @@ void House<Per>::show()
   unsigned int i;
   if(shelf.size() > 0)
   {
-    std::cout<<"Lista ksiazek rodziny:"<<std::endl;
+    std::cout<<std::endl<<"Lista ksiazek rodziny:"<<std::endl;
     for(i = 0 ; i < shelf.size() ; i++)
       std::cout<<*(shelf[i]);
   }
 
   else
-    std::cout<<"Nie ma jeszcze zanych ksiazek"<<std::endl;
+    std::cout<<"Nie ma jeszcze zadnych ksiazek"<<std::endl;
 }
 
 //wirtualnia funkcja reset - usuniecie wszystkich ksiazek z polki

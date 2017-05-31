@@ -19,10 +19,8 @@ class Owner: public Person
   void show_bs();
   void add_bs();
   void add_bs(char*, char*, unsigned, double);
-  void show_order(Bookshop*);
   void delete_bs(unsigned);
   void delete_bs();
-  void accept(Bookshop*);
   void get_cash(Bookshop*);
 };
 

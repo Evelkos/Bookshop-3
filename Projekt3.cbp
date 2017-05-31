@@ -52,6 +52,7 @@
 		<Unit filename="owner.cpp" />
 		<Unit filename="owner.hpp" />
 		<Unit filename="person.hpp" />
+		<Unit filename="tests.cpp" />
 		<Unit filename="warehouse.cpp" />
 		<Unit filename="warehouse.hpp" />
 		<Extensions>

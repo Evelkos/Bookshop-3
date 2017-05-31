@@ -10,6 +10,7 @@ void em_menu1(Owner&, Warehouse&);
 void em_menu2(Employee*, Bookshop*, Warehouse&);
 void cu_menu1(Owner&, std::vector<std::string*>&, std::vector<std::string*>&);
 void wa_menu(Warehouse&, std::vector<Book*>&);
+void tests(std::vector<Book*>&, std::vector<std::string*>&, std::vector<std::string*>&);
 
 
 

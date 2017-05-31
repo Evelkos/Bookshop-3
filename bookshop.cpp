@@ -107,6 +107,7 @@ void Bookshop::add_customers(unsigned n, std::string na, std::string l, unsigned
   }
 }
 
+//dodawanie klientow - podanie zbyt malej powierzchni domu spowoduje, ze klienci nie zostana dodani
 void Bookshop::add_customers(std::vector<std::string*> &names, std::vector<std::string*> &surnames)
 {
   unsigned n, a;
@@ -114,7 +115,8 @@ void Bookshop::add_customers(std::vector<std::string*> &names, std::vector<std::
   n = load_n();
   std::cout<<"Podaj metraz domu danej rodziny: ";
   a = load_n();
-  add_customers(n, "Dom", loc, a, names, surnames);
+  if(a/factor1 > n)
+    add_customers(n, "Dom", loc, a, names, surnames);
 }
 
 //tworzy nowego pracownika
