@@ -145,3 +145,37 @@ void test_sh(std::vector<Book*> &books, std::vector<std::string*> &names, std::v
 
   std::cout<<"Po zakonczonym tescie wywoluja sie destruktory utworzonych obiektow:"<<std::endl;
 }
+
+void test_w(std::vector<Book*> &books)
+{
+  std::cout<<"TEST KLASY MAGAZYN:"<<std::endl;
+  std::cout<<"Tworzymy magazyn:";
+  Warehouse w;
+  try
+  {
+    std::cout<<std::endl<<"Dodawanie wszystkich ksiazek do magazynu:"<<std::endl;
+    if(books.size() <= 0) {std::string ex = "Brak ksiazek do dodania"; throw ex;}
+    w.add_all(5, books);
+    std::cout<<"Dodano ksiazki"<<std::endl;
+  }
+  catch(std::string ex)  {std::cout<<"Blad: "<<ex<<std::endl;}
+
+  std::cout<<std::endl<<"Wyswietlanie:"<<std::endl;
+  w.show();
+
+  std::cout<<std::endl<<"Resetowanie:"<<std::endl;
+  w.reset();
+  w.show();
+
+  std::cout<<std::endl<<"Dodawanie ksiazki:"<<std::endl;
+  std::cout<<"Tworzymy nowa ksiazke:"<<std::endl;
+  Book b("Dodana", "W", "Tescie", 50.00, 2000, 200);
+  w.add(20, &b);
+  w.show();
+
+  std::cout<<std::endl<<"Usuwanie ksiazki:"<<std::endl;
+  w.delete_b();
+  w.show();
+
+  std::cout<<std::endl<<"Po zakonczonym tescie wywoluja sie destruktowy utworzonych obiektow:"<<std::endl;
+}

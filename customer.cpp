@@ -26,19 +26,3 @@ Customer& Customer::operator = (Customer &c2)
   this->money = c2.get_money();
   return *this;
 }
-
-
-/*
-void Customer::buy(Book &bo)
-{
-  int i;
-
-  if(this->get_money() >= bo.b->get_price())
-  {
-    this->set_money(this->get_money() - bo.b->get_price());
-    bo.n--;
-  }
-
-  else
-    std::cout<<"-Mam zbyt malo pieniedzy. Nie moge kupic tej ksiazki"<<std::endl;
-}*/

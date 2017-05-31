@@ -11,7 +11,7 @@
 template<typename Per>          //osoba
 class House: public Building    //dom, w ktorym mieszka jedna rodzina
 {
-  std::vector<Per*> inhab;       //mieszkancy domu
+  std::vector<Per*> inhab;      //mieszkancy domu
   std::vector<Book*> shelf;     //polka na ksiazki
 
   public:
@@ -21,6 +21,7 @@ class House: public Building    //dom, w ktorym mieszka jedna rodzina
   void add_inhab(unsigned int, std::vector<std::string*>&, std::vector<std::string*>&);
   Per* get_inhab(unsigned n) {n%=inhab.size(); return inhab[n];};
   unsigned get_size() {return inhab.size();}
+  void earn();
   void virtual show();
   void virtual reset();
 
@@ -107,6 +108,18 @@ void House<Per>::add_inhab(unsigned int n, std::vector<std::string*> &names, std
     pe = new Per(nam, sur, i/100);
     this->inhab.push_back(pe);
     n--;
+  }
+}
+
+//domownicy ida do pracy
+template<typename Per>
+void House<Per>::earn()
+{
+  unsigned i;
+  if(inhab.size() > 0)
+  {
+    for(i = 0 ; i < inhab.size() ; i++)
+      inhab[i]->work(50.00);
   }
 }
 

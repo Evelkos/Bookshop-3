@@ -254,7 +254,6 @@ void Bookshop::order(Warehouse &w)
       {
         n--;
         n%=w.get_bo_size();
-//      std::cout<<"OTO KSIAZKA: "<<*w.get_bo_b(n);
 
         if(ord.size() < ord.max_size())
           ord.push_back(w.get_bo(n));
